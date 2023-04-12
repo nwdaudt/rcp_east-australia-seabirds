@@ -110,9 +110,16 @@ ggsave(boxplot_spp,
        filename = "./EDA/EDA_boxplot_spp-seasons.png",
        height = 13, width = 20, units = "cm", dpi = 300)
 
-## FO% (species-level) by grid/season --------------------------------------####
-funs <- list(FO = ~ sum(.x >= 1)/n() *100,
-             nOCC = ~ sum(.x >= 1))
+## Number of occurrences, Frequency of Occurrence, Numeric Frequency by grid/season -------- ####
+
+funs <- list(
+  # Frequency of Occurrence
+  FO = ~ round(sum(.x >= 1) / n() *100, digits = 1),
+  # Number of Occurrences
+  nOCC = ~ sum(.x >= 1),
+  # Numeric Frequency
+  NF = ~ round((sum(.x) / sum(dplyr::pick(sum_all))) *100, digits = 1)
+)
 
 df3 <- 
   df %>% 
@@ -126,15 +133,18 @@ df3 <-
                   into = c("species", "vars"),
                   sep = "_")
 
-plot_FO_nOCC <-
+df3$vars <- factor(df3$vars, levels = c("nOCC", "FO", "NF"))
+
+plot_nOCC_FO_NF <-
   ggplot(df3, aes(x = species, y = value, colour = vars, shape = vars)) + 
   geom_point(size = 1.2, alpha = 0.7) +
-  scale_color_manual(values = c("#E69F00", "#56B4E9"))+
+  scale_color_manual(values = c("#000000", "#E69F00", "#56B4E9"))+
   facet_wrap(~season, ncol = 4, scales = "free_x") +
   coord_flip() + 
-  geom_hline(yintercept = 10, colour = "#000000", linetype = "longdash", size = 0.4) + 
+  geom_hline(yintercept = 6, colour = "grey15", linetype = "longdash", linewidth = 0.4) + 
   # geom_hline(yintercept = 10, colour = "#56B4E9", linetype = "dashed") + 
-  xlab("") + ylab("FO = frequency of occurrence (%)\n nOCC = number of occurrences") +
+  xlab("") + 
+  ylab("nOCC = number of occurrences\n FO = frequency of occurrence (%)\n NF = numeric frequency (%)") +
   theme_bw() + 
   theme(legend.title = element_blank(),
         axis.title = element_text(size = 8),
@@ -142,9 +152,9 @@ plot_FO_nOCC <-
         axis.text.x = element_text(size = 6),
         strip.text = element_text(size = 8))
 
-ggsave(plot_FO_nOCC, 
-       filename = "./EDA/EDA_spp-nOCC-FO-seasons.png",
-       height = 13, width = 20, units = "cm", dpi = 300)
+ggsave(plot_nOCC_FO_NF, 
+       filename = "./EDA/EDA_spp-nOCC-FO-NF-seasons.png",
+       height = 14, width = 20, units = "cm", dpi = 300)
 
 ## String vector w/ spp names to remove from models & how many spp/season was modelled -----------####
 ## based on <6 occurrences
