@@ -1,6 +1,7 @@
 # Files
 data/
 data_out/*.csv
+scripts_lda/
 results/Bernoulli/*.rda
 results/NegBin/*.rda
 
