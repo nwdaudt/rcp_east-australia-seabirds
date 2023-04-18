@@ -118,31 +118,66 @@ funs <- list(
   # Number of Occurrences
   nOCC = ~ sum(.x >= 1),
   # Numeric Frequency
-  NF = ~ round((sum(.x) / sum(dplyr::pick(sum_all))) *100, digits = 1)
+  NF = ~ round((sum(.x) / sum(dplyr::pick(sum_all))) *100, digits = 2)
 )
 
 df3 <- 
   df %>% 
+  # Create a 'total' in season for running the descriptive stats from 'funs'
+  rbind((df %>% dplyr::mutate(season = as.factor("total")))) %>%
+  # Then, run the descriptive stats
   dplyr::group_by(season) %>%
   dplyr::summarise(across(all_of(spp_cols), .fns = funs)) %>%
+  # Longer format
   tidyr::pivot_longer(cols = !season, 
                       names_to = "spp",
                       values_to = "value") %>%
-  # split name into variables
+  # Split name into variables
   tidyr::separate(spp, 
                   into = c("species", "vars"),
                   sep = "_")
 
+# Factor cols
 df3$vars <- factor(df3$vars, levels = c("nOCC", "FO", "NF"))
+df3$season <- factor(df3$season, levels = c("total", "summer", "autumn", "winter", "spring"))
+
+## Get the order of the most frequent taxa to re-order below
+
+## FO = frequency of occurrence
+spp_FO_order <-
+  df3 %>%
+  dplyr::filter(vars == "FO") %>%
+  dplyr::filter(season == "total") %>%
+  dplyr::arrange(desc(value)) %>%
+  dplyr::pull(species)
+
+## nOCC = number of occurrences
+# spp_nOCC_order <-
+#   df3 %>%
+#   dplyr::filter(vars == "nOCC") %>%
+#   dplyr::filter(season == "total") %>%
+#   dplyr::arrange(desc(value))
+
+## NF = numeric frequency
+# spp_NF_order <-
+#   df3 %>%
+#   dplyr::filter(vars == "NF") %>%
+#   dplyr::filter(season == "total") %>%
+#   dplyr::arrange(desc(value))
+
+
+df3$species <- factor(df3$species, levels = spp_FO_order)
+# levels(df3$species)
+
 
 plot_nOCC_FO_NF <-
   ggplot(df3, aes(x = species, y = value, colour = vars, shape = vars)) + 
   geom_point(size = 1.2, alpha = 0.7) +
-  scale_color_manual(values = c("#000000", "#E69F00", "#56B4E9"))+
-  facet_wrap(~season, ncol = 4, scales = "free_x") +
+  scale_color_manual(values = c("#000000", "#E69F00", "#56B4E9")) +
+  scale_x_discrete(limits = rev) + 
+  facet_wrap(~ season, ncol = 5, scales = "free_x") +
   coord_flip() + 
   geom_hline(yintercept = 6, colour = "grey15", linetype = "longdash", linewidth = 0.4) + 
-  # geom_hline(yintercept = 10, colour = "#56B4E9", linetype = "dashed") + 
   xlab("") + 
   ylab("nOCC = number of occurrences\n FO = frequency of occurrence (%)\n NF = numeric frequency (%)") +
   theme_bw() + 
