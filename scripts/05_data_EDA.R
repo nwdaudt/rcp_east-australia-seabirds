@@ -81,9 +81,9 @@ boxplot_sum.all_season <-
   theme(axis.title = element_text(size = 8),
         axis.text = element_text(size = 6))
 
-ggsave(boxplot_sum.all_season, 
-       filename = "./EDA/EDA_boxplot_total-count-seasons.png",
-       height = 7, width = 7, units = "cm", dpi = 300)
+# ggsave(boxplot_sum.all_season, 
+#        filename = "./EDA/EDA_boxplot_total-count-seasons.png",
+#        height = 7, width = 7, units = "cm", dpi = 300)
 
 ## Number of birds by species/grid/season -----------------------####
 df2 <- 
@@ -106,9 +106,9 @@ boxplot_spp <-
         axis.text.x = element_text(size = 6),
         strip.text = element_text(size = 8))
 
-ggsave(boxplot_spp, 
-       filename = "./EDA/EDA_boxplot_spp-seasons.png",
-       height = 13, width = 20, units = "cm", dpi = 300)
+# ggsave(boxplot_spp, 
+#        filename = "./EDA/EDA_boxplot_spp-seasons.png",
+#        height = 13, width = 20, units = "cm", dpi = 300)
 
 ## Number of occurrences, Frequency of Occurrence, Numeric Frequency by grid/season -------- ####
 
@@ -186,7 +186,7 @@ plot_nOCC_FO_NF <-
         strip.text = element_text(size = 8))
 
 ggsave(plot_nOCC_FO_NF, 
-       filename = "./EDA/EDA_spp-nOCC-FO-NF-seasons.png",
+       filename = "./results/FigS1_spp-nOCC-FO-NF-seasons.png",
        height = 14, width = 20, units = "cm", dpi = 300)
 
 ## String vector w/ spp names to remove from models & how many spp/season was modelled -----------####
@@ -269,6 +269,8 @@ ggsave(effort_raw_seasons,
        filename = "./EDA/EDA_map-effort-raw.png",
        height = 10, width = 8, units = "cm", dpi = 300)
 
+save("effort_raw_seasons", file = "./EDA/EDA_map-effort-raw.rda")
+
 # Save a map to scheme oceanography in Inkscape 
 ggsave((ggplot() + 
           geom_sf(data = world_sf) +
@@ -285,7 +287,7 @@ ggsave((ggplot() +
                                             pad_x = unit(6.2, "cm"),
                                             pad_y = unit(0.4, "cm"),
                                             style = north_arrow_orienteering(text_size = 3))), 
-       filename = "./EDA/EDA_map-for-oceanogr.svg", ## png
+       filename = "./EDA/EDA_map-oceanogr.svg", ## png
        height = 10, width = 8, units = "cm", dpi = 300)
 
 ## Where the effort was -- richness, by grid ------------------------------####
@@ -335,11 +337,13 @@ ggsave(effort_sum.all,
 ## Supp Mat Fig: # richness & total # birds ####
 
 SuppMat_Rich.Number <-
-  effort_richness / effort_sum.all
+  effort_richness / effort_sum.all +
+  patchwork::plot_annotation(tag_levels = "a", tag_suffix = ")")
 
 ggsave(SuppMat_Rich.Number, 
-       filename = "./EDA/EDA_map-effort-spp-richness-and-total-birds-seasons.png",
+       filename = "./results/FigS2_map-effort-spp-richness-and-total-birds-seasons.png",
        height = 20, width = 20, units = "cm", dpi = 300)
 
 ## Clean environment -------------------------------------------------------####
 rm(list = ls())
+
