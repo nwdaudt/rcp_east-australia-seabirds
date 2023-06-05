@@ -656,8 +656,25 @@ for (season_vec in seasons_vec) {
   
 }
 
+## Given the order the RCPs were assigned for 'spring' during modelling,
+# I needed to change 'RCP1' to 'RCP2' and vice-versa, to agree with the 
+# colouring pattern from other seasons
+
+plotRCPs_all <- 
+  plotRCPs_all %>% 
+  dplyr::mutate(final_RCP = as.character(final_RCP)) %>% 
+  dplyr::mutate(final_RCP = ifelse(season == "spring" & final_RCP == "RCP1",
+                                   "RCPx", final_RCP)) %>% 
+  dplyr::mutate(final_RCP = ifelse(season == "spring" & final_RCP == "RCP2",
+                                   "RCP1", final_RCP)) %>% 
+  dplyr::mutate(final_RCP = ifelse(season == "spring" & final_RCP == "RCPx",
+                                   "RCP2", final_RCP))
+
 plotRCPs_all$season <- factor(plotRCPs_all$season, levels = c("summer", "autumn",
                                                               "winter", "spring"))
+
+plotRCPs_all$final_RCP <- factor(plotRCPs_all$final_RCP, 
+                                 levels = c("RCP1", "RCP2"))
 
 ## Map it -------------------------------------------------------------------- #
 map_point_pred <-
@@ -677,6 +694,9 @@ ggsave(plot = map_point_pred,
        filename = 
          paste0("./results/NegBin/NegBin_07_RCP-point-predictions.png"),
        height = 10, width = 20, units = "cm", dpi = 300)
+
+save("map_point_pred",
+     file = "./results/NegBin/NegBin_07_RCP-point-predictions-ggplot.rda")
 
 rm("map_point_pred")
 
@@ -748,6 +768,10 @@ for (season_vec in seasons_vec) {
          filename = 
            paste0("./results/NegBin/NegBin_", as.character(season_vec), "_07_RCP-prob-predictions.png"),
          width = 11, height = 11, units = "cm", dpi = 300)
+  
+  save(plotRCPs,
+       filename = 
+         paste0("./results/NegBin/NegBin_", as.character(season_vec), "_07_RCP-prob-predictions-ggplot.rda"))
   
   ## Clean environment
   rm("best_model_files", "best_model",
