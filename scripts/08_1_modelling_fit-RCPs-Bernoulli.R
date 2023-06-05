@@ -12,6 +12,7 @@
 library(plyr)
 library(dplyr)
 library(tidyr)
+library(tibble)
 library(ggplot2)
 library(patchwork)
 library(RColorBrewer)
@@ -416,7 +417,7 @@ for (season_vec in seasons_vec) {
   
   # Get the best model name
   if(season_vec == "autumn") {
-    # Given model parsimony, I deliberately chose this one (delta-AIC < 1)
+    # Given model parsimony, I deliberately chose this one (delta-BIC < 1)
     best_model_name <- "bat_mean_sst_mean" 
   } else {
     best_model_name <- fit_BICs[1,]$model
@@ -461,7 +462,8 @@ for (season_vec in seasons_vec) {
   dev.off()
   
   ## RCPs stability ---------------------------------------------------------- #
-  # How many sites to take out each round -- roughly 5, 10, and 20% of total sites
+  # How many sites to take out each round -- 
+  # these numbers correspond roughly to 5%, 10%, and 20% of total sites
   if(season_vec == "summer") {
     oosSR <- c(2, 3, 5)
   } 
@@ -609,6 +611,10 @@ for (season_vec in seasons_vec) {
            paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_07_species-profiles.png"),
          width = 16, height = 8, units = "cm", dpi = 300)
   
+  # Save ggplot objects
+  save("plot_spp_profiles_CI",
+       file = paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_07_species-profiles-ggplot.rda"))
+  
   ## Clean environment
   rm("best_model_files", "best_model_boot_files", "season_vec",
      "best_model", "best_model_boot", "best_model_spp_profile_boot",
@@ -718,9 +724,11 @@ map_point_pred <-
         axis.text = element_text(size = 6))
 
 ggsave(plot = map_point_pred, 
-       filename = 
-         paste0("./results/Bernoulli/Bernoulli_07_RCP-point-predictions.png"),
+       filename = "./results/Bernoulli/Bernoulli_07_RCP-point-predictions.png",
        height = 10, width = 20, units = "cm", dpi = 300)
+
+save("map_point_pred",
+     file = "./results/Bernoulli/Bernoulli_07_RCP-point-predictions-ggplot.rda")
 
 rm("map_point_pred")
 
@@ -792,6 +800,9 @@ for (season_vec in seasons_vec) {
   
   plotRCPs <- FUN_prob_maps(column_names = rcp_map)
   
+  save("plotRCPs",
+       file = paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_07_RCP-prob-predictions-ggplot.rda"))
+  
   if(season_vec == "autumn"){
     ggsave(plot = plotRCPs, 
            filename = 
@@ -817,7 +828,6 @@ for (season_vec in seasons_vec) {
 ## RCPs ~ env. data ####
 
 # seasons_vec <- c("summer", "autumn", "winter", "spring")
-season_vec <- "autumn"
 
 ## Store data for plot
 plot_data <- data.frame()
@@ -1046,7 +1056,7 @@ for (season_vec in seasons_vec) {
                                                 2:ncol(finalRCP)]))
     rm("name", "lvl")
   }
-    
+  
   ## iNEXT function [q = 0 means spp richness]
   inext_obj <- iNEXT::iNEXT(inext_list, q = 0, datatype = "incidence_raw")
   
@@ -1125,7 +1135,7 @@ for (season_vec in seasons_vec) {
   #         axis.text = element_text(size = 6))
   
   
-  # Hack (I'm overwriting previous objects)
+  # Hack (Note: I'm overwriting previous objects)
   df <- fortify(inext_obj, type = 3)
   
   df.point <- df[which(df$method == "observed"), ]

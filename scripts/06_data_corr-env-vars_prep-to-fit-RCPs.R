@@ -10,7 +10,8 @@
 
 library(dplyr)
 library(tidyr)
-library(PerformanceAnalytics)
+library(corrplot)
+# library(PerformanceAnalytics) # at the end, didn't use it
 
 ## Data #### 
 
@@ -85,7 +86,9 @@ for (season_vec in seasons_vec) {
   
   env_cols <- names(rcp_data[, 5:17])
   
-  # ## Prep to check VIF
+  # ## Prep to check VIF 
+  # (1 - do we need this ???)
+  # (2 - is that the way we would do for multivar data ???)
   # mod <- glm(Ardenna.carneipes ~ 
   #              bat_mean + slope_mean + dist_coast_mean + eke_mean + 
   #              chl_mean + chl_log10_mean + sst_mean + sss_mean + mld_mean + 

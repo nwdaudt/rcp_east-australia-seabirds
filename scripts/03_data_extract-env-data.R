@@ -7,16 +7,16 @@
 ## This code extracts all the environmental data that will be used in future analysis.
 ## Data sources are mentioned at the beginning of each section.
 ## As I've run this in my local computer, I did each variable individually, 
-## due to memory issues. Also, due to same problem, I saved backups for each step 
+## due to memory issues. Also, due to the same problem, I saved backups for each step 
 ## to avoid headaches.
 ## You can find all backups at "./data/backup-during-env-data-extraction/".
-## In theory, this code doesn't need to be run again.
 
 ## Libraries ####
 
 library(readr)
 library(dplyr)
 library(stringr)
+library(sp)
 library(sf)
 library(mapview)
 library(rnaturalearth)
@@ -125,7 +125,7 @@ readr::write_csv(
 ## These next steps don't need to be run again, as it's all done and saved.
 ##
 ## However, to get the obj 'layer_names' which will be used in the next session, 
-## you'll need to load "vcur_stack" (or "ucur_stack"; but note the code below used [v*])
+## you'll need to load "vcur_stack" (or "ucur_stack"; but note the code below uses [v*])
 ## ----------------------------------------------------------------------------#
 
 ## V component ----------------------------------------------------------------#
@@ -365,8 +365,8 @@ rm("chlInfo", "ext_chl")
 study_area_polygon <- 
   sf::st_sfc(sf::st_polygon(list(rbind(c(110, -9),    # min(long) / min(lat)
                                        c(160, -9),    # max(long) / min(lat)
-                                       c(160, -48),  # max(long) / max(lat) 
-                                       c(110, -48),  # min(long) / max(lat)
+                                       c(160, -48),   # max(long) / max(lat) 
+                                       c(110, -48),   # min(long) / max(lat)
                                        c(110, -9)))), # min(long) / min(lat)
              crs = 4326)
 # mapview::mapview(study_area_polygon)
@@ -933,21 +933,24 @@ for (season in seasons) {
   ## Plots done using {tmap} tools
   nameSSTgrad <- paste("SST gradient", as.character(season))
   SSTgrad_plot <-
-    tm_shape(r_SSTgrad) + tm_raster(palette = viridisLite::viridis(5), title = nameSSTgrad) + 
-    tm_legend(legend.position = c(0.3, 0.45))
+    tmap::tm_shape(r_SSTgrad) + 
+    tmap::tm_raster(palette = viridisLite::viridis(5), title = nameSSTgrad) + 
+    tmap::tm_legend(legend.position = c(0.3, 0.45))
   
   nameEKEmean <- paste("EKE mean", as.character(season))
   EKEmean_plot <-
-    tm_shape(r_EKEmean) + tm_raster(palette = viridisLite::magma(5), title = nameEKEmean) + 
-    tm_legend(legend.position = c(0.3, 0.45))
+    tmap::tm_shape(r_EKEmean) + 
+    tmap::tm_raster(palette = viridisLite::magma(5), title = nameEKEmean) + 
+    tmap::tm_legend(legend.position = c(0.3, 0.45))
   
   nameEKEsd <- paste("EKE sd", as.character(season))
   EKEsd_plot <-
-    tm_shape(r_EKEsd) + tm_raster(palette = viridisLite::cividis(5), title = nameEKEsd) + 
-    tm_legend(legend.position = c(0.3, 0.45))
+    tmap::tm_shape(r_EKEsd) + 
+    tmap::tm_raster(palette = viridisLite::cividis(5), title = nameEKEsd) + 
+    tmap::tm_legend(legend.position = c(0.3, 0.45))
   
-  p <- tmap_arrange(SSTgrad_plot, EKEmean_plot, EKEsd_plot, 
-                    nrow = 3)
+  p <- tmap::tmap_arrange(SSTgrad_plot, EKEmean_plot, EKEsd_plot, 
+                          nrow = 3)
   
   ## Store 'tmap_arrange' obj in a list
   name <- as.character(season)
@@ -973,19 +976,22 @@ for (file_dir_clim in file_dirs_clim) {
   
   ## Plots done using {tmap} tools
   SSTgrad_plot <-
-    tm_shape(r_SSTgrad) + tm_raster(palette = viridisLite::viridis(5), title = "SSTgrad 10 yrs") + 
-    tm_legend(legend.position = c(0.3, 0.45))
+    tmap::tm_shape(r_SSTgrad) + 
+    tmap::tm_raster(palette = viridisLite::viridis(5), title = "SSTgrad 10 yrs") + 
+    tmap::tm_legend(legend.position = c(0.3, 0.45))
   
   EKEmean_plot <-
-    tm_shape(r_EKEmean) + tm_raster(palette = viridisLite::magma(5), title = "EKE mean 11 yrs") + 
-    tm_legend(legend.position = c(0.3, 0.45))
+    tmap::tm_shape(r_EKEmean) + 
+    tmap::tm_raster(palette = viridisLite::magma(5), title = "EKE mean 11 yrs") + 
+    tmap::tm_legend(legend.position = c(0.3, 0.45))
   
   EKEsd_plot <-
-    tm_shape(r_EKEsd) + tm_raster(palette = viridisLite::cividis(5), title = "EKE sd 11 yrs") +
-    tm_legend(legend.position = c(0.3, 0.45))
+    tmap::tm_shape(r_EKEsd) + 
+    tmap::tm_raster(palette = viridisLite::cividis(5), title = "EKE sd 11 yrs") +
+    tmap::tm_legend(legend.position = c(0.3, 0.45))
   
-  p <- tmap_arrange(SSTgrad_plot, EKEmean_plot, EKEsd_plot, 
-                    nrow = 3)
+  p <- tmap::tmap_arrange(SSTgrad_plot, EKEmean_plot, EKEsd_plot, 
+                          nrow = 3)
   
   ## Store 'tmap_arrange' obj in a list
   name <- "climatology"
@@ -998,16 +1004,16 @@ for (file_dir_clim in file_dirs_clim) {
 }
 
 climatic_layers_plot <- 
-  tmap_arrange(c(plot_list[["summer"]],
-                 plot_list[["autumn"]],
-                 plot_list[["winter"]],
-                 plot_list[["spring"]],
-                 plot_list[["climatology"]]), ncol = 3)
+  tmap::tmap_arrange(c(plot_list[["summer"]],
+                       plot_list[["autumn"]],
+                       plot_list[["winter"]],
+                       plot_list[["spring"]],
+                       plot_list[["climatology"]]), ncol = 3)
 
-tmap_save(tm = climatic_layers_plot,
-          filename = "./figs/EDA_climatology_layers.pdf",
-          width = 50, height = 55, units = "cm",
-          dpi = 250)
+tmap::tmap_save(tm = climatic_layers_plot,
+                filename = "./figs/EDA_climatology_layers.pdf",
+                width = 50, height = 55, units = "cm",
+                dpi = 250)
 
 rm("file_dirs", "file_dirs_clim", "seasons", 
    "plot_list", "climatic_layers_plot")

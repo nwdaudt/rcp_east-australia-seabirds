@@ -165,10 +165,8 @@ spp_FO_order <-
 #   dplyr::filter(season == "total") %>%
 #   dplyr::arrange(desc(value))
 
-
 df3$species <- factor(df3$species, levels = spp_FO_order)
 # levels(df3$species)
-
 
 plot_nOCC_FO_NF <-
   ggplot(df3, aes(x = species, y = value, colour = vars, shape = vars)) + 
@@ -345,5 +343,3 @@ ggsave(SuppMat_Rich.Number,
 
 ## Clean environment -------------------------------------------------------####
 rm(list = ls())
-
-### Zeroes for each species/season? (probably don't need it)

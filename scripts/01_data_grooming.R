@@ -6,12 +6,14 @@
 
 ## This code joins data from two ASG's datasets, do some gross wrangling,
 ## and tidy up taxonomy (order, family, species names).
-## Finally, these processes are saved under "./data_out/inputs/ASG_2016_2021_tidy.csv"
+## Finally, these processes are saved under "./data_out/ASG_2016_2021_tidy.csv"
 
 ## Libraries ####
 
 library(plyr)
-library(tidyverse)
+library(dplyr)
+library(readr)
+library(stringr)
 library(lubridate)
 
 ## Data ####
