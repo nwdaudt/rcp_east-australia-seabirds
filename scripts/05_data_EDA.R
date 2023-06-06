@@ -56,6 +56,23 @@ length(unique(data_raw$order))    # > 5 orders
 
 sum(data_raw$total_ct)            # > In total, 142,646 individuals recorded
 
+## Effort summary, by voyage (Table S1) ####
+
+tableS1 <-
+  data_raw %>% 
+  dplyr::group_by(voyage) %>% 
+  dplyr::summarise(date_start = min(date),
+                   date_end = max(date),
+                   lat_range = paste(round(min(latitude)), "–", round(max(latitude))),
+                   lon_range = paste(round(min(longitude)), "–", round(max(longitude))),
+                   no_records = n(),
+                   no_birds = sum(total_ct),
+                   no_spp = n_distinct(species)) %>% 
+  dplyr::ungroup() %>% 
+  dplyr::arrange(date_start)
+
+write.csv(tableS1, "./results/tableS1-effort-summary.csv")
+
 ## Number of birds (total) by grid/season ----------------------------------####
 df <- 
   data_gridded %>% 
