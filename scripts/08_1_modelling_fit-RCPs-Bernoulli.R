@@ -371,6 +371,8 @@ for (season_vec in seasons_vec) {
     rm("i")
   }
   
+  fit_BICs <- fit_BICs %>% dplyr::filter(!is.infinite(bic))
+  
   ## Min BIC
   BIC_min <- min(fit_BICs$bic)
   
@@ -378,7 +380,7 @@ for (season_vec in seasons_vec) {
   fit_BICs <- 
     fit_BICs %>%
     dplyr::mutate(is_min_BIC = as.factor(ifelse(fit_BICs$bic == BIC_min, 'yes', 'no'))) %>%
-    arrange(bic) %>%
+    dplyr::arrange(bic) %>%
     dplyr::mutate(delta_bic = bic - lag(bic)) %>%
     dplyr::mutate(delta_bic = (tidyr::replace_na(delta_bic, 0)))
   
@@ -416,24 +418,37 @@ for (season_vec in seasons_vec) {
   ## Save 'best_model' for diagnostics
   
   # Get the best model name
-  if(season_vec == "autumn") {
-    # Given model parsimony, I deliberately chose this one (delta-BIC < 1)
-    best_model_name <- "bat_mean_sst_mean" 
-  } else {
-    best_model_name <- fit_BICs[1,]$model
-  }
+  best_model_name <- fit_BICs[1,]$model
   
   # Get it from the 'fit' list
   best_model <- fit[[best_model_name]]
   
-  # Save it
+  # Save the best model object
   save("best_model", 
        file = paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_04_best-model.rda"))
   
+  ### Get the 'full model name & full/best model infos
+  full_model_name <- paste(env_cols_models_season[[season_vec]], collapse = "_")
+  
+  full_and_best_models <- data.frame(
+    data_type = rep("bernoulli", times = 2),
+    season = rep(season_vec, times = 2),
+    model = c("full",
+              "best"),
+    model_specification = c(full_model_name,
+                            best_model_name),
+    bic = c(fit_BICs[fit_BICs$model==full_model_name,]$bic,
+            fit_BICs[fit_BICs$model==best_model_name,]$bic)
+  )
+  
+  write.csv(full_and_best_models, 
+            file = paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_04_full_and_best_models.csv"))
+  
   ## Clean environment
-  rm("season_vec", "fit_files", "fit_BICs", "BIC_min", 
+  rm("season_vec", "fit_files", "fit_BICs", "BIC_min",
      "plot_model_selection_topBIC", "fit",
-     "best_model_name", "best_model")
+     "best_model_name", "best_model",
+     "full_model_name", "full_and_best_models")
   gc()
 }
 

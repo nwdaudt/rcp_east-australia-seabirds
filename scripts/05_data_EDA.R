@@ -127,7 +127,7 @@ boxplot_spp <-
 #        filename = "./EDA/EDA_boxplot_spp-seasons.png",
 #        height = 13, width = 20, units = "cm", dpi = 300)
 
-## Number of occurrences, Frequency of Occurrence, Numeric Frequency by grid/season -------- ####
+## Number of occurrences, Frequency of Occurrence, Numeric Frequency by grid/season (Figure S1) ####
 
 funs <- list(
   # Frequency of Occurrence
@@ -351,7 +351,7 @@ ggsave(effort_sum.all,
        filename = "./EDA/EDA_map-effort-total-birds-recorded-seasons.png",
        height = 10, width = 20, units = "cm", dpi = 300)
 
-## Supp Mat Fig: # richness & total # birds ####
+## patchwork #richness & #birds (Figure S2) ####
 
 SuppMat_Rich.Number <-
   effort_richness / effort_sum.all +

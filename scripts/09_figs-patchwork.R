@@ -1,10 +1,10 @@
 ##
-## ASG -- Figures
+## ASG -- Figures & Tables
 ## 
 ## Nicholas W Daudt
 ## ****************************************************************************#
 
-## This code put together some Figs for the manuscript.
+## This code put together some Figs & tables for the manuscript.
 
 ## Libraries ####
 
@@ -61,5 +61,9 @@ ggsave(fig2_point_pred,
 
 ## FIGURE 3 ------------------------------------------------------------------ #
 
+load("./results/Bernoulli/NegBin_07_.rda")
+load("./results/NegBin/NegBin_07_.rda")
 
-
+ggsave(fig3_prob_maps_spring, 
+       filename = "./results/Fig3-probability-maps-spring.png",
+       height = 13, width = 16, units = "cm", dpi = 300)

@@ -344,6 +344,8 @@ for (season_vec in seasons_vec) {
     rm("i")
   }
   
+  fit_BICs <- fit_BICs %>% dplyr::filter(!is.infinite(bic))
+  
   ## Min BIC
   BIC_min <- min(fit_BICs$bic)
   
@@ -394,14 +396,32 @@ for (season_vec in seasons_vec) {
   # Get it from the 'fit' list
   best_model <- fit[[best_model_name]]
 
-  # Save it
+  # Save the best model object
   save("best_model",
        file = paste0("./results/NegBin/NegBin_", as.character(season_vec), "_04_best-model.rda"))
-
+  
+  ### Get the 'full model name & full/best model infos
+  full_model_name <- paste(env_cols_models_season[[season_vec]], collapse = "_")
+  
+  full_and_best_models <- data.frame(
+    data_type = rep("neg_bin", times = 2),
+    season = rep(season_vec, times = 2),
+    model = c("full",
+              "best"),
+    model_specification = c(full_model_name,
+                            best_model_name),
+    bic = c(fit_BICs[fit_BICs$model==full_model_name,]$bic,
+            fit_BICs[fit_BICs$model==best_model_name,]$bic)
+  )
+  
+  write.csv(full_and_best_models, 
+            file = paste0("./results/NegBin/NegBin_", as.character(season_vec), "_04_full_and_best_models.csv"))
+  
   ## Clean environment
   rm("season_vec", "fit_files", "fit_BICs", "BIC_min",
      "plot_model_selection_topBIC", "fit",
-     "best_model_name", "best_model")
+     "best_model_name", "best_model",
+     "full_model_name", "full_and_best_models")
   gc()
 }
 
@@ -721,12 +741,6 @@ rm("map_point_pred")
 
 for (season_vec in seasons_vec) {
   
-  # ## Read RCP data ----------------------------------------------------------- #
-  # load("./data_out/inputs/rcp-data-season.rda")
-  # rcp_data <- rcp_data_seasons[grepl(pattern = as.character(season_vec), 
-  #                                    x = names(rcp_data_seasons))]
-  # rcp_data <- rcp_data[[1]]
-  
   ## Read best_model --------------------------------------------------------- #
   best_model_files <- list.files(path = "./results/NegBin", pattern = "_04_best-model.rda$",
                                  full.names = TRUE, recursive = TRUE)
@@ -769,8 +783,8 @@ for (season_vec in seasons_vec) {
            paste0("./results/NegBin/NegBin_", as.character(season_vec), "_07_RCP-prob-predictions.png"),
          width = 11, height = 11, units = "cm", dpi = 300)
   
-  save(plotRCPs,
-       filename = 
+  save("plotRCPs",
+       file = 
          paste0("./results/NegBin/NegBin_", as.character(season_vec), "_07_RCP-prob-predictions-ggplot.rda"))
   
   ## Clean environment
