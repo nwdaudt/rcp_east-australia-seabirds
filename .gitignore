@@ -3,6 +3,7 @@ data/
 data_out/*.csv
 results/Bernoulli/*.rda
 results/NegBin/*.rda
+docs/
 # Old file that we end up not using
 scripts_lda/
 
