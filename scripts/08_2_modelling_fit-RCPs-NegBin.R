@@ -776,6 +776,23 @@ for (season_vec in seasons_vec) {
   
   rcp_map = c("RCP_1", "RCP_2")
   
+  if(season_vec == "spring" | season_vec == "summer") {
+    
+    # As RCP group colours are depicted from 'south' (RCP1) to 'north' (RCP2),
+    # we had to do a hack here to the probability maps visually agree with 
+    # point-predictions in a meaningful way (basically, swap "RCP1" to "RCP2", and vice-versa)
+    
+    new_col_names <- c("IDgrid", "lon", "lat", 
+                       "RCP_2", "RCP_1", 
+                       "RCP_2.lower", "RCP_1.lower", 
+                       "RCP_2.upper", "RCP_1.upper", 
+                       "geometry")
+    
+    colnames(pred_data) <- new_col_names
+    
+    rm("new_col_names")
+  }
+  
   plotRCPs <- FUN_prob_maps(column_names = rcp_map)
   
   ggsave(plot = plotRCPs, 
