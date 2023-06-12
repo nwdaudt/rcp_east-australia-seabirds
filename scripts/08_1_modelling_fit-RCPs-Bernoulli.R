@@ -600,11 +600,11 @@ for (season_vec in seasons_vec) {
           lowerCI = spp_profile_boot_lower$lowerCI,
           upperCI = spp_profile_boot_upper$upperCI)
   
+  rm("spp_profile_boot_mean", "spp_profile_boot_lower", "spp_profile_boot_upper")
+  
   spp_profile_boot$rcp <- factor(spp_profile_boot$rcp, levels = c("RCP1",
                                                                   "RCP2",
                                                                   "RCP3"))
-  
-  rm("spp_profile_boot_mean", "spp_profile_boot_lower", "spp_profile_boot_upper")
   
   ## Plot -------------------------------------------------------------------- #
   plot_spp_profiles_CI <- 
@@ -811,6 +811,23 @@ for (season_vec in seasons_vec) {
     rcp_map = c("RCP_1", "RCP_2", "RCP_3")
   } else {
     rcp_map = c("RCP_1", "RCP_2")
+  }
+  
+  if(season_vec == "summer") {
+    
+    # As RCP group colours are being depicted from 'south' (RCP1) to 'north' (RCP2),
+    # we had to do a hack here for the probability maps visually agree with 
+    # point-predictions in a meaningful way (basically, swap "RCP1" to "RCP2", and vice-versa)
+    
+    new_col_names <- c("IDgrid", "lon", "lat", 
+                       "RCP_2", "RCP_1", 
+                       "RCP_2.lower", "RCP_1.lower", 
+                       "RCP_2.upper", "RCP_1.upper", 
+                       "geometry")
+    
+    colnames(pred_data) <- new_col_names
+    
+    rm("new_col_names")
   }
   
   plotRCPs <- FUN_prob_maps(column_names = rcp_map)
@@ -1045,12 +1062,12 @@ for (season_vec in seasons_vec) {
                       names(.)[which.max(dplyr::c_across(cols = everything()))]))
   
   finalRCP$final_RCP <- gsub(pattern = "_", replacement = "", x = finalRCP$final_RCP)
+  
   if(season_vec == "autumn"){
     finalRCP$final_RCP <- factor(finalRCP$final_RCP, levels = c("RCP1", "RCP2", "RCP3"))
   } else {
     finalRCP$final_RCP <- factor(finalRCP$final_RCP, levels = c("RCP1", "RCP2"))
   }
-  
   
   ## Bind with 'rcp_data' to get 'IDgrid'
   finalRCP <- 
@@ -1079,7 +1096,7 @@ for (season_vec in seasons_vec) {
   ### To customize line width & point size, we need a bit of a hack
   ### Based on (https://stackoverflow.com/questions/63031619/override-aesthetics-of-custom-plot)
   
-  ## Sample-size-based R/E curve
+  ## Sample-size-based R/E curve ----------------------------------------------#
   
   # This would be the 'simple way':
   # curve_sample_size_based <- 
@@ -1096,24 +1113,24 @@ for (season_vec in seasons_vec) {
   # Hack
   df <- fortify(inext_obj, type = 1)
   
-  df.point <- df[which(df$method == "observed"), ]
-  df.line <- df[which(df$method != "observed"), ]
-  df.line$method <- factor(df.line$method, 
-                           c("interpolated", "extrapolated"),
-                           c("interpolation", "extrapolation"))
+  df.point <- df[which(df$Method == "Observed"), ]
+  df.line <- df[which(df$Method != "Observed"), ]
+  df.line$Method <- factor(df.line$Method, 
+                           c("Rarefaction", "Extrapolation"),
+                           c("Rarefaction", "Extrapolation"))
   # To ensure colour compatibility with other plots
   if(season_vec == "autumn"){
-    df$site <- factor(df$site, levels = c("RCP1", "RCP2", "RCP3"))
+    df$Assemblage <- factor(df$Assemblage, levels = c("RCP1", "RCP2", "RCP3"))
   } else {
-    df$site <- factor(df$site, levels = c("RCP1", "RCP2"))
+    df$Assemblage <- factor(df$Assemblage, levels = c("RCP1", "RCP2"))
   }
   
   curve_sample_size_based <- 
-    ggplot(df, aes(x = x, y = y, colour = site, fill = site)) + 
-    geom_point(aes(shape = site), size = 3, data = df.point) +
-    geom_line(aes(linetype = method), lwd = 1.15, data = df.line) +
+    ggplot(df, aes(x = x, y = y, colour = Assemblage, fill = Assemblage)) + 
+    geom_point(aes(shape = Assemblage), size = 3, data = df.point) +
+    geom_line(aes(linetype = Method), lwd = 1.15, data = df.line) +
     geom_ribbon(aes(ymin = y.lwr, ymax = y.upr,
-                    fill = site, colour = NULL), alpha = 0.2) +
+                    fill = Assemblage, colour = NULL), alpha = 0.2) +
     scale_colour_brewer(palette = "Dark2") +
     scale_fill_brewer(palette = "Dark2") +
     xlab("Number of sampling units (grids)") + ylab("Species richness") +
@@ -1122,9 +1139,9 @@ for (season_vec in seasons_vec) {
           axis.title = element_text(size = 8),
           axis.text = element_text(size = 6))
   
-  ## Sample completeness curve (not used)
-  
+  ## Sample completeness curve ------ (not used) ------------------------------#
   # This would be the 'simple way':
+  
   # curve_sample_completeness <-
   #   iNEXT::ggiNEXT(inext_obj, type = 2, se = TRUE) +
   #   scale_colour_brewer(palette = "Dark2") +
@@ -1133,7 +1150,7 @@ for (season_vec in seasons_vec) {
   #   theme(axis.title = element_text(size = 8),
   #         axis.text = element_text(size = 6))
   
-  ## Coverage-based R/E curves
+  ## Coverage-based R/E curves ------------------------------------------------#
   
   # This would be the 'simple way':
   # curve_coverage_based <- 
@@ -1149,29 +1166,28 @@ for (season_vec in seasons_vec) {
   #         axis.title = element_text(size = 8),
   #         axis.text = element_text(size = 6))
   
-  
   # Hack (Note: I'm overwriting previous objects)
   df <- fortify(inext_obj, type = 3)
   
-  df.point <- df[which(df$method == "observed"), ]
-  df.line <- df[which(df$method != "observed"), ]
-  df.line$method <- factor(df.line$method, 
-                           c("interpolated", "extrapolated"),
-                           c("interpolation", "extrapolation"))
+  df.point <- df[which(df$Method == "Observed"), ]
+  df.line <- df[which(df$Method != "Observed"), ]
+  df.line$Method <- factor(df.line$Method, 
+                           c("Rarefaction", "Extrapolation"),
+                           c("Rarefaction", "Extrapolation"))
   # To ensure colour compatibility with other plots
   if(season_vec == "autumn"){
-    df$site <- factor(df$site, levels = c("RCP1", "RCP2", "RCP3"))
+    df$Assemblage <- factor(df$Assemblage, levels = c("RCP1", "RCP2", "RCP3"))
   } else {
-    df$site <- factor(df$site, levels = c("RCP1", "RCP2"))
+    df$Assemblage <- factor(df$Assemblage, levels = c("RCP1", "RCP2"))
   }
   
   curve_coverage_based <- 
-    ggplot(df, aes(x = x, y = y, colour = site, fill = site)) + 
-    geom_point(aes(shape = site), size = 3, data = df.point) +
-    geom_line(aes(linetype = method), lwd = 1.15, data = df.line,
+    ggplot(df, aes(x = x, y = y, colour = Assemblage, fill = Assemblage)) + 
+    geom_point(aes(shape = Assemblage), size = 3, data = df.point) +
+    geom_line(aes(linetype = Method), lwd = 1.15, data = df.line,
               show.legend = FALSE) +
     geom_ribbon(aes(ymin = y.lwr, ymax = y.upr,
-                    fill = site, colour = NULL), alpha = 0.2) +
+                    fill = Assemblage, colour = NULL), alpha = 0.2) +
     scale_colour_brewer(palette = "Dark2") +
     scale_fill_brewer(palette = "Dark2") +
     xlab("Sample coverage") + ylab("") +
