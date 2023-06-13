@@ -257,3 +257,227 @@ ggsave(
 
 rm("sum", "aut", "win", "spr")
 
+## FIGURE S5 ----------------------------------------------------------------- #
+
+## --------------------- S5.1 Bernoulli ------------------------------------- ##
+
+load("./results/Bernoulli/Bernoulli_summer_07_RCP-prob-predictions-ggplot.rda")
+plotRCPs_sum <- plotRCPs
+
+load("./results/Bernoulli/Bernoulli_autumn_07_RCP-prob-predictions-ggplot.rda")
+plotRCPs_aut <- plotRCPs
+
+load("./results/Bernoulli/Bernoulli_winter_07_RCP-prob-predictions-ggplot.rda")
+plotRCPs_win <- plotRCPs
+
+load("./results/Bernoulli/Bernoulli_spring_07_RCP-prob-predictions-ggplot.rda")
+
+figS5.1_prob_pred <-
+  (plotRCPs_sum + ggtitle("Summer") + 
+     theme(plot.title = element_text(size = 8, face = "italic"),
+           legend.position = "none",
+           axis.text = element_text(size = 3.5),
+           strip.text = element_text(size = 4))) +
+  (plotRCPs_aut + ggtitle("Autumn") + 
+     theme(plot.title = element_text(size = 8, face = "italic"),
+           legend.position = "none",
+           axis.text = element_text(size = 3.5),
+           strip.text = element_text(size = 4))) + 
+  (plotRCPs_win + ggtitle("Winter") + 
+     theme(plot.title = element_text(size = 8, face = "italic"),
+           legend.position = "none",
+           axis.text = element_text(size = 3.5),
+           strip.text = element_text(size = 4))) + 
+  (plotRCPs + ggtitle("Spring") + 
+     theme(plot.title = element_text(size = 8, face = "italic"),
+           axis.text = element_text(size = 3.5),
+           strip.text = element_text(size = 4),
+           legend.key.size = unit(0.3, 'cm'),
+           legend.text = element_text(size = 4),
+           legend.title = element_text(size = 5))) + 
+  patchwork::plot_layout(ncol = 4)
+
+ggsave(figS5.1_prob_pred, 
+       filename = "./results/FigS5_1_prob-pred-Bernoulli.png",
+       height = 9, width = 20, units = "cm", dpi = 300)
+
+## ---------------------- S5.2 NegBin --------------------------------------- ##
+##      Note: I'm overwriting previous objects by using the same names
+
+load("./results/NegBin/NegBin_summer_07_RCP-prob-predictions-ggplot.rda")
+plotRCPs_sum <- plotRCPs
+
+load("./results/NegBin/NegBin_autumn_07_RCP-prob-predictions-ggplot.rda")
+plotRCPs_aut <- plotRCPs
+
+load("./results/NegBin/NegBin_winter_07_RCP-prob-predictions-ggplot.rda")
+plotRCPs_win <- plotRCPs
+
+load("./results/NegBin/NegBin_spring_07_RCP-prob-predictions-ggplot.rda")
+
+figS5.2_prob_pred <-
+  (plotRCPs_sum + ggtitle("Summer") + 
+     theme(plot.title = element_text(size = 8, face = "italic"),
+           legend.position = "none",
+           axis.text = element_text(size = 3.5),
+           strip.text = element_text(size = 4))) +
+  (plotRCPs_aut + ggtitle("Autumn") + 
+     theme(plot.title = element_text(size = 8, face = "italic"),
+           legend.position = "none",
+           axis.text = element_text(size = 3.5),
+           strip.text = element_text(size = 4))) + 
+  (plotRCPs_win + ggtitle("Winter") + 
+     theme(plot.title = element_text(size = 8, face = "italic"),
+           legend.position = "none",
+           axis.text = element_text(size = 3.5),
+           strip.text = element_text(size = 4))) + 
+  (plotRCPs + ggtitle("Spring") + 
+     theme(plot.title = element_text(size = 8, face = "italic"),
+           axis.text = element_text(size = 3.5),
+           strip.text = element_text(size = 4),
+           legend.key.size = unit(0.3, 'cm'),
+           legend.text = element_text(size = 4),
+           legend.title = element_text(size = 5))) + 
+  patchwork::plot_layout(ncol = 4)
+
+ggsave(figS5.2_prob_pred, 
+       filename = "./results/FigS5_2_prob-pred-NegBin.png",
+       height = 8, width = 20, units = "cm", dpi = 300)
+
+rm("plotRCPs_sum", "plotRCPs_aut", "plotRCPs_win", "plotRCPs",
+   "figS5.1_prob_pred", "figS5.2_prob_pred")
+
+## FIGURE S6 ----------------------------------------------------------------- # ----- PARTIAL PLOTS
+
+## --------------------- S6.1 Bernoulli ------------------------------------- ##
+
+## ---------------------- S6.2 NegBin --------------------------------------- ##
+##      Note: I'm overwriting previous objects by using the same names
+
+
+
+
+## FIGURE S7 ----------------------------------------------------------------- #
+
+## --------------------- S7.1 Bernoulli ------------------------------------- ##
+
+load("./results/Bernoulli/Bernoulli_summer_07_species-profiles-ggplot.rda")
+plot_spp_profiles_CI_sum <- plot_spp_profiles_CI
+
+load("./results/Bernoulli/Bernoulli_autumn_07_species-profiles-ggplot.rda")
+plot_spp_profiles_CI_aut <- plot_spp_profiles_CI
+
+load("./results/Bernoulli/Bernoulli_winter_07_species-profiles-ggplot.rda")
+plot_spp_profiles_CI_win <- plot_spp_profiles_CI
+
+load("./results/Bernoulli/Bernoulli_spring_07_species-profiles-ggplot.rda")
+
+figS7.1_spp_profiles <-
+  ((plot_spp_profiles_CI_sum + 
+      ggtitle("Summer") + theme(plot.title = element_text(size = 8, face = "italic"),
+                                strip.text = element_text(size = 6),
+                                axis.text.x = element_text(size = 5),
+                                axis.text.y = element_text(size = 6),
+                                axis.title.x = element_text(size = 6))) + 
+     (plot_spp_profiles_CI_aut + 
+        ggtitle("Autumn") + theme(plot.title = element_text(size = 8, face = "italic"),
+                                  strip.text = element_text(size = 6),
+                                  axis.text.x = element_text(size = 5),
+                                  axis.text.y = element_text(size = 6),
+                                  axis.title.x = element_text(size = 6)))) /
+  ((plot_spp_profiles_CI_win + 
+      ggtitle("Winter") + theme(plot.title = element_text(size = 8, face = "italic"),
+                                strip.text = element_text(size = 6),
+                                axis.text.x = element_text(size = 5),
+                                axis.text.y = element_text(size = 6),
+                                axis.title.x = element_text(size = 6))) +
+     (plot_spp_profiles_CI + 
+        ggtitle("Spring") + theme(plot.title = element_text(size = 8, face = "italic"),
+                                  strip.text = element_text(size = 6),
+                                  axis.text.x = element_text(size = 5),
+                                  axis.text.y = element_text(size = 6),
+                                  axis.title.x = element_text(size = 6))))
+
+ggsave(figS7.1_spp_profiles, 
+       filename = "./results/FigS7_1_spp-profiles-Bernoulli.png",
+       height = 15, width = 20, units = "cm", dpi = 300)
+
+## ---------------------- S7.2 NegBin --------------------------------------- ##
+##      Note: I'm overwriting previous objects by using the same names
+
+load("./results/NegBin/NegBin_summer_07_species-profiles-ggplot.rda")
+plot_spp_profiles_CI_sum <- plot_spp_profiles_CI
+
+load("./results/NegBin/NegBin_autumn_07_species-profiles-ggplot.rda")
+plot_spp_profiles_CI_aut <- plot_spp_profiles_CI
+
+load("./results/NegBin/NegBin_winter_07_species-profiles-ggplot.rda")
+plot_spp_profiles_CI_win <- plot_spp_profiles_CI
+
+load("./results/NegBin/NegBin_spring_07_species-profiles-ggplot.rda")
+
+figS7.2_spp_profiles <-
+  ((plot_spp_profiles_CI_sum + 
+      ggtitle("Summer") + xlab("log(Predicted mean abundance) + Confidence Interval") + 
+      theme(plot.title = element_text(size = 8, face = "italic"),
+            strip.text = element_text(size = 6),
+            axis.text.x = element_text(size = 5),
+            axis.text.y = element_text(size = 6),
+            axis.title.x = element_text(size = 6))) + 
+     (plot_spp_profiles_CI_aut + 
+        ggtitle("Autumn") + xlab("log(Predicted mean abundance) + Confidence Interval") + 
+        theme(plot.title = element_text(size = 8, face = "italic"),
+              strip.text = element_text(size = 6),
+              axis.text.x = element_text(size = 5),
+              axis.text.y = element_text(size = 6),
+              axis.title.x = element_text(size = 6)))) /
+  ((plot_spp_profiles_CI_win + 
+      ggtitle("Winter") + xlab("log(Predicted mean abundance) + Confidence Interval") + 
+      theme(plot.title = element_text(size = 8, face = "italic"),
+            strip.text = element_text(size = 6),
+            axis.text.x = element_text(size = 5),
+            axis.text.y = element_text(size = 6),
+            axis.title.x = element_text(size = 6))) +
+     (plot_spp_profiles_CI + 
+        ggtitle("Spring") + xlab("log(Predicted mean abundance) + Confidence Interval") + 
+        theme(plot.title = element_text(size = 8, face = "italic"),
+              strip.text = element_text(size = 6),
+              axis.text.x = element_text(size = 5),
+              axis.text.y = element_text(size = 6),
+              axis.title.x = element_text(size = 6))))
+
+ggsave(figS7.2_spp_profiles, 
+       filename = "./results/FigS7_2_spp-profiles-NegBin.png",
+       height = 15, width = 20, units = "cm", dpi = 300)
+
+rm("plot_spp_profiles_CI_sum", "plot_spp_profiles_CI_aut", 
+   "plot_spp_profiles_CI_win", "plot_spp_profiles_CI",
+   "figS7.1_spp_profiles", "figS7.2_spp_profiles")
+
+## FIGURE S8 ----------------------------------------------------------------- #
+
+sum <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_summer_07_iNEXT.png") %>% 
+  magick::image_ggplot()
+aut <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_autumn_07_iNEXT.png") %>% 
+  magick::image_ggplot()
+win <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_winter_07_iNEXT.png") %>% 
+  magick::image_ggplot()
+spr <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_spring_07_iNEXT.png") %>% 
+  magick::image_ggplot()
+
+ggsave(
+  gridExtra::grid.arrange(
+    (sum + ggtitle("Summer") + theme(plot.title = element_text(size = 7, face = "italic"))), 
+    (aut + ggtitle("Autumn") + theme(plot.title = element_text(size = 7, face = "italic"))), 
+    (win + ggtitle("Winter") + theme(plot.title = element_text(size = 7, face = "italic"))), 
+    (spr + ggtitle("Spring") + theme(plot.title = element_text(size = 7, face = "italic"))),
+    nrow = 4),
+  filename = "./results/FigS8_iNEXT.png",
+  height = 16, width = 10, units = "cm", dpi = 300
+)
+
+rm("sum", "aut", "win", "spr")
