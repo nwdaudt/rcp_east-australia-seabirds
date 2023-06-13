@@ -185,6 +185,9 @@ for (season_vec in seasons_vec) {
            paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_01_multifit-plot.png"),
          width = 13, height = 6, units = "cm", dpi = 300)
   
+  save("gg_multifitBIC",
+       file = paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_01_multifit-plot-ggplot.rda"))
+  
   ## Save results 'multifit' ------------------------------------------------- #
   save("nRCPs_samp",
        file = paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_01_multifit.rda"))

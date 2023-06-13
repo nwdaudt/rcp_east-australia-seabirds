@@ -1,5 +1,5 @@
 ---
-title: "Probabilistic bioregion models suggest seabird assemblages are linked to the boundary current off eastern Australia"
+title: "Probabilistic bioregion models suggest seabird assemblages are linked to the major boundary current off eastern Australia"
 # "Probabilistic bioregion models suggest seabird assemblages are linked to large scale oceanography off eastern Australia"
 # author: Nicholas W Daudt
 # date: '`r format(Sys.Date())`'
@@ -181,12 +181,12 @@ All models suggested two RCPs as the optimal grouping number, except for P/A-aut
 
 Grid point-predictions are the assignment of the RCP with the highest probability value for a given cell. When predicting RCP onto space, patterns of point-predictions suggest a biogeographic change around \~34°S, with both P/A and abundance models pointing to similar patterns (**Fig. 2**). These patterns are further reinforced when looking at the mean probability along with the lower and upper confidence intervals of predictions (**Fig. 3**, **Fig. S5**), showing that around \~34°S the 'northern' RCP tends to have higher probabilities in coastal regions, whereas the 'southern' RCP spreads northward offshore. The P/A-autumn model (three RCPs) has a similar broad-scale pattern, although the southern RCP is further south, and a strong 'Tasmania/Bass Straight' assemblage seems to appear (**Fig. 2**, **Fig. S5**).
 
-```{r fig2-point-pred, fig.cap = "**FIGURE 2.** Spatialized point predictions for seabird RCP models, by season, based on presence/absence data (top row) and abundance data (bottom row) off eastern Australia. Each cell was assigned to the RCP group with highest probability (i.e. hard-classes).", fig.align = "center", echo = FALSE}
+```{r fig2-point-pred, fig.cap = "**FIGURE 2.** Spatialized point predictions (hard-classes) for seabird Region of Common Profile (RCP) models, by season, based on presence-absence (a) and abundance (b) models off eastern Australia. Each grid was assigned to the RCP group with highest membership probability.", fig.align = "center", echo = FALSE}
 
 knitr::include_graphics("../results/Fig2-point-predictions.png")
 ```
 
-```{r fig3-prob-maps, fig.cap = "**FIGURE 3.** Predicted probabilities of RCP membership in in spring presence/absence (a) and abundance (b) models.", fig.align = "center", echo = FALSE}
+```{r fig3-prob-maps, fig.cap = "**FIGURE 3.** Predicted probabilities of Region of Common Profiles membership for each grid, based on selected covariates (see Table 2) of spring presence-absence (a) and abundance (b) models for seabird assemblages off eastern Australia. Results for other seasons and models can be found in the Supplementary Material.", fig.align = "center", echo = FALSE}
 
 knitr::include_graphics("../results/Fig3-probability-maps-spring.png")
 ```
@@ -194,6 +194,11 @@ knitr::include_graphics("../results/Fig3-probability-maps-spring.png")
 *Relationship with environmental covariates (highlight SST) --**waiting for 'partial plots' (Fig. 4, Fig. S6)***
 
 The broad pattern of two large-scale assemblages is reflected in their species composition. Although there are overlaps between groups, both P/A and abundance models captured typical tropical species in the northern RCP (e.g. boobies *Sula* spp., lesser frigatebird *Fregata ariel*) and typical Southern Ocean species in the southern RCP (e.g. mollymawks *Thalassarche* spp., fairy prion *Pachyptila turtur*) with higher occurrence/number probabilities in their usual habitat (**Fig. 5**, **Fig. S7**). The P/A-autumn model, which had three RCPs, also showed the characteristic taxa representing the 'northern' and 'southern' RCPs. However, the intermediate 'Tasmania/Bass Straight' assemblage showed a mixture of both groups with shy albatross *Thalassarche cauta* and Australasian gannet *Morus serrator* standing out with high probabilities of occurrence.
+
+```{r fig5-spp-profiles, fig.cap = "**FIGURE 5.** Species profiles of seabird assembalges off eastern Australia given by spring presence-absence (a) and abundance (b) Region of Common Profile models. Note that values in (b) are log10 transformed. Results for other seasons and models can be found in the Supplementary Material.", fig.align = "center", echo = FALSE}
+
+knitr::include_graphics("../results/Fig5-spp-profiles-spring.png")
+```
 
 # Discussion
 

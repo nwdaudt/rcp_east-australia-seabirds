@@ -30,6 +30,7 @@ FUN_prob_maps <- function(df = pred_data,
   # Required libraries
   library(dplyr)
   library(ggplot2)
+  library(tidyr)
   library(sf)
   library(classInt)
   library(colorspace)

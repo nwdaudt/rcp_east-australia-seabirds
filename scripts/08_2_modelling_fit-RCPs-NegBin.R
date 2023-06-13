@@ -175,6 +175,9 @@ for (season_vec in seasons_vec) {
            paste0("./results/NegBin/NegBin_", as.character(season_vec), "_01_multifit-plot.png"),
          width = 13, height = 6, units = "cm", dpi = 300)
   
+  save("gg_multifitBIC",
+       file = paste0("./results/NegBin/NegBin_", as.character(season_vec), "_01_multifit-plot-ggplot.rda"))
+  
   ## Save results 'multifit' ------------------------------------------------- #
   save("nRCPs_samp",
        file = paste0("./results/NegBin/NegBin_", as.character(season_vec), "_01_multifit.rda"))
@@ -572,10 +575,22 @@ for (season_vec in seasons_vec) {
           lowerCI = spp_profile_boot_lower$lowerCI,
           upperCI = spp_profile_boot_upper$upperCI)
   
+  rm("spp_profile_boot_mean", "spp_profile_boot_lower", "spp_profile_boot_upper")  
+  
+  if(season_vec == "spring"){
+    # As RCP group colours are depicted from 'south' (RCP1) to 'north' (RCP2),
+    # we had to do a hack here for the species profiles visually agree with 
+    # point-predictions in a meaningful way (basically, swap "RCP1" to "RCP2", and vice-versa)
+    
+    spp_profile_boot <- 
+      spp_profile_boot %>% 
+      dplyr::mutate(rcp = ifelse(rcp == "RCP1", "RCPx", rcp)) %>% 
+      dplyr::mutate(rcp = ifelse(rcp == "RCP2", "RCP1", rcp)) %>% 
+      dplyr::mutate(rcp = ifelse(rcp == "RCPx", "RCP2", rcp))
+  }
+  
   spp_profile_boot$rcp <- factor(spp_profile_boot$rcp, levels = c("RCP1",
                                                                   "RCP2"))
-  
-  rm("spp_profile_boot_mean", "spp_profile_boot_lower", "spp_profile_boot_upper")
   
   ## Plot -------------------------------------------------------------------- #
   plot_spp_profiles_CI <- 
@@ -596,6 +611,10 @@ for (season_vec in seasons_vec) {
          filename = 
            paste0("./results/NegBin/NegBin_", as.character(season_vec), "_07_species-profiles.png"),
          width = 16, height = 8, units = "cm", dpi = 300)
+  
+  # Save ggplot objects
+  save("plot_spp_profiles_CI",
+       file = paste0("./results/NegBin/NegBin_", as.character(season_vec), "_07_species-profiles-ggplot.rda"))
   
   ## Clean environment
   rm("best_model_files", "best_model_boot_files", "season_vec",
@@ -677,7 +696,7 @@ for (season_vec in seasons_vec) {
 }
 
 ## Given the order the RCPs were assigned for 'spring' during modelling,
-# I needed to change 'RCP1' to 'RCP2' and vice-versa, to agree with the 
+# I needed to change 'RCP1' to 'RCP2', and vice-versa, to agree with the 
 # colouring pattern from other seasons
 
 plotRCPs_all <- 
@@ -718,7 +737,7 @@ ggsave(plot = map_point_pred,
 save("map_point_pred",
      file = "./results/NegBin/NegBin_07_RCP-point-predictions-ggplot.rda")
 
-rm("map_point_pred")
+rm("map_point_pred", "plotRCPs_all")
 
 ## Predict and map: Uncertainty ####
 
@@ -779,7 +798,7 @@ for (season_vec in seasons_vec) {
   if(season_vec == "spring" | season_vec == "summer") {
     
     # As RCP group colours are depicted from 'south' (RCP1) to 'north' (RCP2),
-    # we had to do a hack here to the probability maps visually agree with 
+    # we had to do a hack here for the probability maps visually agree with 
     # point-predictions in a meaningful way (basically, swap "RCP1" to "RCP2", and vice-versa)
     
     new_col_names <- c("IDgrid", "lon", "lat", 
@@ -814,7 +833,7 @@ for (season_vec in seasons_vec) {
   
 }
 
-## RCPs ~ env. data [COME BACK HERE AND RUN + TIDY IT UP] ####
+## RCPs ~ env. data ####
 
 # seasons_vec <- c("summer", "autumn", "winter", "spring")
 
