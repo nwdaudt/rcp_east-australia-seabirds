@@ -1,3 +1,3 @@
 "","data_type","season","model","model_specification","bic"
-"1","bernoulli","autumn","full","bat_mean_slope_mean_eke_mean_chl_mean_sst_mean_sss_mean_mld_mean_sst_grad_mean_clim_sst_grad_mean",1184.28605329988
-"2","bernoulli","autumn","best","bat_mean_sst_mean",1147.94132858756
+"1","bernoulli","autumn","full","bat + slope + eke + chl + sst + sss + mld + sst_grad + clim_sst_grad",1184.28605329988
+"2","bernoulli","autumn","best","bat + sst",1147.94132858756

@@ -13,14 +13,15 @@ library(plyr)
 library(dplyr)
 library(tidyr)
 library(tibble)
+library(stringr)
 library(ggplot2)
-library(patchwork)
 library(RColorBrewer)
 library(rnaturalearth)
 # library(devtools)
 # devtools::install_github("skiptoniam/ecomix") # @dev
 library(ecomix)
 library(iNEXT)
+library(patchwork)
 
 ## Data ####
 
@@ -426,11 +427,25 @@ for (season_vec in seasons_vec) {
   # Get it from the 'fit' list
   best_model <- fit[[best_model_name]]
   
+  # Just a tweak on best_model_name, for later on
+  best_model_name_form <- 
+    gsub(best_model_name, pattern = "_mean_", replacement = " + ") %>% 
+    stringr::str_sub(., end = -6)
+  
   # Save the best model object
   save("best_model", 
        file = paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_04_best-model.rda"))
   
   ### Get the 'full model name & full/best model infos
+  full_model_name_form <- 
+    paste(
+      # First, just 'fix' variable names, as all end with "_mean" that doesn't need to be there
+      lapply(env_cols_models_season, gsub, pattern = "_mean", replacement = "")[[season_vec]],
+      # Then, collapse
+      collapse = " + ") %>% 
+    gsub(., pattern = "clim_eke", replacement = "clim_eke_mean")
+  
+  # To get full model' BIC
   full_model_name <- paste(env_cols_models_season[[season_vec]], collapse = "_")
   
   full_and_best_models <- data.frame(
@@ -438,8 +453,8 @@ for (season_vec in seasons_vec) {
     season = rep(season_vec, times = 2),
     model = c("full",
               "best"),
-    model_specification = c(full_model_name,
-                            best_model_name),
+    model_specification = c(full_model_name_form,
+                            best_model_name_form),
     bic = c(fit_BICs[fit_BICs$model==full_model_name,]$bic,
             fit_BICs[fit_BICs$model==best_model_name,]$bic)
   )
@@ -450,8 +465,8 @@ for (season_vec in seasons_vec) {
   ## Clean environment
   rm("season_vec", "fit_files", "fit_BICs", "BIC_min",
      "plot_model_selection_topBIC", "fit",
-     "best_model_name", "best_model",
-     "full_model_name", "full_and_best_models")
+     "best_model_name", "best_model_name_form", "best_model",
+     "full_model_name", "full_model_name_form", "full_and_best_models")
   gc()
 }
 
@@ -1022,7 +1037,7 @@ for (season_vec in seasons_vec) {
   rm("vars", "df", "df_lab", "plot", "season_vec")
 }
 
-## Rarefaction curves iNEXT ####
+## iNEXT ####
 
 # seasons_vec <- c("summer", "autumn", "winter", "spring")
 

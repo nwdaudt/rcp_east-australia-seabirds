@@ -1,3 +1,3 @@
 "","data_type","season","model","model_specification","bic"
-"1","neg_bin","winter","full","bat_mean_slope_mean_eke_mean_sst_mean_sss_mean_mld_mean_sst_grad_mean_clim_sst_grad_mean",3262.44542299631
-"2","neg_bin","winter","best","sst_mean",3234.20926482629
+"1","neg_bin","winter","full","bat + slope + eke + sst + sss + mld + sst_grad + clim_sst_grad",3262.44542299631
+"2","neg_bin","winter","best","sst",3234.20926482629
