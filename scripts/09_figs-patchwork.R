@@ -12,13 +12,6 @@ library(ggplot2)
 library(patchwork)
 library(magick)
 
-## SVG
-
-# https://cran.r-project.org/web/packages/grImport/vignettes/import.pdf
-# grImport 
-
-# https://github.com/m-jahn/fluctuator
-
 ## Figures main text #### 
 
 ## FIGURE 1 ------------------------------------------------------------------ #
@@ -86,24 +79,36 @@ ggsave(fig3_prob_maps_spring,
 
 rm("plotRCPs_Ber", "plotRCPs", "fig3_prob_maps_spring")
 
-## FIGURE 4 ------------------------------------------------------------------ # Partial Plots -- COME BACK HERE!
+## FIGURE 4 ------------------------------------------------------------------ #
 
-# load("./results/Bernoulli/Bernoulli_spring_07_RCP-prob-predictions-ggplot.rda")
-# # As both files were originally names the same ('plotRCPs'), 
-# # create a new object for Bernoulli fig (_Ber)
-# plotRCPs_Ber <- plotRCPs
-# 
-# load("./results/NegBin/NegBin_spring_07_RCP-prob-predictions-ggplot.rda")
-# 
-# fig4_partial_plots_spring <- 
-#   (plotRCPs_Ber + theme(legend.position = "none")) / 
-#   plotRCPs +
-#   patchwork::plot_layout(ncol = 2) +
-#   patchwork::plot_annotation(tag_levels = "a", tag_suffix = ")")
-# 
-# ggsave(fig4_partial_plots_spring, 
-#        filename = "./results/Fig3-probability-maps-spring.png",
-#        height = 9, width = 16, units = "cm", dpi = 300)
+B_spr_bat <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_spring_07_partial-plot-bat.png") %>% 
+  magick::image_ggplot()
+B_spr_sst <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_spring_07_partial-plot-sst.png") %>% 
+  magick::image_ggplot()
+
+B_spr <- B_spr_bat | B_spr_sst
+
+NB_spr_sst <- 
+  magick::image_read("./results/NegBin/NegBin_spring_07_partial-plot-sst.png") %>% 
+  magick::image_ggplot()
+NB_spr_clim_eke_mean <- 
+  magick::image_read("./results/NegBin/NegBin_spring_07_partial-plot-clim-eke-mean.png") %>% 
+  magick::image_ggplot()
+
+NB_spr <- NB_spr_sst | NB_spr_clim_eke_mean
+
+fig4_partial_plots_spring <-
+  B_spr / NB_spr +
+  patchwork::plot_annotation(tag_levels = list(c("a)", "", "b)", "")))
+
+ggsave(fig4_partial_plots_spring,
+       filename = "./results/Fig4_partial-plots-spring.png",
+       height = 11, width = 11, units = "cm", dpi = 300)
+
+rm("B_spr_bat", "B_spr_sst", "NB_spr_sst", "NB_spr_clim_eke_mean",
+   "fig4_partial_plots_spring")
 
 ## FIGURE 5 ------------------------------------------------------------------ #
 
@@ -347,15 +352,139 @@ ggsave(figS5.2_prob_pred,
 rm("plotRCPs_sum", "plotRCPs_aut", "plotRCPs_win", "plotRCPs",
    "figS5.1_prob_pred", "figS5.2_prob_pred")
 
-## FIGURE S6 ----------------------------------------------------------------- # ----- PARTIAL PLOTS
+## FIGURE S6 ----------------------------------------------------------------- #
 
 ## --------------------- S6.1 Bernoulli ------------------------------------- ##
+
+B_sum_1 <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_summer_07_partial-plot-bat.png") %>% 
+  magick::image_ggplot() + 
+  ggtitle("Summer") + theme(plot.title = element_text(size = 4.5, face = "italic"))
+B_sum_2 <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_summer_07_partial-plot-sss.png") %>% 
+  magick::image_ggplot()
+
+B_aut_1 <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_autumn_07_partial-plot-bat.png") %>% 
+  magick::image_ggplot() + 
+  ggtitle("Autumn") + theme(plot.title = element_text(size = 4.5, face = "italic"))
+B_aut_2 <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_autumn_07_partial-plot-sst.png") %>% 
+  magick::image_ggplot()
+
+B_win_1 <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_winter_07_partial-plot-sst.png") %>% 
+  magick::image_ggplot() + 
+  ggtitle("Winter") + theme(plot.title = element_text(size = 4.5, face = "italic"))
+
+B_spr_1 <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_spring_07_partial-plot-bat.png") %>% 
+  magick::image_ggplot() + 
+  ggtitle("Spring") + theme(plot.title = element_text(size = 4.5, face = "italic"))
+B_spr_2 <- 
+  magick::image_read("./results/Bernoulli/Bernoulli_spring_07_partial-plot-sst.png") %>% 
+  magick::image_ggplot()
+
+B_sum <- B_sum_1 + B_sum_2
+B_aut <- B_aut_1 + B_aut_2
+B_win <- B_win_1 #+ patchwork::plot_spacer()
+B_spr <- B_spr_1 + B_spr_2
+
+layout = "
+          AA
+          BB
+          CC
+          DD
+         "
+
+figS6.1_partial_plots_Bernoulli <-
+  B_sum / 
+  B_aut / 
+  B_win /
+  B_spr +
+  patchwork::plot_layout(design = layout)
+
+ggsave(figS6.1_partial_plots_Bernoulli,
+       filename = "./results/FigS6_1_partial-plots-Bernoulli.png",
+       height = 16, width = 10, units = "cm", dpi = 300)
+
+rm("B_sum_1", "B_sum_2", 
+   "B_aut_1", "B_aut_2", 
+   "B_win_1", 
+   "B_spr_1", "B_spr_2", 
+   "B_sum", "B_aut", "B_win", "B_spr",
+   "figS6.1_partial_plots_Bernoulli",
+   "layout")
 
 ## ---------------------- S6.2 NegBin --------------------------------------- ##
 ##      Note: I'm overwriting previous objects by using the same names
 
+NB_sum_1 <- 
+  magick::image_read("./results/NegBin/NegBin_summer_07_partial-plot-bat.png") %>% 
+  magick::image_ggplot() + 
+  ggtitle("Summer") + theme(plot.title = element_text(size = 4.5, face = "italic"))
+NB_sum_2 <- 
+  magick::image_read("./results/NegBin/NegBin_summer_07_partial-plot-sss.png") %>% 
+  magick::image_ggplot()
 
+NB_aut_1 <- 
+  magick::image_read("./results/NegBin/NegBin_autumn_07_partial-plot-bat.png") %>% 
+  magick::image_ggplot() + 
+  ggtitle("Autumn") + theme(plot.title = element_text(size = 4.5, face = "italic"))
+NB_aut_2 <- 
+  magick::image_read("./results/NegBin/NegBin_autumn_07_partial-plot-chl.png") %>% 
+  magick::image_ggplot()
+NB_aut_3 <- 
+  magick::image_read("./results/NegBin/NegBin_autumn_07_partial-plot-sst.png") %>% 
+  magick::image_ggplot()
+NB_aut_4 <- 
+  magick::image_read("./results/NegBin/NegBin_autumn_07_partial-plot-mld.png") %>% 
+  magick::image_ggplot()
+NB_aut_5 <- 
+  magick::image_read("./results/NegBin/NegBin_autumn_07_partial-plot-clim-sst-grad.png") %>% 
+  magick::image_ggplot()
 
+NB_win_1 <- 
+  magick::image_read("./results/NegBin/NegBin_winter_07_partial-plot-sst.png") %>% 
+  magick::image_ggplot() + 
+  ggtitle("Winter") + theme(plot.title = element_text(size = 4.5, face = "italic"))
+
+NB_spr_1 <- 
+  magick::image_read("./results/NegBin/NegBin_spring_07_partial-plot-sst.png") %>% 
+  magick::image_ggplot() + 
+  ggtitle("Spring") + theme(plot.title = element_text(size = 4.5, face = "italic"))
+NB_spr_2 <- 
+  magick::image_read("./results/NegBin/NegBin_spring_07_partial-plot-clim-eke-mean.png") %>% 
+  magick::image_ggplot()
+
+NB_sum <- NB_sum_1 + NB_sum_2
+NB_aut <- (NB_aut_1 + NB_aut_2 + NB_aut_3 + NB_aut_4 + NB_aut_5) + patchwork::plot_layout(ncol = 5)
+NB_win <- NB_win_1 #+ patchwork::plot_spacer()
+NB_spr <- NB_spr_1 + NB_spr_2
+
+layout = "
+          AA###
+          BBBBB
+          CC#DD
+         "
+
+figS6.2_partial_plots_NegBin <-
+  NB_sum / 
+  NB_aut / 
+  NB_win /
+  NB_spr +
+  patchwork::plot_layout(design = layout)
+
+ggsave(figS6.2_partial_plots_NegBin,
+       filename = "./results/FigS6_2_partial-plots-NegBin.png",
+       height = 11, width = 16, units = "cm", dpi = 300)
+
+rm("NB_sum", "NB_sum_1", "NB_sum_2",
+   "NB_aut", "NB_aut_1", "NB_aut_2", "NB_aut_3", "NB_aut_4", "NB_aut_5",
+   "NB_win", "NB_win_1",
+   "NB_spr", "NB_spr_1", "NB_spr_2",
+   "figS6.2_partial_plots_NegBin",
+   "layout")
 
 ## FIGURE S7 ----------------------------------------------------------------- #
 

@@ -858,108 +858,110 @@ for (season_vec in seasons_vec) {
 
 ## RCPs ~ env. data ####
 
+load("./data_out/attributes-scaled-env-data-season.rda")
+
 # seasons_vec <- c("summer", "autumn", "winter", "spring")
 
-## To store data for plot
-plot_data <- data.frame()
-
-## Best model formulas
-best_model_forms <- list()
-
-## Get data for plots
 for (season_vec in seasons_vec) {
   
-  ## Read RCP data ----------------------------------------------------------- #
-  # load("./data_out/rcp-data-season.rda")
-  rcp_data <- rcp_data_seasons[grepl(pattern = as.character(season_vec),
-                                     x = names(rcp_data_seasons))]
-  rcp_data <- rcp_data[[1]]
+  ### Get scale parameters to plot predictors in their original values ------- #
+  scale_params <- 
+    env_data_seasons[stringr::str_detect(names(env_data_seasons), as.character(season_vec))]
   
-  env_vars <- colnames(rcp_data[5:17])
+  scale_params <- scale_params[[1]]
   
-  ## Read best_model --------------------------------------------------------- #
+  mean <- 
+    as.data.frame(attr(scale_params, "scaled:center")) %>% 
+    tibble::rownames_to_column() %>% 
+    dplyr::rename(scaled_center = "attr(scale_params, \"scaled:center\")")
+  
+  sd <- 
+    as.data.frame(attr(scale_params, "scaled:scale")) %>% 
+    tibble::rownames_to_column() %>% 
+    dplyr::rename(scaled_center = "attr(scale_params, \"scaled:scale\")")
+  
+  rm("scale_params")
+  
+  ### Get 'beta.mat' --------------------------------------------------------- #
+  # Read best_model
   best_model_files <- list.files(path = "./results/NegBin", pattern = "_04_best-model.rda$",
                                  full.names = TRUE, recursive = TRUE)
   
   load(best_model_files[grepl(pattern = as.character(season_vec),
                               x = best_model_files)])
   
-  # Get env var(s) name(s) from the selected best model
-  best_model_vars <- as.character(attr(best_model$terms$xterms, which = "variables"))
-  best_model_vars <- best_model_vars[2:length(best_model_vars)]
+  rm("best_model_files")
   
-  name <- as.character(season_vec)
-  best_model_forms[[name]] <- best_model_vars
+  beta.mat <- coef(best_model)$beta
   
-  ## Get point-predictions for RCPs ------------------------------------------ #
-  pred <- predict(best_model)
+  pred_names <- colnames(beta.mat)[2:ncol(beta.mat)]
   
-  ## Read data with original environmental data values 
-  df <- read.csv("./data_out/seabirds_rcp.csv")
+  ### To set 'xlm.real' get 'original' data ---------------------------------- #
+  original_env_values <- 
+    read.csv("./data_out/seabirds_rcp.csv")
   
-  df <- 
-    df %>%
-    dplyr::filter(season == season_vec) %>%
-    dplyr::semi_join(., rcp_data[1], by = "IDgrid") %>%
-    dplyr::select(IDgrid, season, all_of(env_vars)) %>%
-    cbind(., as.data.frame(pred))
+  original_env_values <-
+    original_env_values %>% 
+    dplyr::filter(season == as.character(season_vec)) %>% 
+    dplyr::select(all_of(pred_names))
   
-  ## Return and bind data
-  plot_data <- rbind(plot_data, df)
+  ### Partial plot(s) -------------------------------------------------------- #
   
-  rm("rcp_data_seasons", "rcp_data", "env_vars", "best_model_files", "best_model", 
-     "best_model_vars", "name", "pred", "df", "season_vec")
-  gc()
+  # Set 'predplot' vectors
+  predplot <- list()
+  
+  for (i in 1:length(pred_names)) {
+    plot_vec <- rep(0,length(pred_names))
+    plot_vec[i] <- NA
+    predplot[[i]] <- plot_vec
+    rm("plot_vec", "i")
+  }
+  
+  # Set colour palette
+  if(best_model$nRCP == 2){
+    coluse_pal <- c("#1b9e77", "#d95f02")
+  } else {
+    coluse_pal <- c("#1b9e77", "#d95f02", "#7570b3")
+  }
+  
+  for (i in 1:length(pred_names)) {
+    
+    name <- pred_names[i]
+    
+    png(filename = paste0("./results/NegBin/NegBin_", 
+                          as.character(season_vec), 
+                          "_07_partial-plot-",
+                          gsub(stringr::str_sub(name, end = -6),
+                               pattern = "_", replacement = "-"),
+                          ".png"),
+        width = 12, height = 12, units = "cm", res = 300)
+    
+    FUN_partial_plot(beta.mat = beta.mat, 
+                     predplot = predplot[[i]], 
+                     xlm.real = c(
+                       min(original_env_values[,name], na.rm = TRUE),
+                       max(original_env_values[,name], na.rm = TRUE)
+                     ), 
+                     stand.vals = c(
+                       mean[mean$rowname == name, 2],
+                       sd[sd$rowname == name, 2]
+                     ), 
+                     n = 1001, 
+                     xlb = stringr::str_sub(name, end = -6), 
+                     ylb = "Probability", 
+                     location = "right", 
+                     coluse = coluse_pal)
+    dev.off()
+    
+    rm("name", "i")
+  }
+  
+  rm("mean", "sd", 
+     "best_model", "beta.mat", "pred_names", 
+     "original_env_values", 
+     "predplot", "coluse_pal",
+     "season_vec")
   
 }
 
-## Plot RCP~env.data
-for (season_vec in seasons_vec) {
-  
-  vars <- best_model_forms[[season_vec]]
-  
-  df <- 
-    plot_data %>%
-    dplyr::select(contains("RCP"), all_of(vars))
-  
-  df <- dplyr::select(df, - RCP_3)
-  df <- 
-    df %>%
-    dplyr::rowwise() %>%
-    dplyr::mutate(final_RCP = 
-    factor(
-      names(.)[which.max(dplyr::c_across(cols = starts_with("RCP_")))],
-      levels = c(names(df[1]), names(df[2]))))
-  df$max_value_RCP <- do.call(`pmax`, df[1:2])
-  df <- dplyr::select(df, -starts_with("RCP_"))
-  
-  df <- 
-    df %>%
-    tidyr::pivot_longer(cols = all_of(vars),
-                        names_to = "env_vars",
-                        values_to = "value_env")
-  
-  ### ENVIRONMENTAL DATA LABELS ---------------------------------------- ###
-  # (...)
-  
-  plot <- 
-    ggplot(df, aes(x = value_env, y = max_value_RCP, color = final_RCP)) + 
-    geom_point(size = 1.5, alpha = 0.7) + 
-    scale_color_brewer(palette = "Dark2") +
-    facet_wrap(~env_vars, scales = "free_x") + 
-    geom_smooth(se = FALSE) + 
-    # facet_grid(rows = vars(rcps), cols = vars(env_vars), scales = "free_x") + 
-    ylab("RCP membership probability") + xlab("Environmental gradient") +
-    theme_bw() + 
-    theme(legend.position = "none",
-          strip.text = element_text(face = "bold"))
-  
-  ggsave(plot = plot, 
-         filename = 
-           paste0("./results/NegBin/NegBin_", as.character(season_vec), "_RCP-env-data.png"),
-         #width = 12, height = 12, units = "cm", 
-         dpi = 300)
-  
-  rm("vars", "df", "plot", "season_vec")
-}
-
+rm("env_data_seasons")

@@ -11,9 +11,9 @@ FUN_max1else0 <- function(x) {
   return(x)
 }
 
-# FUN: any RCP assigned for less than "N" sites?
+## FUN: any RCP assigned for less than "N" sites?
 FUN_lessNsites <- function(x, n) {
-  # Apply 'fun_max1_else0' by row, and transpose the matrix to correct format
+  # Apply 'FUN_max1else0' by row, and transpose the matrix to correct format
   b <- t(apply(X = x, MARGIN = 1, FUN = FUN_max1else0))
   # colSum values of the matrix (cols are RCP groups), and if <=n replace with 1
   c <- replace((colSums(b) <= n), (colSums(b) <= n) == TRUE, 1)
@@ -112,3 +112,62 @@ FUN_prob_maps <- function(df = pred_data,
   
   return(rcp_plot)
 }
+
+## FUN: Partial plots 
+## ----- Function written by Matthew R. Schofield
+## ----- Department of Mathematics and Statistics, University of Otago
+FUN_partial_plot = function(beta.mat, 
+                            predplot = c(NA,rep(0,ncol(beta.mat)-2)), 
+                            xlm.real = c(-2,2), 
+                            stand.vals = c(0,1), 
+                            n = 1001, 
+                            xlb = "", 
+                            ylb = "Probability", 
+                            location = "topright", 
+                            coluse = palette()[1:(nrow(beta.mat)+1)]){
+  ## beta.mat is a matrix of beta values.  This is obtained from coef(model)
+  ## predplot is a vector (dimension = # of predictors).  The predictor with NA is that plotted.  The value for all other predictors gives the fixed value of that predictor.
+  ## predplot = c(NA,0) plots the 1st predictor, setting the value of the 2nd predictor to 0.
+  ## xlm.real is a vector of length 2.  It gives the range over which to vary the x value (on the original scale).
+  ## stand.vals is a vector of length 2 that gives the values that define the standardization of the predictor values.  The first argument is the mean.  The second is the standard deviation.
+  ## n is the number of points at which to plot the function (it should be large enough to ensure the lines are smooth)
+  ## xlb is the x label
+  ## ylb is the y label
+  ## location gives the location of the legend (?legend for options)
+  ## coluse is a vector giving the colours of the profiles (defaults to first 3 colours in the palette)
+  
+  npar = ncol(beta.mat)  # number of parameters (includes intercept)
+  nprof = nrow(beta.mat)+1 # number of profiles to plot
+  
+  beta.mat = t(rbind(beta.mat,rep(0,npar)))  # this is a work around to simplify the calculation of the inverse logit function
+  
+  xlm.stand = (xlm.real - stand.vals[1])/stand.vals[2]
+  xuse = seq(from = xlm.stand[1], to = xlm.stand[2], length.out = n) # specifying the range of the x values we are plotting over
+  xuse.real = xuse*stand.vals[2] + stand.vals[1]
+  
+  ## the following code sets up the x matrix (at each point)
+  xmat = matrix(NA,nrow = n, ncol = npar)
+  xmat[,1] = 1 # intercept
+  for(j in 1:(npar-1)){
+    if(is.na(predplot[j])){
+      xmat[,j+1] = xuse
+    } else {
+      xmat[,j+1] = predplot[j]
+    }
+  }
+  
+  ## use matrix algebra to "easily" calculate the inverse logit
+  eta.mat = exp(xmat %*% beta.mat)
+  sum.mat = matrix(rowSums(eta.mat),n,nprof)
+  prob.mat = eta.mat/sum.mat
+  
+  ## plot the output
+  plot(NA,NA,xlim = xlm.real, ylim = c(0,1), xlab = xlb, ylab = ylb)
+  for(j in 1:nprof){
+    lines(xuse.real, prob.mat[,j], col = coluse[j], lwd = 3)
+  }
+  legend(location, legend = paste("RCP",1:nprof), col = coluse, lty = 1, bty = "n")
+  
+}
+
+
