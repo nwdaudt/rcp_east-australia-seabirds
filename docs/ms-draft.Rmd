@@ -1,8 +1,5 @@
 ---
 title: "Probabilistic bioregion models suggest seabird assemblages are linked to the major boundary current off eastern Australia"
-# "Probabilistic bioregion models suggest seabird assemblages are linked to large scale oceanography off eastern Australia"
-# author: Nicholas W Daudt
-# date: '`r format(Sys.Date())`'
 author:
   - Nicholas W. Daudt:
       email: nicholaswdaudt@gmail.com
@@ -34,11 +31,6 @@ abstract: |
   **Results**: All models suggested two large scale assemblages ('northern' and 'southern' assemblages), except for the abundance-autumn model which indicated three groups. Model results seem to agree in a biogeographic barrier at ~32°S, where the East Australian Current mostly dissipates to the east and loses force. Furthermore, sea surface temperature and, in one case, sea surface salinity, were selected in all final models, further indicating close relationship between seabird assemblages and water masses. Results from both data types, presence-absence and counts resulted in similar spatial and species profile patterns.
   **Conclusion**: Two seabird assemblages were clearly identified from RCP models, suggesting the persistence of these groups at temporal and spatial scales. Given the rapid change that the East Australian Current is experiencing, and its importance on driving seabirds' distributions, the methods applied in our study could be replicated in future analyses to assess possible spatial/temporal changes in seabird assemblages, including on its structure.
 output: 
-  # html_document: default
-  # word_document:
-  #   reference_docx: "../docs/docx-template.docx"
-  # officedown::rdocx_document:
-  #   reference_docx: "../docs/docx-template.docx"
   # rticles::sim_article:
   #   keep_tex: TRUE
   bookdown::word_document2:
@@ -60,8 +52,6 @@ csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa
 
 ```{r setup, include = FALSE, echo = FALSE}
 library(gt)
-# library(officedown)
-# library(officer)
 ```
 
 \pagebreak
@@ -70,7 +60,7 @@ library(gt)
 
 Bioregionalization is the discipline that identifies, delimits, characterises, and names biogeographical regions [@vilhena2015; @morrone2018]. Although there is no agreement on the naming systems between proposed regionalizations [but see @ebach2008], the hierarchical nature of bioregions is well recognized [@vilhena2015; @kreft2010]. Thus, bioregions are usually described within geographically larger classifications, such as 'provinces' or 'realms' [@spalding2007; @costello2017]. The delimitation of bioregions is made through identifying sets of species that are endemic or with high levels of co-occurrence, distinct enough from other regions, which is interpreted as a natural representation of common historical and/or ecological processes shaped by physical and biological forces [@kreft2010]. In particular, the identification of bioregions allows the representation of the distribution of multiple species at a given time and space as well as to relate these regions to environmental characteristics. By doing so, bioregions can be interpreted as species assemblages [@lyons2017; @hill2017]. Given these features, bioregions have a fundamental role in conservation biogeography [@whittaker2005], by being used as management units and even shedding light into conservation gaps [@spalding2007].
 
-Seabird assemblages have been described and related to environmental characteristics worldwide. Considering the hierarchical nature of oceanographic processes and its resulting features (**Haury78**), it is not surprising that the distribution of high mobile seabirds are linked differently across scales [@hunt1987]. In the marine environment, large scale oceanographic features (water masses and currents) act as 'biomes' and influence seabird assemblage structure--i.e. the occurrence of species and its relative numerical composition [@ribic1997; @hyrenbach2007; @commins2014]. On the other hand, at smaller scales, local abundance is related to temporary processes that aggregate prey and therefore predators, such as fronts and eddies [@weimerskirch2007; @scales2014]. Such smaller-scale processes, although ephemeral, are primarily driven by physical and atmospheric forces and are thus somewhat predictable in space and time, providing consistent feeding areas for marine predators when they occur [@davoren2013; @hazen2013]. Noticeably, sea surface temperature is a key driver of distribution of many seabird species, at individual- and assemblage-levels, as well as at large (water masses) and smaller (fronts) scales [@dunlop1988; @ribic1997; @quillfeldt2015]. Nonetheless, many regions still lack information regarding multiple seabird species distribution and how they assemble in space and time.
+Seabird assemblages have been described and related to environmental characteristics worldwide. Considering the hierarchical nature of oceanographic processes and its resulting features [@haury1978patterns], it is not surprising that the distribution of high mobile seabirds are linked differently across scales [@hunt1987]. In the marine environment, large scale oceanographic features (water masses and currents) act as 'biomes' and influence seabird assemblage structure--i.e. the occurrence of species and its relative numerical composition [@ribic1997; @hyrenbach2007; @commins2014]. On the other hand, at smaller scales, local abundance is related to temporary processes that aggregate prey and therefore predators, such as fronts and eddies [@weimerskirch2007; @scales2014]. Such smaller-scale processes, although ephemeral, are primarily driven by physical and atmospheric forces and are thus somewhat predictable in space and time, providing consistent feeding areas for marine predators when they occur [@davoren2013; @hazen2013]. Noticeably, sea surface temperature is a key driver of distribution of many seabird species, at individual- and assemblage-levels, as well as at large (water masses) and smaller (fronts) scales [@dunlop1988; @ribic1997; @quillfeldt2015]. Nonetheless, many regions still lack information regarding multiple seabird species distribution and how they assemble in space and time.
 
 One such area that could benefit from better understanding of seabird distributions is eastern Australia, considered a world seabird hotspot [@karpouzi2007; @ramírez2017]. Surprisingly, however, there are not many studies on seabird distribution relative to the region's relevance for this group [@mott2018; @bernard2021]. Off northwest Australia, at-sea surveys, multivariate analyses [@dunlop1988] and ensemble species distribution models [@lavers2014] of species assemblages have shown that preferential habitat use of tropical species are related to sea surface temperature and salinity, as well as indicated the importance of the continental shelf for some species. In particular, @dunlop1988 suggests that salinity is the main variable influencing species distribution in oceanic waters whereas temperature would be the key factor on the continental shelf. On the other hand, off eastern Australia, there is a scarcity of studies at larger scales. @reid2000 and @evans2021a analysed seabird assemblages and their relationship with oceanography and prey data, however at coarse scale (tens of km), off southeast Tasmania. At a multi-species, assemblage-level, the latter studies seem to be the only ones on eastern Australia; other studies were mostly descriptive species accounts at local scale [@norman1992distribution; @blaber1994distribution], or focused on a single species [@priddel2014].
 
@@ -88,9 +78,11 @@ The EAC originates from the South Equatorial Current (SEC), a tropical, nutrient
 
 Seabird data were gathered aboard RV Investigator and RV Falkor during 15 voyages, between 2016--2021, over \~37° of latitude (**Fig. 1b**; **Table S1**). One observer continuously recorded seabirds within a 300-m forward quadrant (eye height **18-m, Eric?** a.s.l) throughout daylight hours while the ship was underway at a constant speed. Species, the number of birds and behaviour were logged directly onto a data entry system through a ship-based web server. Individual records received a date/time/geographic coordinate label (multi-species records have the same label but are logged as separate entries for each species) **(Eric: is there any ref for the protocol?)**.
 
-```{r fig1-study-area, fig.cap = "**FIGURE 1.** Study area showing the main ocean currents (a), and seabird records by season on top of the 1° latitude × 1° longitude grid cells (b). In (a), the East Australian Current (EAC) system is highlighted with its acronyms in bold and drawn in blue color. The EAC system originates from the South Equatorial Current (SEC) and its branches, North Caledonian Jet (NCJ) and South Caledonian Jet (SCJ), drawn in red. The EAC 'eastern extension' is an eddy field (blue shaded area) often mentioned as the 'Tasman Front', from which the East Auckland Current originates (EAUC, in green). Figure (a) is adapted after Oke, Roughan, et al. (2019); for colour references see the online version.", fig.align = "center", echo = FALSE}
+```{r fig1-study-area, fig.cap = "**FIGURE 1.** Study area showing the main ocean currents (a), and seabird records made by season on top of the 1° latitude × 1° longitude grid cells (b). In (a), the East Australian Current (EAC) system is highlighted with its acronyms in bold and drawn in blue color. The EAC system originates from the South Equatorial Current (SEC) and its branches, North Caledonian Jet (NCJ) and South Caledonian Jet (SCJ), drawn in red. The EAC 'eastern extension' is an eddy field (blue shaded area) often mentioned as the 'Tasman Front', from which the East Auckland Current originates (EAUC, in green). Figure (a) is adapted after Oke, Roughan, et al. (2019); for colour references see the online version.", fig.align = "center", echo = FALSE}
 
-knitr::include_graphics("../results/Fig1_study-area-w-oceanogr.png")
+# knitr::include_graphics("../results/Fig1_study-area-w-oceanogr.png")
+
+knitr::include_graphics("../EDA/Fig1-study-area-raw-counts.png")
 ```
 
 To explain and predict species distribution and biogeography, a thoughtful choice of covariates is important [@barbet-massin2014]. We used seven oceanographic variables and calculated three climatic layers from them, and three physiographical variables (**Table 1**). These variables are the most used in seabird-environment relationship studies [@tremblay2009], capturing processes at a range of scales from large-scale water-mass properties (e.g. sea surface temperature) to increased predictability of prey availability in mesoscale oceanographic features (e.g. fronts and eddies; @weimerskirch2007; @scales2014). Seabird records were matched with the best open-access, remote-sensed or interpolated data available, and distance from the coast was calculated in R software (see details below).
@@ -101,7 +93,7 @@ data.frame(
   Variable = c("Sea Surface Temperature", "Sea Surface Temperature gradient", "Sea Surface Salinity", "Mixed Layer Depth", "8-day average Chlorophyll-a", "Log10 8-day average Chlorophyll-a", "Eddy Kinetic Energy", "Climatic mean EKE", "Climatic standard deviation EKE", "Climatic mean SSTgrad", "Bathymetry", "Slope", "Distance from coast"),
   Abbreviation = c("sst", "sstgrad", "sss", "mld", "chl8", "log10_chl8", "eke", "clim_eke", "clim_ekesd", "clim_sstgrad", "bat", "slope", "dist_coast"),
   Units = c("°Celsius", "delta-°Celsius", "PSU", "m", "mg/m^3", "log10(chl8)", "m/s", "mean(m/s)/season/10 years", "sd(m/s)/season/10 years", "mean(delta-°Celsius)/season/10 years", "m", "degrees", "km"),
-  `Spatial resolution` = c("0.25° × 0.25°", "0.25° × 0.25°", "0.083° × 0.083°", "0.083° × 0.083°", "0.036° × 0.036°", "0.036° × 0.036°", "cf", "cf", "cf", "0.25° × 0.25°", "cf", "cf", "NA"),
+  `Spatial resolution` = c("0.25° × 0.25°", "0.25° × 0.25°", "0.083° × 0.083°", "0.083° × 0.083°", "0.036° × 0.036°", "0.036° × 0.036°", "0.2° × 0.2°", "0.2° × 0.2°", "0.2° × 0.2°", "0.25° × 0.25°", "0.004° × 0.004°", "0.004° × 0.004°", "NA"),
   `Temporal resolution` = c("daily", "daily", "daily", "daily", "8-days composite", "8-days composite", "daily", "seasonal climatology", "seasonal climatology", "seasonal climatology", "NA", "NA", "NA"),
   Source = c("Huang et al. (2021)", "Derived from Huang et al. (2021)", "E.U. Copernicus Marine Service Information", "E.U. Copernicus Marine Service Information", "ERDDAP/NOAA", "Derived from ERDDAP/NOAA", "IMOS/AODN", "Derived from IMOS/AODN", "Derived from IMOS/AODN", "Derived from Huang et al. (2021)", "GEBCO", "Derived from GEBCO", "Calculated in R (see main text)")
 ) |>
@@ -161,41 +153,84 @@ We built a seasonal 10-year (2011--2021) average layer for predicting model resu
 
 Additionally, to investigate if the amount of information used to run the RCP models was representative, we ran rarefaction curves based on the P/A matrix and the assigned RCP P/A group for each sample (grid). Rarefaction curves were fit using the `iNEXT` package [@chao2014; @hsieh2016], and results are presented based on alpha diversity (i.e. species richness).
 
-<!-- summer \~ bat+slope+eke+sst+sss+mld+sst_grad -->
-
-<!-- autumn \~ bat+slope+eke+chl+sst+sss+mld+sst_grad+clim_sst_grad -->
-
-<!-- winter \~ bat+slope+eke+sst+sss+mld+sst_grad+clim_sst_grad -->
-
-<!-- spring \~ bat+slope+dist_coast+eke+chl+sst+sss+mld+sst_grad+clim_sst_grad+clim_eke_mean -->
-
 # Results
 
 ## Summary of species richness and numbers
 
-A total of 10,261 seabird records were obtained. They summed to 142,646 individuals from 80 species, belonging to 11 families and five orders. The five most abundant species summed 83% of total birds counted (43.0% *Ardenna tenuirostris*, 17.2% *Pachyptila turtur*, 14.3% *Ardenna pacifica*, 5.2% *Onychoprion fuscatus*, 3.2% *Thalassarche cauta*), whereas the five most frequent species were *Ardenna pacifica* (frequency of occurrence = 35.3%), *Thalassarche cauta* (33.2%), *Sula leucogaster* (25.4%), *Sula sula* (25.4%) and *Thalassarche melanophris* (25%) (**Fig. S1 - FO/nOCC/FN**). An increase in species richness towards the south was clear in all but the winter season (**Fig S2. - spp richness/total abund**). Noticeably higher counts were made around Tasmania, possibly due to the 'colony effect' (**Fig. S2**). However, one cell in the Coral Sea summed to numbers of the same order of magnitude as off Tasmania in summer.
+A total of 10,261 seabird records were obtained. They summed to 142,646 individuals from 80 species, belonging to 11 families and five orders. The five most abundant species summed 83% of total birds counted (43.0% *Ardenna tenuirostris*, 17.2% *Pachyptila turtur*, 14.3% *Ardenna pacifica*, 5.2% *Onychoprion fuscatus*, 3.2% *Thalassarche cauta*), whereas the five most frequent species were *Ardenna pacifica* (frequency of occurrence = 35.3%), *Thalassarche cauta* (33.2%), *Sula leucogaster* (25.4%), *Sula sula* (25.4%) and *Thalassarche melanophris* (25%) (**Fig. S1**). An increase in species richness towards the south was clear in all but the winter season (**Fig S2**). Noticeably higher counts were made around Tasmania, possibly due to the 'colony effect' (**Fig. S2**). However, one cell in the Coral Sea summed to numbers of the same order of magnitude as off Tasmania in summer.
 
 ## RCP models
 
-All models suggested two RCPs as the optimal grouping number, except for P/A-autumn, which indicated three RCPs as the best fit (**Fig S3. - multifit plots**). The best fitting models generally had **1--3** covariates selected, although the abundance-autumn model had five covariates (**Table 2 - full-model/selected model**). All the best models selected SST or SSS, variables essential for characterising water masses. The best models show a good fit with no apparent deviances in assumptions (**Fig. S4 - residuals**).
+All models suggested two RCPs as the optimal grouping number, except for P/A-autumn, which indicated three RCPs as the best fit (**Fig S3**). The best fitting models generally had 1--2 covariates selected, although the abundance-autumn model had five covariates (**Table 2**). All the best models selected SST or SSS, variables essential for characterising water masses. The best models show a good fit with no apparent deviances in assumptions (**Fig. S4**).
+
+```{r table2, echo = FALSE, message = FALSE}
+
+df <- 
+  rbind(
+    list.files(path = "../results/Bernoulli", pattern = "*04_full_and_best_models.csv", full.names = TRUE),
+    list.files(path = "../results/NegBin", pattern = "*04_full_and_best_models.csv", full.names = TRUE)) %>% 
+  purrr::map_df(~readr::read_csv(.)) %>% 
+  dplyr::select(- `...1`) %>% 
+  dplyr::mutate(data_type = factor(data_type, levels = c("bernoulli", "neg_bin")),
+                season = factor(season, levels = c("summer", "autumn", "winter", "spring")),
+                model = factor((ifelse(model == "full", "a", "b")), levels = c("a", "b")),
+                bic = round(bic, digits = 2)) %>%
+  dplyr::group_by(data_type) %>% 
+  dplyr::arrange(data_type, season) %>% 
+  as.data.frame(.) %>% 
+  dplyr::ungroup(.)
+
+# Correct a value in a cell
+# Full abundance-autumn model did not fit properly, returning a value of -Inf
+df[df$data_type=='neg_bin' & df$season=='autumn' & df$model=='a',]$bic <- "-Inf (n.f.)"
+
+# A few tweaks to make the table look better
+df$data_type <- c("Bernoulli", rep("", 7), "Negative Binomial", rep("", 7))
+df$season <- rep(c("Summer", "", "Autumn", "", "Winter", "", "Spring", ""), 2)
+
+gt::gt(df)|>
+  ## Improve cols names
+  gt::cols_label(
+    data_type = gt::md("**Data type**"),
+    season = gt::md("**Season**"),
+    model = gt::md(" "),          ## To be excluded in the Word doc
+    model_specification = gt::md("**Model specification**"), 
+    bic = gt::md("**BIC**")) |>
+  ## Table title
+  gt::tab_header(title = gt::md("**TABLE 2.** Full (a) and best (b) Region of Common Profile Models applied to seabird data off eastern Australia, for both data types used (presence-absence, based on a Bernoulli error distribution; abundance, based on a Negative Binomial error distribution)"))
+
+rm("df")
+## Can't figure out why this code below doesn't work...
+# kableExtra::kbl(df, booktabs = T, align = "l", linesep = "") %>% 
+#   kableExtra::column_spec(1, bold=T) %>%
+#   kableExtra::collapse_rows(columns = c(1:3), 
+#                             latex_hline = 'custom', 
+#                             custom_latex_hline = 1:3, 
+#                             row_group_label_position = 'stack')
+```
 
 Grid point-predictions are the assignment of the RCP with the highest probability value for a given cell. When predicting RCP onto space, patterns of point-predictions suggest a biogeographic change around \~34°S, with both P/A and abundance models pointing to similar patterns (**Fig. 2**). These patterns are further reinforced when looking at the mean probability along with the lower and upper confidence intervals of predictions (**Fig. 3**, **Fig. S5**), showing that around \~34°S the 'northern' RCP tends to have higher probabilities in coastal regions, whereas the 'southern' RCP spreads northward offshore. The P/A-autumn model (three RCPs) has a similar broad-scale pattern, although the southern RCP is further south, and a strong 'Tasmania/Bass Straight' assemblage seems to appear (**Fig. 2**, **Fig. S5**).
 
-```{r fig2-point-pred, fig.cap = "**FIGURE 2.** Spatialized point predictions (hard-classes) for seabird Region of Common Profile (RCP) models, by season, based on presence-absence (a) and abundance (b) models off eastern Australia. Each grid was assigned to the RCP group with highest membership probability.", fig.align = "center", echo = FALSE}
+```{r fig2-point-pred, fig.cap = "**FIGURE 2.** Spatialized point predictions (hard-classes) for seabird assemblages (Region of Common Profile; RCP), by season, based on presence-absence (a) and abundance (b) models, off eastern Australia. Each grid was assigned to the RCP group with highest membership probability.", fig.align = "center", echo = FALSE}
 
 knitr::include_graphics("../results/Fig2-point-predictions.png")
 ```
 
-```{r fig3-prob-maps, fig.cap = "**FIGURE 3.** Predicted probabilities of Region of Common Profiles membership for each grid, based on selected covariates (see Table 2) of spring presence-absence (a) and abundance (b) models for seabird assemblages off eastern Australia. Results for other seasons and models can be found in the Supplementary Material.", fig.align = "center", echo = FALSE}
+```{r fig3-prob-maps, fig.cap = "**FIGURE 3.** Predicted probability membership of for each seabird assemblage (Region of Common Profiles; RCP) and grid, off eastern Australia, from spring presence-absence (a) and abundance (b) models. The central column, 'mean', corresponds to the point prediction and Bayesian bootstraped, lower and upper confidence intervals (CI), on its sides. Results for other seasons and models can be found in the Supplementary Material.", fig.align = "center", echo = FALSE}
 
 knitr::include_graphics("../results/Fig3-probability-maps-spring.png")
 ```
 
 *Relationship with environmental covariates (highlight SST) --**waiting for 'partial plots' (Fig. 4, Fig. S6)***
 
+```{r fig4-partial-plots, fig.cap = "**FIGURE 4.**  Results for other seasons and models can be found in the Supplementary Material.", fig.align = "center", echo = FALSE}
+
+knitr::include_graphics("../results/Fig4_partial-plots-spring.png")
+```
+
 The broad pattern of two large-scale assemblages is reflected in their species composition. Although there are overlaps between groups, both P/A and abundance models captured typical tropical species in the northern RCP (e.g. boobies *Sula* spp., lesser frigatebird *Fregata ariel*) and typical Southern Ocean species in the southern RCP (e.g. mollymawks *Thalassarche* spp., fairy prion *Pachyptila turtur*) with higher occurrence/number probabilities in their usual habitat (**Fig. 5**, **Fig. S7**). The P/A-autumn model, which had three RCPs, also showed the characteristic taxa representing the 'northern' and 'southern' RCPs. However, the intermediate 'Tasmania/Bass Straight' assemblage showed a mixture of both groups with shy albatross *Thalassarche cauta* and Australasian gannet *Morus serrator* standing out with high probabilities of occurrence.
 
-```{r fig5-spp-profiles, fig.cap = "**FIGURE 5.** Species profiles of seabird assembalges off eastern Australia given by spring presence-absence (a) and abundance (b) Region of Common Profile models. Note that values in (b) are log10 transformed. Results for other seasons and models can be found in the Supplementary Material.", fig.align = "center", echo = FALSE}
+```{r fig5-spp-profiles, fig.cap = "**FIGURE 5.** Species profiles of seabird assembalges (Region of Common Profile; RCP) off eastern Australia for spring presence-absence (a) and abundance (b) models. Values are the average and confidence intervals of probability of occurrence (a) and predicted mean abundance (b) for each species, based on 1000 Bayesian bootstraps. Values in (b) were log10-transformed to accomodate the high variation between species. Results for other seasons and models can be found in the Supplementary Material.", fig.align = "center", echo = FALSE}
 
 knitr::include_graphics("../results/Fig5-spp-profiles-spring.png")
 ```
@@ -206,7 +241,7 @@ This study shows that seabird assemblages off eastern Australia relate to oceano
 
 ## Limitations {#limitations}
 
-Although the results suggest consistent patterns, we should point out some caveats of our analyses. Seabird data were gathered opportunistically while taking part on several projects, whose sampling design were not planned to account for seabird spatial ecology specifically. As a result, there are spatial discontinuities on the dataset, which might have limited the ability of our models to detect the relationships between assemblages and environmental predictors more robustly. Even though Australia is a hotspot for seabirds [@karpouzi2007; @ramírez2017], there is not much information regarding seabird distribution to date [@mott2018; @bernard2021]. Dedicated seabird effort could thus benefit future studies advancing seabird research in this region, as well as improving patterns described here. By increasing the amount of data, future studies could set the grid cells at higher resolution, and potentially reveal assemblages at a finer scale. In addition, ideally, we could have had more information within each grid cell by season (our sampling units). Nonetheless, rarefaction curves show that the sample coverage [see @chao2012] was high at the RCP level, although there is room for detecting more species on most of them (**Fig S8 - rarefaction curves**).
+Although the results suggest consistent patterns, we should point out some caveats of our analyses. Seabird data were gathered opportunistically while taking part on several projects, whose sampling design were not planned to account for seabird spatial ecology specifically. As a result, there are spatial discontinuities on the dataset, which might have limited the ability of our models to detect the relationships between assemblages and environmental predictors more robustly. Even though Australia is a hotspot for seabirds [@karpouzi2007; @ramírez2017], there is not much information regarding seabird distribution to date [@mott2018; @bernard2021]. Dedicated seabird effort could thus benefit future studies advancing seabird research in this region, as well as improving patterns described here. By increasing the amount of data, future studies could set the grid cells at higher resolution, and potentially reveal assemblages at a finer scale. In addition, ideally, we could have had more information within each grid cell by season (our sampling units). Nonetheless, rarefaction curves show that the sample coverage [see @chao2012] was high at the RCP level, although there is room for detecting more species on most of them (**Fig S8**).
 
 ## Seabird bioregions off eastern Australia
 
