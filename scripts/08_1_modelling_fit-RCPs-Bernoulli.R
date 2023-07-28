@@ -969,7 +969,9 @@ for (season_vec in seasons_vec) {
                      xlb = stringr::str_sub(name, end = -6), 
                      ylb = "Probability", 
                      location = "right", 
-                     coluse = coluse_pal)
+                     coluse = coluse_pal,
+                     model = "pres_abs",
+                     season = season_vec)
     dev.off()
     
     rm("name", "i")

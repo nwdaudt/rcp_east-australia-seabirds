@@ -21,7 +21,7 @@ install.packages("pacman")
 
 needed_libraries <- c("plyr", "dplyr", "tidyr", "readr", "tibble",
                       "lubridate", "stringr", "purrr", 
-                      "ggplot2", "ggspatial", "patchwork", "RColorBrewer", "rnaturalearth", 
+                      "ggplot2", "ggspatial", "patchwork", "RColorBrewer", "colorspace", "rnaturalearth", 
                       "sp", "sf", "mapview", "raster", "terra", "rerddap", "rerddapXtracto", "tmap", 
                       "corrplot", "iNEXT")
 

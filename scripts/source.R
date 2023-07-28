@@ -124,7 +124,9 @@ FUN_partial_plot = function(beta.mat,
                             xlb = "", 
                             ylb = "Probability", 
                             location = "topright", 
-                            coluse = palette()[1:(nrow(beta.mat)+1)]){
+                            coluse = palette()[1:(nrow(beta.mat)+1)],
+                            model = c("pres_abs", "abund"), 
+                            season = c("summer", "autumn", "winter", "spring")){
   ## beta.mat is a matrix of beta values.  This is obtained from coef(model)
   ## predplot is a vector (dimension = # of predictors).  The predictor with NA is that plotted.  The value for all other predictors gives the fixed value of that predictor.
   ## predplot = c(NA,0) plots the 1st predictor, setting the value of the 2nd predictor to 0.
@@ -135,6 +137,8 @@ FUN_partial_plot = function(beta.mat,
   ## ylb is the y label
   ## location gives the location of the legend (?legend for options)
   ## coluse is a vector giving the colours of the profiles (defaults to first 3 colours in the palette)
+  ## model is the type of the specified model -- only needed because for a specific model, we need to swap colours/labels
+  ## season is respective season -- only needed because for a specific model, we need to swap colours/labels
   
   npar = ncol(beta.mat)  # number of parameters (includes intercept)
   nprof = nrow(beta.mat)+1 # number of profiles to plot
@@ -161,12 +165,17 @@ FUN_partial_plot = function(beta.mat,
   sum.mat = matrix(rowSums(eta.mat),n,nprof)
   prob.mat = eta.mat/sum.mat
   
-  ## plot the output
-  plot(NA,NA,xlim = xlm.real, ylim = c(0,1), xlab = xlb, ylab = ylb)
-  for(j in 1:nprof){
-    lines(xuse.real, prob.mat[,j], col = coluse[j], lwd = 3)
+  if(model == "abund" & season == "spring"){
+    prob.mat <- prob.mat[nrow(prob.mat):1, ]
   }
-  legend(location, legend = paste("RCP",1:nprof), col = coluse, lty = 1, bty = "n")
+  
+  ## plot the output
+  plot(NA,NA,xlim = xlm.real, ylim = c(0,1), xlab = toupper(xlb), ylab = ylb,
+       cex.lab = 1.5, cex.axis = 1)
+  for(j in 1:nprof){
+    lines(xuse.real, prob.mat[,j], col = coluse[j], lwd = 4)
+  }
+  legend(location, legend = paste("RCP", 1:nprof), col = coluse, lty = 1, bty = "n")
   
 }
 

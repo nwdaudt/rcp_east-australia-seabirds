@@ -7,6 +7,9 @@
 ## This code implements RCP models, 
 ## using count data based on 'Negative Binomial' error distribution.
 
+## Note: To keep colour congruence between all visualizations, 
+## for the *spring* results, I had to swap 'RCP1' / 'RCP2' labels.
+
 ## Libraries ####
 
 library(plyr)
@@ -821,8 +824,8 @@ for (season_vec in seasons_vec) {
   if(season_vec == "spring" | season_vec == "summer") {
     
     # As RCP group colours are depicted from 'south' (RCP1) to 'north' (RCP2),
-    # we had to do a hack here for the probability maps visually agree with 
-    # point-predictions in a meaningful way (basically, swap "RCP1" to "RCP2", and vice-versa)
+    # I had to do a hack here for the probability maps visually agree with 
+    # point-predictions in a meaningful way (basically, swap "RCP1" / "RCP2")
     
     new_col_names <- c("IDgrid", "lon", "lat", 
                        "RCP_2", "RCP_1", 
@@ -950,7 +953,9 @@ for (season_vec in seasons_vec) {
                      xlb = stringr::str_sub(name, end = -6), 
                      ylb = "Probability", 
                      location = "right", 
-                     coluse = coluse_pal)
+                     coluse = coluse_pal,
+                     model = "abund",
+                     season = season_vec)
     dev.off()
     
     rm("name", "i")
