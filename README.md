@@ -9,7 +9,7 @@ In this study, we run Region of Common Profile (RCP) models to identify and desc
 ***
 ## Project structure
 
-Workspace is set as follows, and we used an .Rproj file to wrap it.
+Workspace is set as follows:
 
 ```shell
 review_plastic-waterbirds_Brazil
@@ -22,9 +22,7 @@ review_plastic-waterbirds_Brazil
 │   ├── rcp-data-season.rda
 │   └── pred-data-seasons.rda
 ├── ./EDA
-│   └── Exploratory Data Analysis plots (mostly .png plots)
 ├── ./results
-│   ├── Main results (.png and .csv files)
 │   ├── ./Bernoulli
 │   └── ./NegBin
 ├── ./scripts
@@ -50,7 +48,8 @@ review_plastic-waterbirds_Brazil
 └── rcp_east-australia-seabirds.Rproj
 ```
 
-In `data_out` you will find the data needed to reproduce the analysis (for details, please check the manuscript).
+In `./data_out`, you will find the data needed to reproduce the analysis (for details, please check the manuscript).
+
 * `grids_0.5-2.rda` = a list of spatial objects (`sf`) with different squared grid sizes, from 0.5° to 2° latitude x longitude;
 * `attributes-scaled-env-data-season.rda` = a list giving the attributes (mean and sd) used to scale environmental data, for each season;
 * `rm_spp-season_vec.rda` = a list with species name to remove, given the number of minimum occurrence threshold we have used, for each season;
@@ -58,18 +57,20 @@ In `data_out` you will find the data needed to reproduce the analysis (for detai
 * **`rcp-data-season.rda`** = a list with the final dataset to use in the models, for each season;
 * **`pred-data-seasons.rda`** = a list with the final environmental dataset to predict the models, for each season.
 
-In `EDA` you will find exploratory data analysis plots.
+In `./EDA`, you will find exploratory data analysis plots (mostly .png files).
 
-In `results` you will find in the root directory the main figures presented within the manuscript and supplementary material, and in the folders `./Bernoulli` and `./NegBin` the specific results for each model and their graphical outputs.
+In `./results`, you will find in the root directory the main figures presented within the manuscript and supplementary material (.png and .csv files), and in the folders `./Bernoulli` and `./NegBin` the specific results for each model and their graphical outputs.
 
-In `scripts` you will find all scripts needed to run the analyses and create the outputs from them.
+In `./scripts`, you will find all scripts needed to run the analyses and create the outputs.
 
-In `docs` you will find the files needed to render the manuscript. Note: A few *formatting* tweaks were made by hand, but the content is the same.
+In `./docs`, you will find the files needed to render the manuscript. Note: A few *formatting* tweaks were made by hand.
+
+We used an R-project to wrap the environment around, `rcp_east-australia-seabirds.Rproj`. 
 
 ***
 ## How to run
 
-You should be able to reproduce all results using scrips in `scripts` and files from `data_out`. The `./scripts/README.md` file will guide you through each step.
+You should be able to reproduce all results using scrips in `./scripts` and files from `./data_out`. The `./scripts/README.md` file will guide you through each step.
 
 A heads up -- you will need R **4.2.0** and then make sure to `renv::restore()` to load the project environment with the same package versions.
 
@@ -78,9 +79,11 @@ A heads up -- you will need R **4.2.0** and then make sure to `renv::restore()` 
 
 [Nicholas W. Daudt](https://github.com/nwdaudt). **& Skip?**
 
+Any bugs, suggestions, or enquires, please feel free to contact NWD or open an issue.
+
 ***
 ## Citation
-Please refer to the original article if using any piece of this repository (code and/or data). This repository is under CC BY 4.0 license.
+Please refer to the original paper if using any piece of this repository (code and/or data). This repository is under CC BY 4.0 license.
 
 Daudt, N.W.; Woehler, E.J.; **Woolley, S.N.C.**; Schofield, M.R.; Smith, R.O.; Bugoni, L.; Rayment, W.J. Seabird assemblages are linked to the major western boundary current off eastern Australia. (*in prep*)
 
