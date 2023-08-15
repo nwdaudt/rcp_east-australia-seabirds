@@ -12,7 +12,7 @@ In this study, we run Region of Common Profile (RCP) models to identify and desc
 Workspace is set as follows:
 
 ```shell
-review_plastic-waterbirds_Brazil
+rcp_east-australia-seabirds
 ├── README.md
 ├── ./data_out
 │   ├── grids_0.5-2.rda
