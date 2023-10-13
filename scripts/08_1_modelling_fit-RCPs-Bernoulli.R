@@ -635,14 +635,15 @@ for (season_vec in seasons_vec) {
     ylab("") + xlab("Probability of Occurrence + Confidence Interval") +
     theme_bw() +
     theme(legend.position = "none",
-          axis.title = element_text(size = 8),
-          axis.text = element_text(size = 7),
+          axis.title = element_text(size = 7),
+          axis.text.x = element_text(size = 7),
+          axis.text.y = element_text(size = 7.2),
           strip.text = element_text(size = 8))
   
   ggsave(plot = plot_spp_profiles_CI, 
          filename = 
            paste0("./results/Bernoulli/Bernoulli_", as.character(season_vec), "_07_species-profiles.png"),
-         width = 16, height = 8, units = "cm", dpi = 300)
+         width = 16, height = 10, units = "cm", dpi = 300)
   
   # Save ggplot objects
   save("plot_spp_profiles_CI",
@@ -748,11 +749,11 @@ map_point_pred <-
   geom_sf(data = plotRCPs_all, aes(fill = final_RCP)) + 
   coord_sf(xlim = c(140, 161), ylim = c(-9, -48)) +
   scale_x_continuous(breaks = c(140, 150, 160)) +
-  scale_fill_brewer(palette = "Dark2", name = "Hard-class RCP") + 
+  scale_fill_brewer(palette = "Dark2", name = "Hard-class RCP:") + 
   facet_wrap(~season, ncol = 4) + 
-  theme(legend.position = "right",
-        legend.title = element_text(size = 9),
-        legend.text = element_text(size = 7.5),
+  theme(legend.position = "bottom",
+        legend.title = element_text(size = 6),
+        legend.text = element_text(size = 6),
         legend.key.size = unit(0.5, "cm"),
         axis.text = element_text(size = 6))
 

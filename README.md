@@ -1,6 +1,6 @@
 # Seabird assemblages are linked to the major western boundary current off eastern Australia
 
-Here you will find all data and code needed to reproduce the results from Daudt et al. (*in prep*). 
+Here you will find all data and code needed to reproduce the results from [Daudt et al. (*in prep*)](https://github.com/nwdaudt/rcp_east-australia-seabirds#citation). 
 
 A hard version of this repository **will be** archived at Zenodo.
 
@@ -77,7 +77,7 @@ A heads up -- you will need R **4.2.0** and then make sure to `renv::restore()` 
 ***
 ## Contributors
 
-[Nicholas W. Daudt](https://github.com/nwdaudt). **& Skip?**
+[Nicholas W. Daudt](https://github.com/nwdaudt)
 
 Any bugs, suggestions, or enquires, please feel free to contact NWD or open an issue.
 
@@ -85,6 +85,6 @@ Any bugs, suggestions, or enquires, please feel free to contact NWD or open an i
 ## Citation
 Please refer to the original paper if using any piece of this repository (code and/or data). This repository is under CC BY 4.0 license.
 
-Daudt, N.W.; Woehler, E.J.; **Woolley, S.N.C.**; Schofield, M.R.; Smith, R.O.; Bugoni, L.; Rayment, W.J. Seabird assemblages are linked to the major western boundary current off eastern Australia. (*in prep*)
+Daudt, N.W.; Woehler, E.J.; Schofield, M.R.; Smith, R.O.; Bugoni, L.; Rayment, W.J. Seabird assemblages are linked to the major western boundary current off eastern Australia. (*in prep*)
 
 Thanks!

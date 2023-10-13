@@ -33,6 +33,9 @@ ggsave(fig1_study_area,
        filename = "./results/Fig1_study-area-w-oceanogr.png",
        height = 10, width = 20, units = "cm", dpi = 300)
 
+## The quality of this plot was not great. So I ended up using a .svg version
+## that I put both maps together by hand in Inkscape software
+
 ## FIGURE 2 ------------------------------------------------------------------ #
 
 load("./results/Bernoulli/Bernoulli_07_RCP-point-predictions-ggplot.rda")
@@ -53,8 +56,8 @@ fig2_point_pred <-
   patchwork::plot_annotation(tag_levels = "a", tag_suffix = ")")
 
 ggsave(fig2_point_pred, 
-       filename = "./results/Fig2-point-predictions.png",
-       height = 13, width = 15, units = "cm", dpi = 300)
+       filename = "./results/Fig2_point-predictions.png",
+       height = 15, width = 11.5, units = "cm", dpi = 300)
 
 rm("map_point_pred_Ber", "map_point_pred", "fig2_point_pred")
 
@@ -74,7 +77,7 @@ fig3_prob_maps_spring <-
   patchwork::plot_annotation(tag_levels = "a", tag_suffix = ")")
 
 ggsave(fig3_prob_maps_spring, 
-       filename = "./results/Fig3-probability-maps-spring.png",
+       filename = "./results/Fig3_probability-maps-spring.png",
        height = 9, width = 16, units = "cm", dpi = 300)
 
 rm("plotRCPs_Ber", "plotRCPs", "fig3_prob_maps_spring")
@@ -120,14 +123,16 @@ plot_spp_profiles_CI_Ber <- plot_spp_profiles_CI
 load("./results/NegBin/NegBin_spring_07_species-profiles-ggplot.rda")
 
 fig5_spp_profiles <- 
-  (plot_spp_profiles_CI_Ber + xlab("Probability of Occurrence\n + Confidence Interval") + theme(axis.text.y = element_text(size = 5))) / 
-  (plot_spp_profiles_CI + xlab("log(Predicted mean abundance)\n + Confidence Interval") + theme(axis.text.y = element_blank())) +
+  (plot_spp_profiles_CI_Ber + xlab("Probability of Occurrence\n + Confidence Interval") + theme(axis.text.y = element_text(size = 8),
+                                                                                                axis.title.x = element_text(size = 7.5))) / 
+  (plot_spp_profiles_CI + xlab("log(Predicted mean abundance)\n + Confidence Interval") + theme(axis.text.y = element_blank(),
+                                                                                                axis.title.x = element_text(size = 7.5))) +
   patchwork::plot_layout(ncol = 2) +
   patchwork::plot_annotation(tag_levels = "a", tag_suffix = ")")
 
 ggsave(fig5_spp_profiles, 
-       filename = "./results/Fig5-spp-profiles-spring.png",
-       height = 9, width = 16, units = "cm", dpi = 300)
+       filename = "./results/Fig5_spp-profiles-spring.png",
+       height = 12, width = 16, units = "cm", dpi = 300)
 
 rm("plot_spp_profiles_CI_Ber", "plot_spp_profiles_CI", "fig5_spp_profiles")
 
