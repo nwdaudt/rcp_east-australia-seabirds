@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  17 OCT 2023 17:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  17 OCT 2023 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,7 +626,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
 (Font)              using `T1/lmr/bx/n' instead on input line 132.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 134.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 135.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -635,56 +635,56 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [1
 
 
-{/home/nicholas/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+{/home/nicholas/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[3]
+[2{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [3] [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[4] [5]
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
-
-[6{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [7] [8]
+[5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[9] [10]
+[6] [7]
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 264.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 264.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 264.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 264.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 264.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 264.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 264.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 264.
+
+[8]
+Underfull \vbox (badness 1389) has occurred while \output is active []
+
+[9{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[11]
+[10] [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[12] [13]
-Underfull \vbox (badness 1708) has occurred while \output is active []
-
-[14]
+[12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[13] [14]
+Underfull \vbox (badness 4060) has occurred while \output is active []
 
-[16]
+[15] [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [17]
@@ -708,90 +708,96 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [23]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[24] [25] [26]
-Overfull \hbox (27.20743pt too wide) in paragraph at lines 717--744
+[24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[26] [27] [28] [29]
+Overfull \hbox (27.20743pt too wide) in paragraph at lines 791--818
  [][] 
  []
 
-[27
+[30
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.746 \end{landscape}
-                     ] [28
+l.820 \end{landscape}
+                     ] [31
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.815 \begin{landscape}
+l.889 \begin{landscape}
                        ]
-<../EDA/Fig1-study-area-raw-counts.png, id=555, 433.8609pt x 286.4301pt>
+<../EDA/Fig1-study-area-raw-counts.png, id=594, 433.8609pt x 286.4301pt>
 File: ../EDA/Fig1-study-area-raw-counts.png Graphic file (type png)
 <use ../EDA/Fig1-study-area-raw-counts.png>
-Package pdftex.def Info: ../EDA/Fig1-study-area-raw-counts.png  used on input line 819.
+Package pdftex.def Info: ../EDA/Fig1-study-area-raw-counts.png  used on input line 893.
 (pdftex.def)             Requested size: 650.43pt x 429.45177pt.
-[29
+[32
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.826 \end{landscape}
+l.900 \end{landscape}
                       <../EDA/Fig1-study-area-raw-counts.png>]
-<../results/Fig4_partial-plots-spring.png, id=562, 312.9291pt x 312.9291pt>
+<../results/Fig4_partial-plots-spring.png, id=601, 312.9291pt x 312.9291pt>
 File: ../results/Fig4_partial-plots-spring.png Graphic file (type png)
 <use ../results/Fig4_partial-plots-spring.png>
-Package pdftex.def Info: ../results/Fig4_partial-plots-spring.png  used on input line 832.
+Package pdftex.def Info: ../results/Fig4_partial-plots-spring.png  used on input line 906.
 (pdftex.def)             Requested size: 469.75499pt x 469.78401pt.
-<../results/Fig2_point-predictions.png, id=563, 327.1422pt x 426.6339pt>
+<../results/Fig2_point-predictions.png, id=602, 327.1422pt x 426.6339pt>
 File: ../results/Fig2_point-predictions.png Graphic file (type png)
 <use ../results/Fig2_point-predictions.png>
-Package pdftex.def Info: ../results/Fig2_point-predictions.png  used on input line 843.
+Package pdftex.def Info: ../results/Fig2_point-predictions.png  used on input line 917.
 (pdftex.def)             Requested size: 516.73335pt x 673.91792pt.
 
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 843--844
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 917--918
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 43.38235pt on input line 848.
+LaTeX Warning: Float too large for page by 43.38235pt on input line 922.
 
-[30
+[33
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.852 \begin{landscape}
-                        <../results/Fig4_partial-plots-spring.png>] [31
+l.926 \begin{landscape}
+                        <../results/Fig4_partial-plots-spring.png>] [34
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.852 \begin{landscape}
+l.926 \begin{landscape}
                         <../results/Fig2_point-predictions.png>]
-<../results/Fig3_probability-maps-spring.png, id=573, 455.0601pt x 255.8358pt>
+<../results/Fig3_probability-maps-spring.png, id=611, 455.0601pt x 255.8358pt>
 File: ../results/Fig3_probability-maps-spring.png Graphic file (type png)
 <use ../results/Fig3_probability-maps-spring.png>
-Package pdftex.def Info: ../results/Fig3_probability-maps-spring.png  used on input line 856.
+Package pdftex.def Info: ../results/Fig3_probability-maps-spring.png  used on input line 930.
 (pdftex.def)             Requested size: 715.47696pt x 402.2916pt.
 
-Overfull \hbox (65.04697pt too wide) in paragraph at lines 856--857
+Overfull \hbox (65.04697pt too wide) in paragraph at lines 930--931
  [][] 
  []
 
-<../results/Fig5_spp-profiles-spring.png, id=574, 455.0601pt x 341.3553pt>
+<../results/Fig5_spp-profiles-spring.png, id=612, 455.0601pt x 341.3553pt>
 File: ../results/Fig5_spp-profiles-spring.png Graphic file (type png)
 <use ../results/Fig5_spp-profiles-spring.png>
-Package pdftex.def Info: ../results/Fig5_spp-profiles-spring.png  used on input line 867.
+Package pdftex.def Info: ../results/Fig5_spp-profiles-spring.png  used on input line 941.
 (pdftex.def)             Requested size: 650.43pt x 487.96767pt.
 
-LaTeX Warning: Float too large for page by 38.1071pt on input line 872.
+LaTeX Warning: Float too large for page by 38.1071pt on input line 946.
 
-[32
+[35
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.874 \end{landscape}
-                      <../results/Fig3_probability-maps-spring.png>] [33
+l.948 \end{landscape}
+                      <../results/Fig3_probability-maps-spring.png>] [36
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.874 \end{landscape}
+l.948 \end{landscape}
                       <../results/Fig5_spp-profiles-spring.png>]
 No file ms_preprint.bbl.
 (./ms_preprint.aux)
@@ -803,21 +809,21 @@ L3 programming layer <2023-10-10>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `ms_preprint.out' has not changed.
-(rerunfilecheck)             Checksum: B153F41C2E1647A790956693EF7BE4F1;2775.
+(rerunfilecheck)             Checksum: 0B34505009CAA336398F853E8C740588;3127.
  ) 
 Here is how much of TeX's memory you used:
- 14288 strings out of 476464
- 228518 string characters out of 5801643
- 1945040 words of memory out of 5000000
- 35302 multiletter control sequences out of 15000+600000
- 616094 words of font info for 180 fonts, out of 8000000 for 9000
+ 14321 strings out of 476464
+ 228951 string characters out of 5801643
+ 1944040 words of memory out of 5000000
+ 35310 multiletter control sequences out of 15000+600000
+ 616730 words of font info for 188 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,13n,79p,2110b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ms_preprint.pdf (33 pages, 1293418 bytes).
+Output written on ms_preprint.pdf (36 pages, 1304899 bytes).
 PDF statistics:
- 692 PDF objects out of 1000 (max. 8388607)
- 617 compressed objects within 7 object streams
- 214 named destinations out of 1000 (max. 500000)
- 29362 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 734 PDF objects out of 1000 (max. 8388607)
+ 656 compressed objects within 7 object streams
+ 223 named destinations out of 1000 (max. 500000)
+ 29386 words of extra memory for PDF output out of 29859 (max. 10000000)
 
