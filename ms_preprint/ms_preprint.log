@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  13 OCT 2023 18:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  17 OCT 2023 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -280,23 +280,54 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen167
 \Gin@req@width=\dimen168
-)
-\cslhangindent=\skip66
-\csllabelwidth=\skip67
-\cslentryspacingunit=\skip68
-(/home/nicholas/.TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip66
+\LTright=\skip67
+\LTpre=\skip68
+\LTpost=\skip69
+\LTchunksize=\count280
+\LTcapwidth=\dimen169
+\LT@head=\box52
+\LT@firsthead=\box53
+\LT@foot=\box54
+\LT@lastfoot=\box55
+\LT@gbox=\box56
+\LT@cols=\count281
+\LT@rows=\count282
+\c@LT@tables=\count283
+\c@LT@chunks=\count284
+\LT@p@ftn=\toks24
+) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen170
+\ar@mcellbox=\box57
+\extrarowheight=\dimen171
+\NC@list=\toks25
+\extratabsurround=\skip70
+\backup@length=\skip71
+\ar@cellbox=\box58
+) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count280
-\calc@Bcount=\count281
-\calc@Adimen=\dimen169
-\calc@Bdimen=\dimen170
-\calc@Askip=\skip69
-\calc@Bskip=\skip70
+\calc@Acount=\count285
+\calc@Bcount=\count286
+\calc@Adimen=\dimen172
+\calc@Bdimen=\dimen173
+\calc@Askip=\skip72
+\calc@Bskip=\skip73
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count282
-\calc@Cskip=\skip71
-) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
+\calc@Ccount=\count287
+\calc@Cskip=\skip74
+) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box59
+\fn@width=\dimen174
+)
+\cslhangindent=\skip75
+\csllabelwidth=\skip76
+\cslentryspacingunit=\skip77
+(/home/nicholas/.TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -308,53 +339,26 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
    defining Unicode char U+0394 (decimal 916)
-(/home/nicholas/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip72
-\LTright=\skip73
-\LTpre=\skip74
-\LTpost=\skip75
-\LTchunksize=\count283
-\LTcapwidth=\dimen171
-\LT@head=\box52
-\LT@firsthead=\box53
-\LT@foot=\box54
-\LT@lastfoot=\box55
-\LT@gbox=\box56
-\LT@cols=\count284
-\LT@rows=\count285
-\c@LT@tables=\count286
-\c@LT@chunks=\count287
-\LT@p@ftn=\toks24
-) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/tools/array.sty
-Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen172
-\ar@mcellbox=\box57
-\extrarowheight=\dimen173
-\NC@list=\toks25
-\extratabsurround=\skip76
-\backup@length=\skip77
-\ar@cellbox=\box58
-) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+(/home/nicholas/.TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip78
 \multirow@cntb=\count288
 \multirow@dima=\skip79
-\bigstrutjot=\dimen174
+\bigstrutjot=\dimen175
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen175
-\WF@size=\dimen176
+\wrapoverhang=\dimen176
+\WF@size=\dimen177
 \c@WF@wrappedlines=\count289
-\WF@box=\box59
+\WF@box=\box60
 \WF@everypar=\toks26
 Package: wrapfig 2003/01/31  v 3.6
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count290
 \float@exts=\toks27
-\float@box=\box60
+\float@box=\box61
 \@float@everytoks=\toks28
-\@floatcapt=\box61
+\@floatcapt=\box62
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/graphics/color.sty
@@ -371,10 +375,10 @@ Package color Info: Driver file: pdftex.def on input line 149.
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box62
+\@vwid@box=\box63
 \sift@deathcycles=\count292
-\@vwid@loff=\dimen177
-\@vwid@roff=\dimen178
+\@vwid@loff=\dimen178
+\@vwid@roff=\dimen179
 )
 \c@taburow=\count293
 \tabu@nbcols=\count294
@@ -382,25 +386,25 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabu@Xcol=\count296
 \tabu@alloc=\count297
 \tabu@nested=\count298
-\tabu@target=\dimen179
-\tabu@spreadtarget=\dimen180
-\tabu@naturalX=\dimen181
-\tabucolX=\dimen182
-\tabu@Xsum=\dimen183
-\extrarowdepth=\dimen184
-\abovetabulinesep=\dimen185
-\belowtabulinesep=\dimen186
-\tabustrutrule=\dimen187
+\tabu@target=\dimen180
+\tabu@spreadtarget=\dimen181
+\tabu@naturalX=\dimen182
+\tabucolX=\dimen183
+\tabu@Xsum=\dimen184
+\extrarowdepth=\dimen185
+\abovetabulinesep=\dimen186
+\belowtabulinesep=\dimen187
+\tabustrutrule=\dimen188
 \tabu@thebody=\toks30
 \tabu@footnotes=\toks31
-\tabu@box=\box63
-\tabu@arstrutbox=\box64
-\tabu@hleads=\box65
-\tabu@vleads=\box66
+\tabu@box=\box64
+\tabu@arstrutbox=\box65
+\tabu@hleads=\box66
+\tabu@vleads=\box67
 \tabu@cellskip=\skip81
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box67
+\@tempboxb=\box68
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/environ/environ.sty
@@ -412,19 +416,19 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \TPTL@width=\skip82
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box68
-\UL@hyphenbox=\box69
+\UL@box=\box69
+\UL@hyphenbox=\box70
 \UL@skip=\skip83
 \UL@hook=\toks33
-\UL@height=\dimen188
+\UL@height=\dimen189
 \UL@pe=\count299
-\UL@pixel=\dimen189
-\ULC@box=\box70
+\UL@pixel=\dimen190
+\ULC@box=\box71
 Package: ulem 2019/11/18
-\ULdepth=\dimen190
+\ULdepth=\dimen191
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen191
+\rotheadsize=\dimen192
 \c@nlinenum=\count300
 \TeXr@lab=\toks34
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -445,34 +449,34 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 118.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 128.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-10-10 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count301
-\l__pdf_internal_box=\box71
+\l__pdf_internal_box=\box72
 ) (./ms_preprint.aux)
 \openout1 = `ms_preprint.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -539,26 +543,26 @@ LaTeX Font Info:    ... okay on input line 118.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 118.
+Package hyperref Info: Link coloring OFF on input line 128.
 (./ms_preprint.out) (./ms_preprint.out)
 \@outlinefile=\write3
 \openout3 = `ms_preprint.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 118.
-Package microtype Info: Applying patch `item' on input line 118.
-Package microtype Info: Applying patch `toc' on input line 118.
-Package microtype Info: Applying patch `eqnum' on input line 118.
+LaTeX Info: Redefining \microtypecontext on input line 128.
+Package microtype Info: Applying patch `item' on input line 128.
+Package microtype Info: Applying patch `toc' on input line 128.
+Package microtype Info: Applying patch `eqnum' on input line 128.
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 118.
+Package microtype Warning: Unable to apply patch `footnote' on input line 128.
 
-Package microtype Info: Applying patch `verbatim' on input line 118.
+Package microtype Info: Applying patch `verbatim' on input line 128.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 118.
+LaTeX Info: Redefining \showhyphens on input line 128.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -576,41 +580,41 @@ Package microtype Info: Character `029' is missing
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 120.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 130.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 120.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 130.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 120.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 130.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 120.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 130.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 120.
+(Font)              <10> on input line 130.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 120.
+(Font)              <7> on input line 130.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 120.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 120.
+(Font)              <5> on input line 130.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 130.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 120.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 130.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 120.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 130.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -620,9 +624,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 122.
+(Font)              using `T1/lmr/bx/n' instead on input line 132.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 126.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 134.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -639,28 +643,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [4] [5]
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 400.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
 
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 400.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
 
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 400.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
 
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 400.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
 
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 407.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
 
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 407.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
 
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 407.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
 
 
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 407.
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 193.
 
 [6{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [7] [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -705,7 +709,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [24] [25] [26]
-Overfull \hbox (27.20743pt too wide) in paragraph at lines 1804--1831
+Overfull \hbox (27.20743pt too wide) in paragraph at lines 717--744
  [][] 
  []
 
@@ -713,82 +717,82 @@ Overfull \hbox (27.20743pt too wide) in paragraph at lines 1804--1831
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1833 \end{landscape}
-                      ] [28
+l.746 \end{landscape}
+                     ] [28
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1902 \begin{landscape}
-                        ]
-<../EDA/Fig1-study-area-raw-counts.png, id=537, 433.8609pt x 286.4301pt>
+l.815 \begin{landscape}
+                       ]
+<../EDA/Fig1-study-area-raw-counts.png, id=555, 433.8609pt x 286.4301pt>
 File: ../EDA/Fig1-study-area-raw-counts.png Graphic file (type png)
 <use ../EDA/Fig1-study-area-raw-counts.png>
-Package pdftex.def Info: ../EDA/Fig1-study-area-raw-counts.png  used on input line 1906.
+Package pdftex.def Info: ../EDA/Fig1-study-area-raw-counts.png  used on input line 819.
 (pdftex.def)             Requested size: 650.43pt x 429.45177pt.
 [29
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1913 \end{landscape}
-                       <../EDA/Fig1-study-area-raw-counts.png>]
-<../results/Fig4_partial-plots-spring.png, id=545, 312.9291pt x 312.9291pt>
+l.826 \end{landscape}
+                      <../EDA/Fig1-study-area-raw-counts.png>]
+<../results/Fig4_partial-plots-spring.png, id=562, 312.9291pt x 312.9291pt>
 File: ../results/Fig4_partial-plots-spring.png Graphic file (type png)
 <use ../results/Fig4_partial-plots-spring.png>
-Package pdftex.def Info: ../results/Fig4_partial-plots-spring.png  used on input line 1919.
+Package pdftex.def Info: ../results/Fig4_partial-plots-spring.png  used on input line 832.
 (pdftex.def)             Requested size: 469.75499pt x 469.78401pt.
-<../results/Fig2_point-predictions.png, id=546, 327.1422pt x 426.6339pt>
+<../results/Fig2_point-predictions.png, id=563, 327.1422pt x 426.6339pt>
 File: ../results/Fig2_point-predictions.png Graphic file (type png)
 <use ../results/Fig2_point-predictions.png>
-Package pdftex.def Info: ../results/Fig2_point-predictions.png  used on input line 1930.
+Package pdftex.def Info: ../results/Fig2_point-predictions.png  used on input line 843.
 (pdftex.def)             Requested size: 516.73335pt x 673.91792pt.
 
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 1930--1931
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 843--844
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 43.38235pt on input line 1935.
+LaTeX Warning: Float too large for page by 43.38235pt on input line 848.
 
 [30
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1939 \begin{landscape}
-                         <../results/Fig4_partial-plots-spring.png>] [31
+l.852 \begin{landscape}
+                        <../results/Fig4_partial-plots-spring.png>] [31
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1939 \begin{landscape}
-                         <../results/Fig2_point-predictions.png>]
-<../results/Fig3_probability-maps-spring.png, id=558, 455.0601pt x 255.8358pt>
+l.852 \begin{landscape}
+                        <../results/Fig2_point-predictions.png>]
+<../results/Fig3_probability-maps-spring.png, id=573, 455.0601pt x 255.8358pt>
 File: ../results/Fig3_probability-maps-spring.png Graphic file (type png)
 <use ../results/Fig3_probability-maps-spring.png>
-Package pdftex.def Info: ../results/Fig3_probability-maps-spring.png  used on input line 1943.
+Package pdftex.def Info: ../results/Fig3_probability-maps-spring.png  used on input line 856.
 (pdftex.def)             Requested size: 715.47696pt x 402.2916pt.
 
-Overfull \hbox (65.04697pt too wide) in paragraph at lines 1943--1944
+Overfull \hbox (65.04697pt too wide) in paragraph at lines 856--857
  [][] 
  []
 
-<../results/Fig5_spp-profiles-spring.png, id=559, 455.0601pt x 341.3553pt>
+<../results/Fig5_spp-profiles-spring.png, id=574, 455.0601pt x 341.3553pt>
 File: ../results/Fig5_spp-profiles-spring.png Graphic file (type png)
 <use ../results/Fig5_spp-profiles-spring.png>
-Package pdftex.def Info: ../results/Fig5_spp-profiles-spring.png  used on input line 1954.
+Package pdftex.def Info: ../results/Fig5_spp-profiles-spring.png  used on input line 867.
 (pdftex.def)             Requested size: 650.43pt x 487.96767pt.
 
-LaTeX Warning: Float too large for page by 38.1071pt on input line 1959.
+LaTeX Warning: Float too large for page by 38.1071pt on input line 872.
 
 [32
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1961 \end{landscape}
-                       <../results/Fig3_probability-maps-spring.png>] [33
+l.874 \end{landscape}
+                      <../results/Fig3_probability-maps-spring.png>] [33
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1961 \end{landscape}
-                       <../results/Fig5_spp-profiles-spring.png>]
+l.874 \end{landscape}
+                      <../results/Fig5_spp-profiles-spring.png>]
 No file ms_preprint.bbl.
 (./ms_preprint.aux)
  ***********
@@ -802,18 +806,18 @@ Package rerunfilecheck Info: File `ms_preprint.out' has not changed.
 (rerunfilecheck)             Checksum: B153F41C2E1647A790956693EF7BE4F1;2775.
  ) 
 Here is how much of TeX's memory you used:
- 14231 strings out of 476464
- 227444 string characters out of 5801643
+ 14288 strings out of 476464
+ 228518 string characters out of 5801643
  1945040 words of memory out of 5000000
- 35248 multiletter control sequences out of 15000+600000
- 616043 words of font info for 180 fonts, out of 8000000 for 9000
+ 35302 multiletter control sequences out of 15000+600000
+ 616094 words of font info for 180 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,13n,79p,1008b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,79p,2110b,536s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ms_preprint.pdf (33 pages, 1293345 bytes).
+Output written on ms_preprint.pdf (33 pages, 1293418 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 604 compressed objects within 7 object streams
+ 692 PDF objects out of 1000 (max. 8388607)
+ 617 compressed objects within 7 object streams
  214 named destinations out of 1000 (max. 500000)
  29362 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -1,0 +1,129 @@
+---
+title: "Supplementary Material"
+subtitle: "Probabilistic bioregion models suggest seabird assemblages are linked to the major boundary current off eastern Australia"
+# author: "Author"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    keep_tex: true
+    # fig_caption: false
+bibliography: ../references.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
+header-includes:
+- \usepackage{pdflscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+library(readr)
+library(dplyr)
+library(purrr)
+library(stringr)
+library(gt)
+```
+
+This document is an accompanying file for **XXXXX et al. (2023) Divers. Distr.**. Briefly, here you will find --
+
+* **List of packages** and version used for data wrangling, visualisation and analyses;
+* **Table S1**: Summary of sampling effort by voyage;
+* **Figure S1**: Number of occurrence, frequency of occurrence (FO), and numeric frequency (NF) by season;
+* **Figure S2**: Species richness and total number of seabirds counted by grid/season;
+* **Figure S3**: Plots for choosing best RCP group number (`multifit`);
+* **Figure S4**: Residual plots from the best fitted models;
+* **Figure S5**: Partial plots for covariates;
+* **Figure S6**: Probability maps from seasonal predictions;
+* **Figure S7**: Species profiles for each season;
+* **Figure S8**: Species-richness and sample-coverage curves.
+
+\newpage
+
+# List of packages
+
+We used the following packages 'plyr' 1.8.8 [@plyr], 'dplyr' 1.1.2 [@dplyr], 'tidyr' 1.3.0 [@tidyr], 'readr' 2.1.4 [@readr], 'tibble' 3.2.1 [@tibble], 'lubridate' 1.9.2 [@lubridate], 'stringr' 1.5.0 [@stringr], 'purrr' 1.0.1 [@purrr], 'ggplot2' 3.4.2 [@ggplot2], 'ggspatial' 1.1.7 [@ggspatial], 'patchwork' 1.1.2 [@patchwork], 'RColorBrewer' 1.1-3 [@rcolorbrewer], 'rnaturalearth' 0.3.2 [@rnaturalearth], 'sp' 1.6-0 [@sp1; @sp2], 'sf' 1.0-8 [@sf], 'mapview' 2.11.0 [@mapview], 'raster' 3.5-21 [@raster], 'terra' 1.6-7 [@terra], 'rerddap' 1.0.2 [@rerddap], 'rerddapXtracto' 1.1.4 [@rerddapXtracto], 'hadsstR' [@hadsstr], 'corrplot' 0.92 [@corrplot2021], and the ones referenced in the main text.
+
+The code is archived in a repository **(Zenodo repo)**, and you can find a detailed walk-through in it.
+
+\newpage
+
+\blandscape
+
+```{r table-S1, echo = FALSE}
+read.csv("../results/tableS1-effort-summary.csv")  %>% 
+  dplyr::select(-X) %>% 
+  gt::gt() %>% 
+  # Tidy-up column labels
+  gt::cols_label(
+    voyage = gt::md("**Voyage**"),
+    date_start = gt::md("**Date start**"),
+    date_end = gt::md("**Date end**"),
+    lat_range = gt::md("**Latitudinal range**"), 
+    lon_range = gt::md("**Longitudinal range**"),
+    no_records = gt::md("**No. of records**"),
+    no_birds = gt::md("**No. of birds**"),
+    no_spp = gt::md("**No. of species**")) %>% 
+  # Table title
+  gt::tab_header(title = gt::md("**TABLE S1.** Summary of seabird sampling effort by voyage, off eastern Australia, during Australasian Seabird Group's ship-based surveys between 2016--2021. Start and finish dates and geographic ranges of each voyage, including the number of seabird records and the number of individuals and species recorded"))
+```
+
+\newpage
+
+![**Figure S1.** Number of occurrences (nOCC), frequency of occurrence (FO) and numeric frequency (NF) of seabirds recorded off eastern Australia during Australasian Seabird Group's ship-based surveys between 2016--2021. The dashed line represents the number of occurrence thresholds (n = 6) each taxon had to match for its inclusion in the seasonal models (see *Methods* in the main text). Species are ordered from the largest to the lowest total number of occurrences.](../results/FigS1_spp-nOCC-FO-NF-seasons.png)
+
+\elandscape
+
+\newpage
+
+![**Figure S2.** Species richness and the total number of seabirds counted off eastern Australia during Australasian Seabird Group's ship-based surveys between 2016--2021, by grid/season, after data aggregation (see *Methods* in the main text). Dots represent the grid centroids.](../results/FigS2_map-effort-spp-richness-and-total-birds-seasons.png)
+
+\newpage
+
+![**Figure S3.1.** Multifit plot for Region of Common Profiles (RCP) for each seasonal presence-absence model, applied to seabirds off eastern Australia. The number of groups with the lowest BIC value indicates the best number of groups (assemblages) that describes the data. For each number of groups, we ran 100 models with random starting values to avoid getting stuck in an incorrect 'optima' (see *Methods* in the main text). The resulting plot also shows how many groups were 'empty' (colour scale) with 'five or less' or 'only one' sites assigned to an RCP, i.e. the model was fit with, say, 5 groups, but 3 of them had 'five or less' or 'only one' sites (grids) allocated to an RCP.](../results/FigS3_1_multifit-Bernoulli.png)
+
+\newpage
+
+![**Figure S3.2.** Multifit plot for Region of Common Profiles (RCP) for each seasonal abundance (count) model, applied to seabirds off eastern Australia. The number of groups with the lowest BIC value indicates the best number of groups (assemblages) that describes the data. For each number of groups, we ran 100 models with random starting values to avoid getting stuck in an incorrect 'optima' (see *Methods* in the main text). The resulting plot also shows how many groups were 'empty' (colour scale) with 'five or less' or 'only one' sites assigned to an RCP, i.e. the model was fit with, say, 5 groups, but 3 of them had 'five or less' or 'only one' sites (grids) allocated to an RCP.](../results/FigS3_2_multifit-NegBin.png)
+
+\newpage
+
+![**Figure S4.1.** Best model residuals for each seasonal presence-absence Region of Common Profile model, applied to seabirds off eastern Australia.](../results/FigS4_1_best-model-residuals-Bernoulli.png)
+
+\newpage
+
+![**Figure S4.2.** Best model residuals for each seasonal abundance (count) Region of Common Profile model, applied to seabirds off eastern Australia.](../results/FigS4_2_best-model-residuals-NegBin.png)
+
+\newpage
+
+![**Figure S5.1.** Partial plots for the retained covariates in the best seasonal models based on presence-absence data. The plot shows the probability of belonging to a Region of Common Profiles (RCP) against the environmental value. Refer to Table 1 in the main text for the environmental data acronyms.](../results/FigS6_1_partial-plots-Bernoulli.png)
+
+\newpage
+
+\blandscape
+
+![**Figure S5.2.** Partial plots for the retained covariates in the best seasonal models based on abundance data. The plot shows the probability of belonging to a Region of Common Profiles (RCP) against the environmental value. Refer to Table 1 in the main text for the environmental data acronyms.](../results/FigS6_2_partial-plots-NegBin.png)
+
+\newpage
+
+![**Figure S6.1.** Predicted probability membership of for each seabird assemblage (Region of Common Profiles; RCP) and grid, off eastern Australia, from presence-absence models. The central column, 'mean', corresponds to the point prediction and Bayesian bootstraped, lower and upper confidence intervals (CI), on its sides.](../results/FigS5_1_prob-pred-Bernoulli.png)
+
+\newpage
+
+![**Figure S6.2.** Predicted probability membership of for each seabird assemblage (Region of Common Profiles; RCP) and grid, off eastern Australia, from abundance (count) models. The central column, 'mean', corresponds to the point prediction and Bayesian bootstraped, lower and upper confidence intervals (CI), on its sides.](../results/FigS5_2_prob-pred-NegBin.png)
+
+\newpage
+
+![**Figure S7.1.** Species profiles for each assemblage (Region of Common Profiles; RCP) for each seasonal presence-absence model. Values are the average and confidence intervals of probability of occurrence for each species, based on 1000 Bayesian bootstraps. ](../results/FigS7_1_spp-profiles-Bernoulli.png)
+
+\newpage
+
+![**Figure S7.2.** Species profiles for each assemblage (Region of Common Profiles; RCP) for each seasonal abundance (count) model. Values are the average and confidence intervals of predicted mean abundance for each species, based on 1000 Bayesian bootstraps. Values were log10-transformed to accommodate the high variation between species.](../results/FigS7_2_spp-profiles-NegBin.png)
+
+\elandscape
+
+\newpage
+
+![**Figure S8.** Diversity curve (alpha diversity) and sample coverage for each assemblage (Region of Common Profile; RCP) from each presence-absence seasonal model.](../results/FigS8_iNEXT.png)
+
+\newpage
+
+# References
