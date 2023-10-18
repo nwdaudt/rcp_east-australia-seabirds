@@ -107,6 +107,9 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{setspace}\doublespacing
+\usepackage[left]{lineno}
+\newcommand{\blinenumbers}{\begin{linenumbers}}
+\newcommand{\elinenumbers}{\end{linenumbers}}
 \usepackage{pdflscape}
 \DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
 \newcommand{\blandscape}{\begin{landscape}}
@@ -132,7 +135,7 @@
 \begin{abstract}
 \textbf{Aim:} To identify assemblages of seabird species and relate them to environmental conditions off eastern Australia, a world seabird hotspot.
 \textbf{Location:} East coast of Australia.
-\textbf{Methods:} We used 15 seabird at-sea ship-based survey data collected over 37° of latitude, from 2016 to 2021, and fitted Region of Common Profile (RCP) mixture models for each season and type of data (presence-absence and abundance). RCP groups are defined as a set of regions where the probability of encountering a specific species profile is constant within regions, but different amongst them. These groups also vary according to covariates, which in our case included oceanographic, climatic, and physiographic parameters.
+\textbf{Methods:} We used 15 seabird at-sea ship-based survey data sets collected over 37° of latitude, from 2016 to 2021, and fitted Region of Common Profile (RCP) mixture models for each season and type of data (presence-absence and abundance). RCP groups are defined as a set of regions where the probability of encountering a specific species profile is constant within regions, but different amongst them. These groups also vary according to covariates, which in our case included oceanographic, climatic, and physiographic parameters.
 \textbf{Results:} Based on 142,646 seabirds recorded, from 80 species, all models suggested two macro-scale assemblages (`northern' and `southern'), except for the autumn presence-absence model that identified three groups. The model results consistently show a biogeographic transition at \textasciitilde34°S, near the latitude at which the East Australian Current separates from the Australian continental slope. Sea surface temperatures or sea surface salinities were selected in all final models, further indicating a close relationship between seabird assemblages and water masses. Results from both data types, presence-absence and abundance, resulted in similar spatial and species profile patterns.
 \textbf{Main conclusions:} RCP models clearly identified two seabird assemblages off the east coast of Australia, suggesting the persistence of these groups at seasonal and macro spatial scales. Given the rapid climatic changes that the East Australian Current is experiencing and its importance in influencing distributions of seabirds, the methods applied in our study could be replicated to assess possible changes in seabird assemblages, and how they are affected by changing environmental conditions.
 \end{abstract}
@@ -181,9 +184,9 @@ We thank all observers who assisted in data collection, the crews of RV \emph{In
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Data availability statement:} The gridded data used as the basis for all analyses is available in the archived repository along with the code to reproduce the results. The raw data are currently being used for other projects and thus can not be publicly available. If you are interested in the raw data, please get in touch with EJW.
+\textbf{Data availability statement:} The gridded data used as the basis for all analyses are available in the archived repository along with the code to reproduce the results. The raw data are currently being used for other projects and thus can not be publicly available. If you are interested in the raw data, please get in touch with Eric J. Woehler.
 
-\textbf{Funding statement:} \ldots\ldots\ldots{}\textbf{Eric - any specific funding(s) we need to acknowledge?}
+\textbf{Funding statement:} Parks Australia provided funding support to participants for selected voyages.
 
 \textbf{Conflict of interest disclosure:} The authors declare no conflict of interest.
 
@@ -196,6 +199,8 @@ We thank all observers who assisted in data collection, the crews of RV \emph{In
 \textbf{Clinical trial registration:} NA.
 
 \newpage
+
+\begin{linenumbers}
 
 \begin{center}
 \textbf{Seabird assemblages are linked to the major western boundary current off eastern Australia}
@@ -211,7 +216,7 @@ We thank all observers who assisted in data collection, the crews of RV \emph{In
 
 \textbf{Location:} East coast of Australia.
 
-\textbf{Methods:} We used 15 seabird at-sea ship-based survey data collected over 37° of latitude, from 2016 to 2021, and fitted Region of Common Profile (RCP) mixture models for each season and type of data (presence-absence and abundance). RCP groups are defined as a set of regions where the probability of encountering a specific species profile is constant within regions, but different amongst them. These groups also vary according to covariates, which in our case included oceanographic, climatic, and physiographic parameters.
+\textbf{Methods:} We used 15 seabird at-sea ship-based survey data sets collected over 37° of latitude, from 2016 to 2021, and fitted Region of Common Profile (RCP) mixture models for each season and type of data (presence-absence and abundance). RCP groups are defined as a set of regions where the probability of encountering a specific species profile is constant within regions, but different amongst them. These groups also vary according to covariates, which in our case included oceanographic, climatic, and physiographic parameters.
 
 \textbf{Results:} Based on 142,646 seabirds recorded, from 80 species, all models suggested two macro-scale assemblages (`northern' and `southern'), except for the autumn presence-absence model that identified three groups. The model results consistently show a biogeographic transition at \textasciitilde34°S, near the latitude at which the East Australian Current separates from the Australian continental slope. Sea surface temperatures or sea surface salinities were selected in all final models, further indicating a close relationship between seabird assemblages and water masses. Results from both data types, presence-absence and abundance, resulted in similar spatial and species profile patterns.
 
@@ -756,7 +761,7 @@ Young, J. W., Hobday, A. J., Campbell, R. A., Kloser, R. J., Bonham, P. I., Clem
 \section*{Data Accessibility Statement}\label{data-accessibility-statement}}
 \addcontentsline{toc}{section}{Data Accessibility Statement}
 
-The gridded data used as the basis for all analyses is available in the archived repository along with the code to reproduce the results. The raw data are currently being used for other projects and thus can not be publicly available. If you are interested in the raw data, please get in touch with XXX.
+The gridded data used as the basis for all analyses are available in the archived repository along with the code to reproduce the results. The raw data are currently being used for other projects and thus can not be publicly available. If you are interested in the raw data, please get in touch with XXX.
 
 \newpage
 
@@ -781,6 +786,8 @@ The gridded data used as the basis for all analyses is available in the archived
 \item
   \textbf{FIGURE 5.} Species profiles of seabird assemblages (Region of Common Profile; RCP) off eastern Australia in spring. Values are the average and 95\% confidence intervals of probability of occurrence (a) and predicted mean abundance (b) for each species, based on 1000 Bayesian bootstraps. Values in (b) were log10-transformed to accommodate the high variation between species. Results for other seasons and models can be found in the Supplementary Material (Figure S7)
 \end{itemize}
+
+\end{linenumbers}
 
 \begin{landscape}
 

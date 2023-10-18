@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  17 OCT 2023 16:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  18 OCT 2023 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -638,14 +638,14 @@ L3 programming layer <2023-10-10>
  ) 
 Here is how much of TeX's memory you used:
  14854 strings out of 476464
- 240386 string characters out of 5801643
+ 240384 string characters out of 5801643
  1938040 words of memory out of 5000000
  36163 multiletter control sequences out of 15000+600000
  615253 words of font info for 145 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,9n,93p,1008b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ms_supp_mat.pdf (17 pages, 3360450 bytes).
+Output written on ms_supp_mat.pdf (17 pages, 3360354 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  182 compressed objects within 2 object streams

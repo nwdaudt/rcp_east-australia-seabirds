@@ -1,6 +1,6 @@
 ---
 title: "Supplementary Material"
-subtitle: "Probabilistic bioregion models suggest seabird assemblages are linked to the major boundary current off eastern Australia"
+subtitle: "<b>Seabird assemblages are linked to the major western boundary current off eastern Australia</b>"
 # author: "Author"
 date: "`r Sys.Date()`"
 output:
