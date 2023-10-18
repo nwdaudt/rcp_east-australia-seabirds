@@ -75,7 +75,7 @@ You should be able to reproduce all results using scripts in `./scripts` and fil
 
 `R` packages and their dependencies were captured using `{renv} v. 1.0.3` in the [lock.file](https://github.com/nwdaudt/rcp_east-australia-seabirds/renv.lock). 
 
-However, `{renv}` does *not* capture all the computing environment, which is detailed below:
+However, `{renv}` does *not* capture all the computing environment. The OS and `R` version is detailed below. We did not 'dockerised' our computing environment, so any system dependency you will need to deal with yourself (sorry!).
 
 ```shell
 R version 4.2.0 (2022-04-22)
@@ -92,16 +92,15 @@ locale:
 [7] LC_PAPER=en_NZ.UTF-8       LC_NAME=C                  LC_ADDRESS=C              
 [10] LC_TELEPHONE=C            LC_MEASUREMENT=en_NZ.UTF-8 LC_IDENTIFICATION=C       
 ```
-We did not 'dockerised' our computing environment, so any system dependency you will need to deal with yourself (sorry!).
 
-A heads up -- you will need `R **4.2.0**` and then make sure to `renv::restore()` to load the project environment with the same package versions (if you are not familiar with `{renv}`, see [their website](https://rstudio.github.io/renv/articles/renv.html)). 
+A heads up -- you will need `R` **4.2.0** and then make sure to `renv::restore()` to load the project environment with the same package versions as ours (if you are not familiar with `{renv}`, see [their website](https://rstudio.github.io/renv/articles/renv.html)). 
 
 ***
 ## Contributors
 
-[//]: # ([Nicholas W. Daudt](https://github.com/nwdaudt))
+[//]: # (Nicholas W. Daudt https://github.com/nwdaudt )
 
-Any bugs, suggestions, or enquires, please feel free to contact NWD or open an issue.
+Any bugs, suggestions, or enquires, please feel free to contact XXX or open an issue.
 
 ***
 ## Citation
