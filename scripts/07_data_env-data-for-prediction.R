@@ -1,8 +1,7 @@
 ##
-## ASG environmental average layers and create prediction data.frame
+## ASG - average environmental layers to create prediction data.frame
 ## 
-## Nicholas W Daudt
-## ****************************************************************************#
+## *************************************************************************** #
 
 # This code creates average ('climatic'), static layers for all environmental 
 # data by season and, finally, average values by grid (1 x 1 degree) to be 
@@ -315,7 +314,7 @@ file_dirs <- file_dirs[grepl(x = file_dirs,
 
 ## pseudo-code ---------------------------------------#
 # select one season
-# open file & # crop to 'g1' extent
+# open file & crop to 'g1' extent
 # extract mean value for each grid (remember: clim_EKEmean == eke, clim_SSTgrad == SSTgrad)
 # Scale environmental data
 # store as data.frame

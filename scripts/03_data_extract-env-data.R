@@ -1,15 +1,14 @@
 ##
-## ASG environmental data extraction (for the full dataset)
+## ASG - environmental data extraction (for the full dataset)
 ## 
-## Nicholas W Daudt
-## ****************************************************************************#
+## *************************************************************************** #
 
-## This code extracts all the environmental data that will be used in future analysis.
+## This code extracts all the environmental data that will be used in future analyses.
 ## Data sources are mentioned at the beginning of each section.
 ## As I've run this in my local computer, I did each variable individually, 
 ## due to memory issues. Also, due to the same problem, I saved backups for each step 
 ## to avoid headaches.
-## You can find all backups at "./data/backup-during-env-data-extraction/".
+## I saved backups at "./data/backup-during-env-data-extraction/".
 
 ## Libraries ####
 
@@ -106,8 +105,8 @@ data_sf_envs <-
 ## ----------------------------------------------------------------------------#
 ## Bathymetry (and slope) data consumed a lot of memory from my notebook, so   #
 ## create a backup here, and just read it later on. Additionally, get rid of   # 
-## observations with 'dist_coast' equals to zero. They won't have              #
-## 'oceanographic' data anyways in the following steps                         #
+## observations with 'dist_coast' equals to zero, as they won't have           #
+## 'oceanographic' data anyway in the following steps                          #
 ## ----------------------------------------------------------------------------#
 
 readr::write_csv(
@@ -592,13 +591,13 @@ for (yr in yrs) {
   # plot(r_Grad_stack)
   # length(r_Grad_stack@layers)
   
-  ## Save cropped file ********************************************************#
+  ## Save cropped file ******************************************************* #
   raster::writeRaster(r_Grad_stack,
                       filename = paste0(stringr::str_sub(
                         file_dirs[stringr::str_detect(file_dirs, as.character(yr))], end = -9), 
                         "_SSTgrad.nc"), 
                       format = "CDF", overwrite = TRUE)
-  ## **************************************************************************#
+  ## ************************************************************************* #
   
   rm("sst_stack", "r_Grad_stack")
   gc()
@@ -820,8 +819,8 @@ raster::writeRaster(u_prime_stack,
 rm("ucur_stack", "u_clim", "u_prime_stack")
 
 ## Calculate EKE
-# (due to memory issues, I needed to restart the session)
-# Needs to get the 'layer_names' obj above, though
+# (due to memory issues, I needed to restart the session here)
+# Need to get the 'layer_names' obj, as used above
 
 ## Load U' and V' data
 v_prime_clim_stack <- raster::stack("./data/env-data_raw/v_prime_clim_stack.nc")
@@ -1082,50 +1081,3 @@ readr::write_csv(data,
 # -----------------------------------------------------------------------------#
 
 rm("data", "data_sf_envs", "file_dirs", "seasons")
-
-#### `sessionInfo()` ####
-
-# sessionInfo()
-
-# R version 4.2.0 (2022-04-22)
-# Platform: x86_64-pc-linux-gnu (64-bit)
-# Running under: Ubuntu 20.04.5 LTS
-# 
-# Matrix products: default
-# BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
-# LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
-# 
-# locale:
-# [1] LC_CTYPE=en_NZ.UTF-8       LC_NUMERIC=C               LC_TIME=en_NZ.UTF-8       
-# [4] LC_COLLATE=en_NZ.UTF-8     LC_MONETARY=en_NZ.UTF-8    LC_MESSAGES=en_NZ.UTF-8   
-# [7] LC_PAPER=en_NZ.UTF-8       LC_NAME=C                  LC_ADDRESS=C              
-# [10] LC_TELEPHONE=C            LC_MEASUREMENT=en_NZ.UTF-8 LC_IDENTIFICATION=C       
-# 
-# attached base packages:
-# [1] stats     graphics  grDevices utils     datasets  methods   base     
-# 
-# other attached packages:
-# [1] hadsstr_0.1          rerddapXtracto_1.1.2 rerddap_0.8.0        terra_1.6-7         
-# [5] raster_3.5-21        sp_1.5-0             rnaturalearth_0.1.0  mapview_2.11.0      
-# [9] sf_1.0-8             stringr_1.4.0        dplyr_1.0.9          readr_2.1.2         
-# 
-# loaded via a namespace (and not attached):
-# [1] bit64_4.0.5             vroom_1.5.7             jsonlite_1.8.0          assertthat_0.2.1       
-# [5] stats4_4.2.0            yaml_2.3.5              pillar_1.7.0            lattice_0.20-45        
-# [9] glue_1.6.2              uuid_1.1-0              digest_0.6.29           colorspace_2.0-3       
-# [13] leaflet.providers_1.9.0 htmltools_0.5.2         pkgconfig_2.0.3         httpcode_0.3.0         
-# [17] purrr_0.3.4             scales_1.2.0            webshot_0.5.3           brew_1.0-7             
-# [21] svglite_2.1.0           satellite_1.0.4         tzdb_0.3.0              tibble_3.1.7           
-# [25] proxy_0.4-27            farver_2.1.1            generics_0.1.3          tictoc_1.1             
-# [29] ellipsis_0.3.2          withr_2.5.0             cli_3.3.0               magrittr_2.0.3         
-# [33] crayon_1.5.1            ncdf4_1.19              fansi_1.0.3             xml2_1.3.3             
-# [37] class_7.3-20            tools_4.2.0             data.table_1.14.2       hms_1.1.1              
-# [41] lifecycle_1.0.1         munsell_0.5.0           compiler_4.2.0          e1071_1.7-11           
-# [45] systemfonts_1.0.4       rlang_1.0.4             classInt_0.4-7          units_0.8-0            
-# [49] grid_4.2.0              leafpop_0.1.0           rstudioapi_0.13         rappdirs_0.3.3         
-# [53] htmlwidgets_1.5.4       crosstalk_1.2.0         leafem_0.2.0            base64enc_0.1-3        
-# [57] codetools_0.2-18        DBI_1.1.3               curl_4.3.2              R6_2.5.1               
-# [61] rgdal_1.5-32            fastmap_1.1.0           bit_4.0.4               utf8_1.2.2             
-# [65] KernSmooth_2.23-20      hoardr_0.5.2            stringi_1.7.6           parallel_4.2.0         
-# [69] crul_1.3                Rcpp_1.0.9              vctrs_0.4.1             png_0.1-7              
-# [73] leaflet_2.1.1           tidyselect_1.1.2 

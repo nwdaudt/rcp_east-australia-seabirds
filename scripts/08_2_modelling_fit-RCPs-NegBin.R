@@ -1,11 +1,11 @@
 ##
-## ASG -- Region of Common Profile (NegBin)
+## ASG -- Region of Common Profile models (NegBin)
 ## 
 ## Nicholas W Daudt
-## ****************************************************************************#
+## *************************************************************************** #
 
 ## This code implements RCP models, 
-## using count data based on 'Negative Binomial' error distribution.
+## using count data based on 'Negative Binomial' models.
 
 ## Note: To keep colour congruence between all visualizations, 
 ## for the *spring* results, I had to swap 'RCP1' / 'RCP2' labels.
@@ -54,7 +54,7 @@ spp_form <- as.formula(~ 1)
 control <- list(penalty = 0.01, penalty.tau = 10, penalty.gamma = 10,
                 penalty.disp = c(10, sqrt(10)), quiet = TRUE)
 
-## How many random starts should 'multifit' fit?
+## How many random starts should 'multifit' fit
 nstarts <- 100
 
 ## Loop through to get the results

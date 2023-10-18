@@ -1,11 +1,10 @@
 ##
-## ASG -- Region of Common Profile (Bernoulli)
-## 
-## Nicholas W Daudt
-## ****************************************************************************#
+## ASG -- Region of Common Profile models (Bernoulli)
+##
+## *************************************************************************** #
 
 ## This code implements RCP models, 
-## using presence/absence data based on 'Bernoulli' as error distribution.
+## using presence/absence data based on 'Bernoulli' models.
 
 ## Libraries ####
 
@@ -53,7 +52,7 @@ spp_form <- as.formula(~ 1)
 control <- list(penalty = 0.01, penalty.tau = 10, penalty.gamma = 10,
                 penalty.disp = c(10, sqrt(10)), quiet = TRUE)
 
-## How many random starts should 'multifit' fit?
+## How many random starts should 'multifit' fit
 nstarts <- 100
 
 ## Loop through to get the results
@@ -835,7 +834,7 @@ for (season_vec in seasons_vec) {
   if(season_vec == "summer") {
     
     # As RCP group colours are being depicted from 'south' (RCP1) to 'north' (RCP2),
-    # we had to do a hack here for the probability maps visually agree with 
+    # I had to do a hack here for the probability maps visually agree with 
     # point-predictions in a meaningful way (basically, swap "RCP1" to "RCP2", and vice-versa)
     
     new_col_names <- c("IDgrid", "lon", "lat", 

@@ -1,10 +1,9 @@
 ##
-## ASG -- Region of Common Profile models
+## ASG - exploratory data analyses
 ## 
-## Nicholas W Daudt
-## ****************************************************************************#
+## *************************************************************************** #
 
-## This code makes some Exploratory Data Analysis (plots & maps)
+## This code makes some Exploratory Data Analyses (plots & maps)
 
 ## Libraries ####
 
@@ -206,7 +205,7 @@ ggsave(plot_nOCC_FO_NF,
        filename = "./results/FigS1_spp-nOCC-FO-NF-seasons.png",
        height = 14, width = 20, units = "cm", dpi = 300)
 
-## String vector w/ spp names to remove from models & how many spp/season was modelled -----------####
+## String vector w/ spp names to remove from models & how many spp/season was modelled ---------- ####
 ## based on <6 occurrences
 
 df_season_nOCC <-
@@ -247,7 +246,7 @@ for (i in 1:length(remove_spp_vec)) {
 
 save("remove_spp_vec", file = "./data_out/rm_spp-season_vec.rda")
 
-## Where the effort was -- individual records from raw data --------------------####
+## Where the effort was -- individual records from raw data ------------------- ####
 
 aus_sf <- rnaturalearth::ne_countries(country = "australia", returnclass = "sf")
 world_sf <- ne_countries(returnclass = "sf")
@@ -307,7 +306,7 @@ ggsave((ggplot() +
        filename = "./EDA/EDA_map-oceanogr.svg", ## png
        height = 10, width = 8, units = "cm", dpi = 300)
 
-## Where the effort was -- richness, by grid ------------------------------####
+## Where the effort was -- richness, by grid ----------------------------- ####
 
 effort_richness <-
   ggplot(aus_sf) + 
@@ -329,7 +328,7 @@ ggsave(effort_richness,
        filename = "./EDA/EDA_map-effort-richness-seasons.png",
        height = 10, width = 20, units = "cm", dpi = 300)
 
-## Where the effort was -- total numbers, by grid -------------------------####
+## Where the effort was -- total numbers, by grid ------------------------ ####
 
 effort_sum.all <-
   ggplot(aus_sf) + 
@@ -360,7 +359,3 @@ SuppMat_Rich.Number <-
 ggsave(SuppMat_Rich.Number, 
        filename = "./results/FigS2_map-effort-spp-richness-and-total-birds-seasons.png",
        height = 20, width = 20, units = "cm", dpi = 300)
-
-## Clean environment -------------------------------------------------------####
-rm(list = ls())
-

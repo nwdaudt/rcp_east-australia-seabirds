@@ -1,10 +1,9 @@
 ##
-## ASG -- Figures & Tables
+## ASG -- {patchwork} figures for final MS & Supp Mat
 ## 
-## Nicholas W Daudt
-## ****************************************************************************#
+## *************************************************************************** #
 
-## This code put together some Figs & tables for the manuscript.
+## This code put together the Figs for the manuscript.
 
 ## Libraries ####
 
@@ -14,7 +13,7 @@ library(magick)
 
 ## Figures main text #### 
 
-## FIGURE 1 ------------------------------------------------------------------ #
+### FIGURE 1 -------------------------------------------------------------- ####
 
 # Based on:
 # https://stackoverflow.com/questions/76079316/including-vector-graphics-file-svg-in-a-figure-generated-with-the-patchwork-pa
@@ -36,7 +35,7 @@ ggsave(fig1_study_area,
 ## The quality of this plot was not great. So I ended up using a .svg version
 ## that I put both maps together by hand in Inkscape software
 
-## FIGURE 2 ------------------------------------------------------------------ #
+### FIGURE 2 -------------------------------------------------------------- ####
 
 load("./results/Bernoulli/Bernoulli_07_RCP-point-predictions-ggplot.rda")
 # As both files were originally names the same ('map_point_pred'), 
@@ -61,7 +60,7 @@ ggsave(fig2_point_pred,
 
 rm("map_point_pred_Ber", "map_point_pred", "fig2_point_pred")
 
-## FIGURE 3 ------------------------------------------------------------------ #
+### FIGURE 3 --------------------------------------------------------------- ####
 
 load("./results/Bernoulli/Bernoulli_spring_07_RCP-prob-predictions-ggplot.rda")
 # As both files were originally names the same ('plotRCPs'), 
@@ -82,7 +81,7 @@ ggsave(fig3_prob_maps_spring,
 
 rm("plotRCPs_Ber", "plotRCPs", "fig3_prob_maps_spring")
 
-## FIGURE 4 ------------------------------------------------------------------ #
+### FIGURE 4 -------------------------------------------------------------- ####
 
 B_spr_bat <- 
   magick::image_read("./results/Bernoulli/Bernoulli_spring_07_partial-plot-bat.png") %>% 
@@ -113,7 +112,7 @@ ggsave(fig4_partial_plots_spring,
 rm("B_spr_bat", "B_spr_sst", "NB_spr_sst", "NB_spr_clim_eke_mean",
    "fig4_partial_plots_spring")
 
-## FIGURE 5 ------------------------------------------------------------------ #
+### FIGURE 5 -------------------------------------------------------------- ####
 
 load("./results/Bernoulli/Bernoulli_spring_07_species-profiles-ggplot.rda")
 # As both files were originally names the same ('plotRCPs'), 
@@ -138,11 +137,11 @@ rm("plot_spp_profiles_CI_Ber", "plot_spp_profiles_CI", "fig5_spp_profiles")
 
 ## Figures supplementary material ####
 
-## FIGURE S1 & FIGURE S2 ----------------------------------------------------- #
+### FIGURE S1 & FIGURE S2 ------------------------------------------------- ####
 
 # --- these Figs were done under script '05_data_EDA.R' ---
 
-## FIGURE S3 ----------------------------------------------------------------- #
+### FIGURE S3 ------------------------------------------------------------- ####
 
 ## -------------------- S3.1 Bernoulli -------------------------------------- ##
 
@@ -210,7 +209,7 @@ ggsave(figS3.2_multifit,
 rm("gg_multifitBIC_sum", "gg_multifitBIC_aut", "gg_multifitBIC_win", "gg_multifitBIC",
    "figS3.1_multifit", "figS3.2_multifit")
 
-## FIGURE S4 ----------------------------------------------------------------- #
+### FIGURE S4 ------------------------------------------------------------- ####
 
 ## --------------------- S4.1 Bernoulli ------------------------------------- ##
 
@@ -267,7 +266,7 @@ ggsave(
 
 rm("sum", "aut", "win", "spr")
 
-## FIGURE S5 ----------------------------------------------------------------- #
+### FIGURE S5 ------------------------------------------------------------- ####
 
 ## --------------------- S5.1 Bernoulli ------------------------------------- ##
 
@@ -357,7 +356,7 @@ ggsave(figS5.2_prob_pred,
 rm("plotRCPs_sum", "plotRCPs_aut", "plotRCPs_win", "plotRCPs",
    "figS5.1_prob_pred", "figS5.2_prob_pred")
 
-## FIGURE S6 ----------------------------------------------------------------- #
+### FIGURE S6 ------------------------------------------------------------- ####
 
 ## --------------------- S6.1 Bernoulli ------------------------------------- ##
 
@@ -491,7 +490,7 @@ rm("NB_sum", "NB_sum_1", "NB_sum_2",
    "figS6.2_partial_plots_NegBin",
    "layout")
 
-## FIGURE S7 ----------------------------------------------------------------- #
+### FIGURE S7 ------------------------------------------------------------- ####
 
 ## --------------------- S7.1 Bernoulli ------------------------------------- ##
 
@@ -588,7 +587,7 @@ rm("plot_spp_profiles_CI_sum", "plot_spp_profiles_CI_aut",
    "plot_spp_profiles_CI_win", "plot_spp_profiles_CI",
    "figS7.1_spp_profiles", "figS7.2_spp_profiles")
 
-## FIGURE S8 ----------------------------------------------------------------- #
+### FIGURE S8 ------------------------------------------------------------- ####
 
 sum <- 
   magick::image_read("./results/Bernoulli/Bernoulli_summer_07_iNEXT.png") %>% 

@@ -1,8 +1,11 @@
-## Nicholas W Daudt - 2022
+##
+## ASG -- helper functions for plotting RCP outputs
+## 
+## *************************************************************************** #
 
-#### ----------------- Helper functions for plotting RCPs -------------------- #
+## Functions were all named starting with "FUN_"
 
-# FUN: max value in row to 1 and others to 0
+## FUN: max value in row to 1 and others to 0 
 FUN_max1else0 <- function(x) {
   # All values other than the max to 0
   x <- replace(x, x < max(x), 0)
@@ -114,8 +117,8 @@ FUN_prob_maps <- function(df = pred_data,
 }
 
 ## FUN: Partial plots 
-## ----- Function written by Matthew R. Schofield
-## ----- Department of Mathematics and Statistics, University of Otago
+## ----- Function written by XXXX
+
 FUN_partial_plot = function(beta.mat, 
                             predplot = c(NA,rep(0,ncol(beta.mat)-2)), 
                             xlm.real = c(-2,2), 
@@ -125,6 +128,7 @@ FUN_partial_plot = function(beta.mat,
                             ylb = "Probability", 
                             location = "topright", 
                             coluse = palette()[1:(nrow(beta.mat)+1)],
+                            # These next two args are only needed because of the colour swap explained in the modelling scripts
                             model = c("pres_abs", "abund"), 
                             season = c("summer", "autumn", "winter", "spring")){
   ## beta.mat is a matrix of beta values.  This is obtained from coef(model)

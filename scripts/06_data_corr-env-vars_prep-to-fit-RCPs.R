@@ -1,8 +1,7 @@
 ##
-## ASG -- Data prep for running the models
+## ASG -- data prep for running the models
 ## 
-## Nicholas W Daudt
-## ****************************************************************************#
+## *************************************************************************** #
 
 ## This code prepares data for specifying RCPs.
 
@@ -11,7 +10,6 @@
 library(dplyr)
 library(tidyr)
 library(corrplot)
-# library(PerformanceAnalytics) # at the end, didn't use it
 
 ## Data #### 
 
@@ -103,6 +101,7 @@ for (season_vec in seasons_vec) {
   
   png(file = file_name, height = 12, width = 12, units = "cm", res = 300)
   
+  ## If plotting VIF data, uncomment `par()`, `barplot() + abline()`, and `par()` ['back to default']
   # par(mfrow = c(1, 2))
   
   corrplot::corrplot.mixed(
@@ -124,7 +123,7 @@ for (season_vec in seasons_vec) {
   rm("season_vec", "rcp_data", "file_name")
 }
 
-## Visually inspecting the plots, I've decided to remove some variables 
+## Visually inspecting the plots, I've decided to remove variables 
 ## to avoid collinearity (r > |0.7|)
 
 env_cols_models_season <- list(

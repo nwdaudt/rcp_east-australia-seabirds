@@ -1,8 +1,7 @@
 ##
-## ASG aggregate East Australia data by grids
+## ASG - aggregate East Australia data by grids
 ## 
-## Nicholas W Daudt
-## ****************************************************************************#
+## *************************************************************************** #
 
 ## This code aggregate raw data by grid sizes/season,
 ## summarises environmental and seabird data by grid/season,
@@ -106,7 +105,8 @@ for (i in 1:length(grids_EAus)) {
 ## Labels for plot
 # how many different grids populated by season, by grid size
 txt_hist <- 
-  df_grid_summary %>% dplyr::group_by(grid, season) %>% 
+  df_grid_summary %>% 
+  dplyr::group_by(grid, season) %>% 
   dplyr::summarise(n_grids = paste0("(n = ", as.character(n_distinct(IDgrid)), ")")) %>%
   dplyr::ungroup(.) %>%
   dplyr::mutate(n_grids = paste(as.character(season), n_grids))

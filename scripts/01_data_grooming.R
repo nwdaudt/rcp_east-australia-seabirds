@@ -1,8 +1,7 @@
 ##
-## ASG data grooming
+## ASG - data grooming
 ## 
-## Nicholas W Daudt
-## ****************************************************************************#
+## *************************************************************************** #
 
 ## This code joins data from two ASG's datasets, do some gross wrangling,
 ## and tidy up taxonomy (order, family, species names).
@@ -33,7 +32,7 @@ rm("fk210206")
 
 ## Gross wrangling ####
 
-## Set up right column classes, and create some useful ones *******************#
+## Set up right column classes, and create some useful ones ****************** #
 names(data)
 
 data <- 
@@ -67,7 +66,7 @@ data[numeric_cols] <- lapply(data[numeric_cols], as.numeric)
 
 rm("factor_cols", "numeric_cols")
 
-# Clean some empty columns, columns with no interest for analysis, ************#
+# Clean some empty columns, columns with no interest for analysis, *********** #
 # and missing values in species ID and geographic coordinates
 
 data <- 
@@ -81,7 +80,7 @@ data <-
   dplyr::select(- c(observer, ship_heading, 
                     sitting_on_ice_ct, in_hand_ct, bird_direction))
 
-## Good data - according to Eric **********************************************# **
+## Good data - according to Eric ********************************************* #
 
 # levels(data$voyage)
 
@@ -103,7 +102,7 @@ data <-
     voyage == "fk201228" | voyage == "fk210206") %>% 
   droplevels(.)
 
-# Replace missing values in 'total_ct' column, with the sum of ****************#
+# Replace missing values in 'total_ct' column, with the sum of *************** #
 # other counting columns
 
 # Check for NAs
@@ -123,7 +122,7 @@ plyr::count(is.na(data$total_ct)) # all good
 
 rm("cols_to_sum")
 
-# Exclude rows summing to "0" -- they mean all columns were "NA" or "0" *******#
+# Exclude rows summing to "0" -- they mean all columns were "NA" or "0" ****** #
 plyr::count(data$total_ct == 0) # TRUE   655
 
 data <- dplyr::filter(data, total_ct != 0) %>% droplevels(.)
@@ -299,41 +298,3 @@ length(unique(data$family))   # > 13 families
 length(unique(data$order))    # > 6 orders
 
 sum(data$total_ct)            # > In total, 158,120 individuals recorded
-
-
-#### `sessionInfo()` ####
-
-# sessionInfo()
-
-# R version 4.2.0 (2022-04-22)
-# Platform: x86_64-pc-linux-gnu (64-bit)
-# Running under: Ubuntu 20.04.5 LTS
-# 
-# Matrix products: default
-# BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
-# LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
-# 
-# locale:
-# [1] LC_CTYPE=en_NZ.UTF-8       LC_NUMERIC=C               LC_TIME=en_NZ.UTF-8       
-# [4] LC_COLLATE=en_NZ.UTF-8     LC_MONETARY=en_NZ.UTF-8    LC_MESSAGES=en_NZ.UTF-8   
-# [7] LC_PAPER=en_NZ.UTF-8       LC_NAME=C                  LC_ADDRESS=C              
-# [10] LC_TELEPHONE=C             LC_MEASUREMENT=en_NZ.UTF-8 LC_IDENTIFICATION=C       
-# 
-# attached base packages:
-# [1] stats     graphics  grDevices utils     datasets  methods   base     
-# 
-# other attached packages:
-# [1] lubridate_1.8.0 forcats_0.5.1   stringr_1.4.0   dplyr_1.0.9     purrr_0.3.4    
-# [6] readr_2.1.2     tidyr_1.2.0     tibble_3.1.7    ggplot2_3.3.6   tidyverse_1.3.1
-# [11] plyr_1.8.7     
-# 
-# loaded via a namespace (and not attached):
-# [1] Rcpp_1.0.9       cellranger_1.1.0 pillar_1.7.0     compiler_4.2.0   dbplyr_2.2.1    
-# [6] tools_4.2.0      jsonlite_1.8.0   lifecycle_1.0.1  gtable_0.3.0     pkgconfig_2.0.3 
-# [11] rlang_1.0.4      reprex_2.0.1     DBI_1.1.3        cli_3.3.0        rstudioapi_0.13 
-# [16] haven_2.5.0      xml2_1.3.3       withr_2.5.0      httr_1.4.3       fs_1.5.2        
-# [21] generics_0.1.3   vctrs_0.4.1      hms_1.1.1        grid_4.2.0       tidyselect_1.1.2
-# [26] glue_1.6.2       R6_2.5.1         fansi_1.0.3      readxl_1.4.0     modelr_0.1.8    
-# [31] tzdb_0.3.0       magrittr_2.0.3   scales_1.2.0     backports_1.4.1  ellipsis_0.3.2  
-# [36] rvest_1.0.2      assertthat_0.2.1 colorspace_2.0-3 utf8_1.2.2       stringi_1.7.6   
-# [41] munsell_0.5.0    broom_1.0.0      crayon_1.5.1
