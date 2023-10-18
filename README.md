@@ -1,6 +1,8 @@
 # Seabird assemblages are linked to the major western boundary current off eastern Australia
 
-Here you will find all data and code needed to reproduce the results from [XXXXX et al. (*in review*)](https://github.com/nwdaudt/rcp_east-australia-seabirds#citation). 
+Here you will find all data and code needed to reproduce the results from [XXXXX et al. (*in review*) -- *#citation link*]
+
+[//]: # (https://github.com/nwdaudt/rcp_east-australia-seabirds#citation)
 
 A hard version of this repository **will be** archived at Zenodo.
 
@@ -73,7 +75,9 @@ You should be able to reproduce all results using scripts in `./scripts` and fil
 
 ### Environment
 
-`R` packages and their dependencies were captured using `{renv} v. 1.0.3` in the [lock.file](https://github.com/nwdaudt/rcp_east-australia-seabirds/renv.lock). 
+`R` packages and their dependencies were captured using `{renv} v. 1.0.3` in the [*lock.file link*]
+
+[//]: # (https://github.com/nwdaudt/rcp_east-australia-seabirds/blob/main/renv.lock). 
 
 However, `{renv}` does *not* capture all the computing environment. The OS and `R` version is detailed below. We did not 'dockerised' our computing environment, so any system dependency you will need to deal with yourself (sorry!).
 
