@@ -77,7 +77,7 @@ You should be able to reproduce all results using scripts in `./scripts` and fil
 
 `R` packages and their dependencies were captured using `{renv} v. 1.0.3` in the [*lock.file link*]
 
-[//]: # (https://github.com/nwdaudt/rcp_east-australia-seabirds/blob/main/renv.lock). 
+[//]: # (LINK https://github.com/nwdaudt/rcp_east-australia-seabirds/blob/main/renv.lock ). 
 
 However, `{renv}` does *not* capture all the computing environment. The OS and `R` version is detailed below. We did not 'dockerised' our computing environment, so any system dependency you will need to deal with yourself (sorry!).
 
