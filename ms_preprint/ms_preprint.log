@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  18 OCT 2023 16:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  20 OCT 2023 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,7 +756,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has 
                                                   \__shipout_drop_firstpage_...
 l.896 \begin{landscape}
                        ]
-<../EDA/Fig1-study-area-raw-counts.png, id=631, 433.8609pt x 286.4301pt>
+<../EDA/Fig1-study-area-raw-counts.png, id=632, 433.8609pt x 286.4301pt>
 File: ../EDA/Fig1-study-area-raw-counts.png Graphic file (type png)
 <use ../EDA/Fig1-study-area-raw-counts.png>
 Package pdftex.def Info: ../EDA/Fig1-study-area-raw-counts.png  used on input line 900.
@@ -767,12 +767,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has
                                                   \__shipout_drop_firstpage_...
 l.907 \end{landscape}
                       <../EDA/Fig1-study-area-raw-counts.png>]
-<../results/Fig4_partial-plots-spring.png, id=638, 312.9291pt x 312.9291pt>
+<../results/Fig4_partial-plots-spring.png, id=639, 312.9291pt x 312.9291pt>
 File: ../results/Fig4_partial-plots-spring.png Graphic file (type png)
 <use ../results/Fig4_partial-plots-spring.png>
 Package pdftex.def Info: ../results/Fig4_partial-plots-spring.png  used on input line 913.
 (pdftex.def)             Requested size: 469.75499pt x 469.78401pt.
-<../results/Fig2_point-predictions.png, id=639, 327.1422pt x 426.6339pt>
+<../results/Fig2_point-predictions.png, id=640, 327.1422pt x 426.6339pt>
 File: ../results/Fig2_point-predictions.png Graphic file (type png)
 <use ../results/Fig2_point-predictions.png>
 Package pdftex.def Info: ../results/Fig2_point-predictions.png  used on input line 924.
@@ -796,7 +796,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has
                                                   \__shipout_drop_firstpage_...
 l.933 \begin{landscape}
                         <../results/Fig2_point-predictions.png>]
-<../results/Fig3_probability-maps-spring.png, id=648, 455.0601pt x 255.8358pt>
+<../results/Fig3_probability-maps-spring.png, id=649, 455.0601pt x 255.8358pt>
 File: ../results/Fig3_probability-maps-spring.png Graphic file (type png)
 <use ../results/Fig3_probability-maps-spring.png>
 Package pdftex.def Info: ../results/Fig3_probability-maps-spring.png  used on input line 937.
@@ -806,7 +806,7 @@ Overfull \hbox (65.04697pt too wide) in paragraph at lines 937--938
  [][] 
  []
 
-<../results/Fig5_spp-profiles-spring.png, id=649, 455.0601pt x 341.3553pt>
+<../results/Fig5_spp-profiles-spring.png, id=650, 455.0601pt x 341.3553pt>
 File: ../results/Fig5_spp-profiles-spring.png Graphic file (type png)
 <use ../results/Fig5_spp-profiles-spring.png>
 Package pdftex.def Info: ../results/Fig5_spp-profiles-spring.png  used on input line 948.
@@ -835,21 +835,21 @@ L3 programming layer <2023-10-10>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `ms_preprint.out' has not changed.
-(rerunfilecheck)             Checksum: 0B34505009CAA336398F853E8C740588;3127.
+(rerunfilecheck)             Checksum: DF9B6479EFA9368AD4F3D3CEE4C27E1B;3137.
  ) 
 Here is how much of TeX's memory you used:
- 14642 strings out of 476464
- 234438 string characters out of 5801643
+ 14638 strings out of 476464
+ 234396 string characters out of 5801643
  1947040 words of memory out of 5000000
  35610 multiletter control sequences out of 15000+600000
- 623010 words of font info for 196 fonts, out of 8000000 for 9000
+ 622851 words of font info for 194 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,13n,79p,2110b,608s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,79p,2112b,608s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ms_preprint.pdf (36 pages, 1326811 bytes).
+Output written on ms_preprint.pdf (36 pages, 1326025 bytes).
 PDF statistics:
- 775 PDF objects out of 1000 (max. 8388607)
- 695 compressed objects within 7 object streams
+ 776 PDF objects out of 1000 (max. 8388607)
+ 696 compressed objects within 7 object streams
  223 named destinations out of 1000 (max. 500000)
  33482 words of extra memory for PDF output out of 35830 (max. 10000000)
 
