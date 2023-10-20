@@ -3,18 +3,8 @@
 ## 
 ## *************************************************************************** #
 
-## The project started off with the directories "./data" (and its sub-directories) 
-## and "./scripts". If you haven't cloned this repo from GitHub, you need to 
-## create some directories manually
-
-# dir.create("./data_out")
-# dir.create("./EDA")
-# dir.create("./results")
-# dir.create("./results/Bernoulli")
-# dir.create("./results/NegBin")
-
-# The directory "./ms_preprint" was created when I manually opened an Rmarkdown
-# file using {rticle}'s template for `arXiv` preprints.
+# install.packages("renv") # uncomment if you need to install {renv}
+renv::restore()
 
 ## -------------------------------------------------------------------------- ##
 ## -------------------------------------------------------------------------- ##
@@ -30,7 +20,21 @@
 ## -------------------------------------------------------------------------- ##
 ## -------------------------------------------------------------------------- ##
 
-## Install needed libraries
+## The project started off with the directories "./data" (and its sub-directories) 
+## and "./scripts". If you haven't cloned this repo from GitHub, you need to 
+## create some directories manually
+
+# dir.create("./data_out")
+# dir.create("./EDA")
+# dir.create("./results")
+# dir.create("./results/Bernoulli")
+# dir.create("./results/NegBin")
+
+# The directory "./ms_preprint" was created when I manually opened an Rmarkdown
+# file using {rticle}'s template for `arXiv` preprints.
+
+# ---------------------------------------------------------------------------- #
+## Install needed libraries -------------------------------------------------- #
 
 # Install {pacman}, a wrapper for checking/installing packages
 install.packages("pacman")
