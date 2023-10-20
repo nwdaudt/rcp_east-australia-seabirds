@@ -9,7 +9,7 @@ There will be two sessions. Jump straight in [*modelling* -- *#session link*] if
 
 The scripts are named following a numerical order, so that is easy to follow.
 
-![](./scripts/scripts-workflow.png)
+![Fig 1. Scripts workflow](https://github.com/nwdaudt/rcp_east-australia-seabirds/blob/main/scripts/scripts-workflow.png)
 
 All scripts were developed using [RStudio IDE](https://posit.co/products/open-source/rstudio/) and, for the sake of facility, I structured them into 'code sections'. So, if you use RStudio, you can follow the *document outline* easily. 
 
