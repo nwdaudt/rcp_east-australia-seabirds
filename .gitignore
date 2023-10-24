@@ -5,6 +5,7 @@ results/Bernoulli/*.rda
 results/NegBin/*.rda
 docs/
 scripts/scripts-workflow.svg
+cover-letter*.*
 
 # Old file that we end up not using
 scripts_lda/
