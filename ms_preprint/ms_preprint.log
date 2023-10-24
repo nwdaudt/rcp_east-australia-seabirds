@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  20 OCT 2023 11:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.11)  24 OCT 2023 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,7 +466,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 131.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 132.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -476,24 +476,24 @@ File: l3backend-pdftex.def 2023-10-10 L3 backend support: PDF output (pdfTeX)
 ) (./ms_preprint.aux)
 \openout1 = `ms_preprint.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -560,26 +560,26 @@ LaTeX Font Info:    ... okay on input line 131.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 131.
+Package hyperref Info: Link coloring OFF on input line 132.
 (./ms_preprint.out) (./ms_preprint.out)
 \@outlinefile=\write3
 \openout3 = `ms_preprint.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 131.
-Package microtype Info: Applying patch `item' on input line 131.
-Package microtype Info: Applying patch `toc' on input line 131.
-Package microtype Info: Applying patch `eqnum' on input line 131.
+LaTeX Info: Redefining \microtypecontext on input line 132.
+Package microtype Info: Applying patch `item' on input line 132.
+Package microtype Info: Applying patch `toc' on input line 132.
+Package microtype Info: Applying patch `eqnum' on input line 132.
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 131.
+Package microtype Warning: Unable to apply patch `footnote' on input line 132.
 
-Package microtype Info: Applying patch `verbatim' on input line 131.
+Package microtype Info: Applying patch `verbatim' on input line 132.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 131.
+LaTeX Info: Redefining \showhyphens on input line 132.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -597,41 +597,41 @@ Package microtype Info: Character `029' is missing
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 133.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 134.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 133.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 134.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 133.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 134.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 133.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 134.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 133.
+(Font)              <10> on input line 134.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 133.
+(Font)              <7> on input line 134.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 133.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 133.
+(Font)              <5> on input line 134.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 134.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 133.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 134.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 133.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 134.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -639,24 +639,25 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 134.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 134.
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 135.
+(Font)              using `T1/lmr/bx/n' instead on input line 136.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 138.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 139.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1931) has occurred while \output is active []
 
 [1
 
 
-{/home/nicholas/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[2{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [3]
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 207.
+{/home/nicholas/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2] [3]
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 208.
 (/home/nicholas/.TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -670,33 +671,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[6] [7]
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 269.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 269.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 269.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 269.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 269.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 269.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 269.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 269.
-
-[8]
-Underfull \vbox (badness 1389) has occurred while \output is active []
+[6] [7] [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [9{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/nicholas/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -740,90 +716,93 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [25]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[26] [27] [28] [29]
-Overfull \hbox (27.20743pt too wide) in paragraph at lines 798--825
+[26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[27] [28] [29] [30]
+Overfull \hbox (27.20743pt too wide) in paragraph at lines 802--829
  [][] 
  []
 
-[30
+[31
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.827 \end{landscape}
-                     ] [31
+l.831 \end{landscape}
+                     ] [32
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.896 \begin{landscape}
+l.900 \begin{landscape}
                        ]
-<../EDA/Fig1-study-area-raw-counts.png, id=632, 433.8609pt x 286.4301pt>
+<../EDA/Fig1-study-area-raw-counts.png, id=640, 433.8609pt x 286.4301pt>
 File: ../EDA/Fig1-study-area-raw-counts.png Graphic file (type png)
 <use ../EDA/Fig1-study-area-raw-counts.png>
-Package pdftex.def Info: ../EDA/Fig1-study-area-raw-counts.png  used on input line 900.
+Package pdftex.def Info: ../EDA/Fig1-study-area-raw-counts.png  used on input line 904.
 (pdftex.def)             Requested size: 650.43pt x 429.45177pt.
-[32
+[33
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.907 \end{landscape}
+l.911 \end{landscape}
                       <../EDA/Fig1-study-area-raw-counts.png>]
-<../results/Fig4_partial-plots-spring.png, id=639, 312.9291pt x 312.9291pt>
+<../results/Fig4_partial-plots-spring.png, id=647, 312.9291pt x 312.9291pt>
 File: ../results/Fig4_partial-plots-spring.png Graphic file (type png)
 <use ../results/Fig4_partial-plots-spring.png>
-Package pdftex.def Info: ../results/Fig4_partial-plots-spring.png  used on input line 913.
+Package pdftex.def Info: ../results/Fig4_partial-plots-spring.png  used on input line 917.
 (pdftex.def)             Requested size: 469.75499pt x 469.78401pt.
-<../results/Fig2_point-predictions.png, id=640, 327.1422pt x 426.6339pt>
+<../results/Fig2_point-predictions.png, id=648, 327.1422pt x 426.6339pt>
 File: ../results/Fig2_point-predictions.png Graphic file (type png)
 <use ../results/Fig2_point-predictions.png>
-Package pdftex.def Info: ../results/Fig2_point-predictions.png  used on input line 924.
+Package pdftex.def Info: ../results/Fig2_point-predictions.png  used on input line 928.
 (pdftex.def)             Requested size: 516.73335pt x 673.91792pt.
 
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 924--925
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 928--929
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 43.38235pt on input line 929.
+LaTeX Warning: Float too large for page by 43.38235pt on input line 933.
 
-[33
+[34
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.933 \begin{landscape}
-                        <../results/Fig4_partial-plots-spring.png>] [34
+l.937 \begin{landscape}
+                        <../results/Fig4_partial-plots-spring.png>] [35
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.933 \begin{landscape}
+l.937 \begin{landscape}
                         <../results/Fig2_point-predictions.png>]
-<../results/Fig3_probability-maps-spring.png, id=649, 455.0601pt x 255.8358pt>
+<../results/Fig3_probability-maps-spring.png, id=657, 455.0601pt x 255.8358pt>
 File: ../results/Fig3_probability-maps-spring.png Graphic file (type png)
 <use ../results/Fig3_probability-maps-spring.png>
-Package pdftex.def Info: ../results/Fig3_probability-maps-spring.png  used on input line 937.
+Package pdftex.def Info: ../results/Fig3_probability-maps-spring.png  used on input line 941.
 (pdftex.def)             Requested size: 715.47696pt x 402.2916pt.
 
-Overfull \hbox (65.04697pt too wide) in paragraph at lines 937--938
+Overfull \hbox (65.04697pt too wide) in paragraph at lines 941--942
  [][] 
  []
 
-<../results/Fig5_spp-profiles-spring.png, id=650, 455.0601pt x 341.3553pt>
+<../results/Fig5_spp-profiles-spring.png, id=658, 455.0601pt x 341.3553pt>
 File: ../results/Fig5_spp-profiles-spring.png Graphic file (type png)
 <use ../results/Fig5_spp-profiles-spring.png>
-Package pdftex.def Info: ../results/Fig5_spp-profiles-spring.png  used on input line 948.
+Package pdftex.def Info: ../results/Fig5_spp-profiles-spring.png  used on input line 952.
 (pdftex.def)             Requested size: 650.43pt x 487.96767pt.
 
-LaTeX Warning: Float too large for page by 38.1071pt on input line 953.
+LaTeX Warning: Float too large for page by 38.1071pt on input line 957.
 
-[35
+[36
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.955 \end{landscape}
-                      <../results/Fig3_probability-maps-spring.png>] [36
+l.959 \end{landscape}
+                      <../results/Fig3_probability-maps-spring.png>] [37
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.955 \end{landscape}
+l.959 \end{landscape}
                       <../results/Fig5_spp-profiles-spring.png>]
 No file ms_preprint.bbl.
 (./ms_preprint.aux)
@@ -838,18 +817,18 @@ Package rerunfilecheck Info: File `ms_preprint.out' has not changed.
 (rerunfilecheck)             Checksum: DF9B6479EFA9368AD4F3D3CEE4C27E1B;3137.
  ) 
 Here is how much of TeX's memory you used:
- 14638 strings out of 476464
- 234396 string characters out of 5801643
+ 14688 strings out of 476464
+ 235048 string characters out of 5801643
  1947040 words of memory out of 5000000
- 35610 multiletter control sequences out of 15000+600000
- 622851 words of font info for 194 fonts, out of 8000000 for 9000
+ 35635 multiletter control sequences out of 15000+600000
+ 634643 words of font info for 213 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,13n,79p,2112b,608s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on ms_preprint.pdf (36 pages, 1326025 bytes).
+</home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></home/nicholas/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on ms_preprint.pdf (37 pages, 1356180 bytes).
 PDF statistics:
- 776 PDF objects out of 1000 (max. 8388607)
- 696 compressed objects within 7 object streams
- 223 named destinations out of 1000 (max. 500000)
- 33482 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 796 PDF objects out of 1000 (max. 8388607)
+ 710 compressed objects within 8 object streams
+ 225 named destinations out of 1000 (max. 500000)
+ 39626 words of extra memory for PDF output out of 42996 (max. 10000000)
 
