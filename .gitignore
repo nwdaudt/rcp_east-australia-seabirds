@@ -3,12 +3,13 @@ data/
 data_out/*.csv
 results/Bernoulli/*.rda
 results/NegBin/*.rda
-docs/
+ms_preprint/
 scripts/scripts-workflow.svg
 cover-letter*.*
 
 # Old file that we end up not using
 scripts_lda/
+docs/
 
 # History files
 .Rhistory
