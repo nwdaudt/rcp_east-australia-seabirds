@@ -619,6 +619,12 @@ for (season_vec in seasons_vec) {
   
   rm("spp_profile_boot_mean", "spp_profile_boot_lower", "spp_profile_boot_upper")
   
+  # Remove dot in between genus/species
+  spp_profile_boot$species <- gsub(pattern = ".", replacement = " ", 
+                                   x = spp_profile_boot$species,
+                                   fixed = TRUE)
+  
+  # Set 'rcp' as a factor
   spp_profile_boot$rcp <- factor(spp_profile_boot$rcp, levels = c("RCP1",
                                                                   "RCP2",
                                                                   "RCP3"))
@@ -631,12 +637,12 @@ for (season_vec in seasons_vec) {
     geom_errorbarh(aes(xmin = lowerCI, xmax = upperCI)) +
     scale_color_brewer(palette = "Dark2") +
     facet_wrap(vars(rcp), ncol = 3) + 
-    ylab("") + xlab("Probability of Occurrence + Confidence Interval") +
+    ylab("") + xlab("Probability of occurrence + Confidence interval") + # ±?
     theme_bw() +
     theme(legend.position = "none",
           axis.title = element_text(size = 7),
           axis.text.x = element_text(size = 7),
-          axis.text.y = element_text(size = 7.2),
+          axis.text.y = element_text(size = 7.2, face = "italic"),
           strip.text = element_text(size = 8))
   
   ggsave(plot = plot_spp_profiles_CI, 

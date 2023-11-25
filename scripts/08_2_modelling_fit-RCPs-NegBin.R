@@ -603,6 +603,11 @@ for (season_vec in seasons_vec) {
   
   rm("spp_profile_boot_mean", "spp_profile_boot_lower", "spp_profile_boot_upper")  
   
+  # Remove dot in between genus/species
+  spp_profile_boot$species <- gsub(pattern = ".", replacement = " ", 
+                                   x = spp_profile_boot$species,
+                                   fixed = TRUE)
+  
   if(season_vec == "spring"){
     # As RCP group colours are depicted from 'south' (RCP1) to 'north' (RCP2),
     # we had to do a hack here for the species profiles visually agree with 
@@ -615,6 +620,7 @@ for (season_vec in seasons_vec) {
       dplyr::mutate(rcp = ifelse(rcp == "RCPx", "RCP2", rcp))
   }
   
+  # Set 'rcp' as a factor
   spp_profile_boot$rcp <- factor(spp_profile_boot$rcp, levels = c("RCP1",
                                                                   "RCP2"))
   
@@ -631,7 +637,7 @@ for (season_vec in seasons_vec) {
     theme(legend.position = "none",
           axis.title = element_text(size = 7),
           axis.text.x = element_text(size = 7),
-          axis.text.y = element_text(size = 7.2),
+          axis.text.y = element_text(size = 7.2, face = "italic"),
           strip.text = element_text(size = 8))
   
   ggsave(plot = plot_spp_profiles_CI, 

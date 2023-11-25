@@ -122,9 +122,9 @@ plot_spp_profiles_CI_Ber <- plot_spp_profiles_CI
 load("./results/NegBin/NegBin_spring_07_species-profiles-ggplot.rda")
 
 fig5_spp_profiles <- 
-  (plot_spp_profiles_CI_Ber + xlab("Probability of Occurrence\n + Confidence Interval") + theme(axis.text.y = element_text(size = 8),
+  (plot_spp_profiles_CI_Ber + xlab("Probability of occurrence\n + Confidence interval") + theme(axis.text.y = element_text(size = 8),
                                                                                                 axis.title.x = element_text(size = 7.5))) / 
-  (plot_spp_profiles_CI + xlab("log(Predicted mean abundance)\n + Confidence Interval") + theme(axis.text.y = element_blank(),
+  (plot_spp_profiles_CI + xlab("log(Predicted mean abundance)\n + Confidence interval") + theme(axis.text.y = element_blank(),
                                                                                                 axis.title.x = element_text(size = 7.5))) +
   patchwork::plot_layout(ncol = 2) +
   patchwork::plot_annotation(tag_levels = "a", tag_suffix = ")")
@@ -551,28 +551,28 @@ load("./results/NegBin/NegBin_spring_07_species-profiles-ggplot.rda")
 
 figS7.2_spp_profiles <-
   ((plot_spp_profiles_CI_sum + 
-      ggtitle("Summer") + xlab("log(Predicted mean abundance) + Confidence Interval") + 
+      ggtitle("Summer") + xlab("log(Predicted mean abundance) + Confidence interval") + 
       theme(plot.title = element_text(size = 8, face = "italic"),
             strip.text = element_text(size = 6),
             axis.text.x = element_text(size = 5),
             axis.text.y = element_text(size = 6),
             axis.title.x = element_text(size = 6))) + 
      (plot_spp_profiles_CI_aut + 
-        ggtitle("Autumn") + xlab("log(Predicted mean abundance) + Confidence Interval") + 
+        ggtitle("Autumn") + xlab("log(Predicted mean abundance) + Confidence interval") + 
         theme(plot.title = element_text(size = 8, face = "italic"),
               strip.text = element_text(size = 6),
               axis.text.x = element_text(size = 5),
               axis.text.y = element_text(size = 6),
               axis.title.x = element_text(size = 6)))) /
   ((plot_spp_profiles_CI_win + 
-      ggtitle("Winter") + xlab("log(Predicted mean abundance) + Confidence Interval") + 
+      ggtitle("Winter") + xlab("log(Predicted mean abundance) + Confidence interval") + 
       theme(plot.title = element_text(size = 8, face = "italic"),
             strip.text = element_text(size = 6),
             axis.text.x = element_text(size = 5),
             axis.text.y = element_text(size = 6),
             axis.title.x = element_text(size = 6))) +
      (plot_spp_profiles_CI + 
-        ggtitle("Spring") + xlab("log(Predicted mean abundance) + Confidence Interval") + 
+        ggtitle("Spring") + xlab("log(Predicted mean abundance) + Confidence interval") + 
         theme(plot.title = element_text(size = 8, face = "italic"),
               strip.text = element_text(size = 6),
               axis.text.x = element_text(size = 5),
