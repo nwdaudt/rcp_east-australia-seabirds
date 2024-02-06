@@ -4,7 +4,20 @@ data_out/*.csv
 results/Bernoulli/*.rda
 results/NegBin/*.rda
 
-## Various templates I've tried to render the MS - not used, so ignore them
+## 
+ms_PROOCE/*.spl
+ms_PROOCE/*.tex
+ms_PROOCE/*.log
+ms_PROOCE/*.pdf
+ms_PROOCE/ms_title-page.Rmd
+# Highlights (already in the Rmd) and declaration statement -- no need to share
+ms_PROOCE/*.doc*
+# {rticles} includes a CLS file in here, 
+# but I've specified an URL straight from github/citation-style-language
+ms_PROOCE/*.cls 
+
+## Templates I've tried to render the MS -- not used, so ignore them
+## I'll keep them local just for historical fileing
 docs/
 ms_preprint/
 ms_springer/
