@@ -1,17 +1,22 @@
-# Files
+## Files
 data/
 data_out/*.csv
 results/Bernoulli/*.rda
 results/NegBin/*.rda
+
+## Various templates I've tried to render the MS - not used, so ignore them
+docs/
 ms_preprint/
 ms_springer/
-ms_elsevier/
-scripts/scripts-workflow.svg
+
+## (Re)Submission cover letters -- no need to share this
 cover-letter*.*
 
-# Old file that we end up not using
+## Scripts workflow SVG image -- don't need to be version controled
+scripts/scripts-workflow.svg
+
+## LDA idea we end up not using -- opted for RCPs instead 
 scripts_lda/
-docs/
 
 # History files
 .Rhistory
