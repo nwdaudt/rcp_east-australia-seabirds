@@ -4,7 +4,7 @@ data_out/*.csv
 results/Bernoulli/*.rda
 results/NegBin/*.rda
 
-## 
+## Auxiliary files for rendering the PDF
 ms_PROOCE/*.spl
 ms_PROOCE/*.tex
 ms_PROOCE/*.log
@@ -17,18 +17,18 @@ ms_PROOCE/*.doc*
 ms_PROOCE/*.cls 
 
 ## Templates I've tried to render the MS -- not used, so ignore them
-## I'll keep them local just for historical fileing
+## I'll keep them locally just for historical record
 docs/
 ms_preprint/
 ms_springer/
 
-## (Re)Submission cover letters -- no need to share this
+## (Re)submission cover letters -- no need to share this
 cover-letter*.*
 
 ## Scripts workflow SVG image -- don't need to be version controled
 scripts/scripts-workflow.svg
 
-## LDA idea we end up not using -- opted for RCPs instead 
+## LDA idea we ended up not using (we opted for RCPs instead) 
 scripts_lda/
 
 # History files
