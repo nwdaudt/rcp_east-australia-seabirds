@@ -66,7 +66,7 @@ In `./EDA`, you will find exploratory data analysis plots (mostly .png files). *
 
 In `./results`, you will find in the root directory the main figures presented within the manuscript and supplementary material (.png and .csv files), and in the folders `./Bernoulli` and `./NegBin` the specific results for each model and their outputs.
 
-In `./scripts`, you will find all scripts needed to run the analyses and create the outputs. This folder has its own README to guide you through the files.
+In `./scripts`, you will find all scripts needed to run the analyses and create the outputs. This folder has its own [README](https://github.com/nwdaudt/rcp_east-australia-seabirds/blob/main/scripts/README.md) to guide you through the files.
 
 In `./ms_PROOCE`, you will find the .Rmd source files needed to render the main manuscript and supplementary materials. I used `rticles::elsevier_article` template.
 * `ms_PROOCE.Rmd` = manuscript *submitted* to the journal;

@@ -1,8 +1,8 @@
 # Seabird assemblages are linked to the major western boundary current off eastern Australia
 
-This `.scripts/README` guide you through the scripts used in [XXXXX et al. (*in review*) -- *#citation link*]
+This `.scripts/README` guide you through the scripts used in [Daudt *et al.*](https://github.com/nwdaudt/rcp_east-australia-seabirds/tree/main?tab=readme-ov-file#citation) (2024).
 
-There will be two sessions. Jump straight in [*modelling* -- *#session link*] if you are interested in the paper results. The [*full pipeline* -- *#session link*] explains the logic behind each script and what it does.
+There will be two sessions. Jump straight in [modelling](https://github.com/nwdaudt/rcp_east-australia-seabirds/tree/main/scripts#modelling) if you are interested in the results of the paper. The [full pipeline](https://github.com/nwdaudt/rcp_east-australia-seabirds/tree/main/scripts#full-pipeline) explains the logic behind each script and what it does, before getting the the modelling steps.
 
 ***
 ## General workflow and formatation
@@ -18,7 +18,7 @@ Below, I provide a 'pseudo-code' underlying what each script does.
 ***
 ## Full pipeline
 
-NOTE: Seabird raw data can not be publicly available at this moment (Oct 2023), so scripts '01'--'07' are here for the transparency of the process. Environmental data are all publicly available through the links provided in the manuscript. The gridded, tidied-up data after script '06' and '07' are available under `./data_out/`, which allows you to reproduce the main results.
+NOTE: Seabird raw data can not be publicly available at the moment, so scripts '01'--'07' are here for the transparency of the process. Environmental data are all publicly available through the links provided within the manuscript (see Table 1 in the main text). The gridded, tidied-up data after script '06' and '07' are available under `./data_out/`, which allows you to reproduce the main results.
 
 * **'00': R environment**
   - Sets up R environment by calling `renv::restore()`
@@ -88,4 +88,7 @@ NOTE: Seabird raw data can not be publicly available at this moment (Oct 2023), 
   - *Results:* predict and map point-predictions
   - *Results:* predict and map uncertainty
   - *Results:* partial plots relating RCP probability agains environmental data
-  
+
+## Manuscript
+
+After running the above steps, you will get all the results needed to compile the manuscript. The source `RMarkdown` files are in  `./ms_PROOCE`. Note, however, as explained in the main [README](https://github.com/nwdaudt/rcp_east-australia-seabirds/blob/main/README.md), the higher quality Figure 1 from the manuscript was built outside R (although a lower quality version is available through the codes). 
