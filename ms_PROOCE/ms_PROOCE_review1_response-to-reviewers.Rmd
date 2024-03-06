@@ -1,0 +1,174 @@
+---
+title: ""
+# author: "Author"
+# date: ""
+output: pdf_document
+---
+`r Sys.Date()` \newline
+
+\begin{flushright}
+\textit{Submission}: \textbf{PROOCE-D-23-00336} \newline
+\textit{Seabird assemblages are linked to the major western boundary current off eastern Australia} \newline
+\end{flushright}
+
+---
+
+\begin{flushright}
+\underline{\textbf{Response to Reviewer's questions comments}} \newline
+\end{flushright}
+
+\textcolor{blue}{Most of the comments from Reviewer 2 in this section are also under their detailed comments. Therefore, those were omitted from this section and answered/commented below.} \newline
+
+*Question 5*
+
+**Reviewer 1**
+
+*Line 8 if the Highlights are those that the study has uncovered, the first ‘highlight’, southward movement of the EAC, is not that which is determined in this study.*
+
+\textcolor{blue}{That is right, thanks for noticing it. We have now removed this sentence from the Highlight session.} \newline
+
+*Line 341 'While remote tracking studies are advancing our understanding on how individual seabirds use their environment at fine scales (Tremblay et al., 2009)', this study as an understanding of how much tracking studies advance the understanding of seabird interaction and their environment fails to look at more current papers. A good example (with referenced other examples within) is: Trevail et al (2023) Tracking seabird migration in the tropical Indian Ocean reveals basin-scale conservation need. <https://doi.org/10.1016/j.cub.2023.10.060>*
+
+\textcolor{blue}{Thanks for suggesting Trevail et al. (2023), which we have included alongside Tremblay et al. (2009).} \newline
+
+**Reviewer 2**
+
+\textcolor{blue}{See comments below.}
+
+---
+
+\begin{flushright}
+\underline{\textbf{Response to Reviewer's 2 detailed comments}} \newline
+\end{flushright}
+
+*This study uses Region of Common Profile mixture models to describe seasonal seabird distributions with respect to environmental parameters, using at-sea survey data and oceanographic, climatic and physiographic factors. The authors found two macro-scale seabird assemblages, defined as 'northern' and 'southern' assemblages separated roughly near the latitude where the East Australian Current (EAC) moves off the Australian continental slope (~34 S). The authors state that the two seabird assemblages were mostly persistent across four seasons. The authors suggest that the predicted poleward intensification of the EAC makes it imperative that changes to seabird distribution in this important region be monitored, using this study as a baseline.*
+
+*This paper provides new information about an important seabird 'hot spot' in the South Pacific Ocean, and it is timely in that climate-driven changes to the region have implications to the seabird community. In addition, the results describe physical drivers that influence seabird distribution and assemblages in this marine system. The paper is generally well written and easy to follow.*
+
+\textcolor{blue}{Thanks for your thorough, positive review of our manuscript. We greatly appreciate your time and dedication to commenting and suggesting points that could be clarified/better explored, which have undoubtedly improved the manuscript. Please find below replies to the main 'general aspects' you stressed out, followed by detailed replies for each specific topic.} \newline
+
+*There are four general aspects for which I recommend clarification or changes.*
+
+*First, unless this journal has a strict limit on length of the paper, I think the scope and integration of the various components of this study would be better served by moving some of the detail available in Supplemental material into the main paper. Or, perhaps as an attached appendix. In particular, I suggest including the results of species richness analysis, which seems relevant to the focus of the paper. I hope more about the assemblages themselves (species involved and what they are responding to) are covered in subsequent papers.*
+
+\textcolor{blue}{Thanks for suggesting the inclusion of supplementary figures in the main paper. The species richness analysis was moved to the main text, while other figures, as explained below, were kept in the supplemental material.}
+
+\textcolor{blue}{Also, thanks for encouraging a separate publication on the assemblages (a likely following paper on the way).} \newline
+
+*Second, it's not clear why only the spring is presented for some results (Figures 2, 4, 5) in the main paper (except perhaps for brevity and simplicity). If the authors provided justification for why spring results were highlighted, I could not find it. Furthermore, Suppl. figures 9 and 10 appear to show considerable differences among seasons in the spatial distribution of the two assemblages. Although the Discussion also mentions the influence of summer/autumn migrants (lines 293-299), there are statements about the seasonal persistence of assemblages distributions, which is confusing. More explanation of the observed seasonal differences may be warranted.*
+
+\textcolor{blue}{Although \textit{Progress in Oceanography} does not limit figures, we decided to keep supplementary figures as they were. We chose to present only spring results for the sake of the brevity of the main text. Readers interested in specific maps and graphs can refer to the supplementary material at their leisure. From our perspective, this does not influence the reader's understanding of the main messages of the paper.}
+
+\textcolor{blue}{To clarify this in the main paper, we added the following sentence under the \textit{RCP models} heading:}
+
+\textcolor{blue}{"In this section, we will present only the main results for the spring season when delving into specifics about each model and its results. The results of spring models summarise the key findings of our analysis, but we encourage the reader to look at the Supplementary Material for other seasons."}
+
+\textcolor{blue}{We believe the differences in the spatial patterns of assemblages shown in the (original) supplementary figures 9 and 10 (predicted probability maps) are due to the lack of comprehensive sampling in all seasons. Given the strong support for a 'southern' and a 'northern' assemblage, we note that both summer and autumn fail to have observations in both southern/northern areas. The rarefaction curves also show this by lower values on 'sample coverage' for RCP1 (northern) in summer and RCP3 (northern) in autumn. Further, the point predictions assigned higher probabilities of 'southern' assemblage in the 'northern' area for summer and the opposite in autumn, suggesting some limitations about these results. We agree we could have explored these incongruences further in the main text, so we have now expanded this explanation on specific sections of the discussion, as detailed in the replies below.} \newline
+
+*Third, I could not find any definition of the seasonal breakdowns - which months comprise summer, autumn, winter, spring? It may be clear to the authors, but studies vary widely in those seasonal categories. Also, please make it clear to northern readers that you are describing austral seasons.*
+
+\textcolor{blue}{Thanks for noticing this. We have now added a sentence to include which months comprise each season (see below).} \newline
+
+*Fourth, I suggest the authors make more effort to compare the patterns found in this study region with results from studies in other regions, including the northern hemisphere and sub-Arctic and Arctic.*
+
+\textcolor{blue}{Thanks for your comment. This is the first study applying RCP models to highly mobile animals, more specifically to seabirds. Although there is an obvious component of seabirds throughout the paper, the key points in the discussion are broader--i.e. the application of RCP to highly mobile animals and marine biogeography. However, we believe these comparisons asked by the reviewer are among a sound background Intro section (L 29--43 and 50--56) and later subtly addressed in L 286--287 and 378--379 in the Discussion, according to the references provided. Further, the different oceanography dynamics, seabird families, and foraging strategies for the seabird species compared in a sub-Arctic/Arctic study with a tropical-cool temperate study do not seem adequate to us. Therefore, we would prefer not to add another paragraph to the main text.} \newline
+
+*Specifics (by Line; L)*
+
+*L 41-43: Consider including publications from other bioregions (some more recent), which also show SST and water masses as key drivers of seabird distributions. There are many; a few are: Gall et al. 2013, 2022; Nur et al. 2011, Serratosa et al. 2020.*
+
+\textcolor{blue}{Thanks for the suggestion. We have included Serratosa et al. (2020) and Gall et al. (2022).} \newline
+
+*L 90 - not sure a blanket statement like 'seabird distribution is under-represented in climate change studies' is the case elsewhere (e.g, studies in the North Atlantic, and to less extent in the North Pacific).*
+
+\textcolor{blue}{Even though there are studies in the North Atlantic/Pacific, these are mainly around the USA; therefore, we believe seabirds are still under-represented in this field of research. However, we do acknowledge these efforts and studies. Thus, we have changed the sentence to reflect that the lack of these studies in the Australasia region is particularly noticeable.} \newline
+
+*L 127-128 - Briefly describe the main features of this protocol, even though details can be obtained from the citation given. How were flying (vs on water or foraging) birds treated; how was distance (within 300m) determined; when were surveys halted due to conditions? Since 'one or more' observers recorded birds, how did you adjust for differences in effort?*
+
+\textcolor{blue}{The protocol does not record distance from the ship for each individual record (i.e. it is a \textit{strip-transect} protocol); we have added this info in the section 2.2. We also added the behaviours, \textit{"(i.e. flying, feeding, sitting on the water)"}, in the section 2.2 and 2.3.2, as we summed all behaviours for our aggregated data set. In addition, we added the conditions when surveys were halted (\textit{"Seabird surveys were halted when sea conditions exceeded 6 m wave height and 40 kn of wind or visibility was under 500 m."}).}
+
+\textcolor{blue}{Sorry, the issue raised about having 'one or more' observers was a misunderstanding between the authors. \textit{Two} observers continuously recorded seabirds throughout the day; single observers were only present during brief meal and comfort [toilet] breaks (5--15 min). So, there was no significant difference in effort, since the observations were confined to forward quarter 300 m and there was never the density of birds that reduced data entry or impacted on survey efficacy. This was fixed in the main text by changing from \textit{"One or more observers"} to \textit{"Two observers"}.} \newline
+
+*L 137 - 'data wrangling' is jargon; revise to something like 'Data management', or 'compilation'.*
+
+\textcolor{blue}{Data 'wrangling' is an actual concept in the field of Data Science, which means 'tidying and transforming' your data. See well-known data science book "R for Data Science", which has a whole section on 'wrangle' in its 1st edition (at \url{https://r4ds.had.co.nz/wrangle-intro.html}), and properly define the concept in its 2nd edition (at \url{https://r4ds.hadley.nz/intro}).} \newline
+
+*Section 2.3.2 - somewhere in this section, describe what months constitute each season.*
+
+\textcolor{blue}{Done. We have included a sentence that reads:}
+
+\textcolor{blue}{"Seasons were defined as summer (Dec--Feb), autumn (Mar--May), winter (Jun--Aug), and spring (Sep--Nov)."} \newline
+
+*L 187 - not clear what the 'species profiles' are here. Please clarify what this refers to.*
+
+\textcolor{blue}{Done. We have ammended the sentence, which now reads:}
+
+\textcolor{blue}{"RCPs can be directly interpreted as assemblages; the assemblage structure is given by the species profiles (i.e. the proportion of each species within the assemblage given by their probability of occurrence or predicted abundance)."} \newline
+
+*L 231-233 - I think Supple Fig.2 (species richness maps) would be best in the main paper. While the rarefaction curves (Supple Fig. 13) serve to determine if sampling was adequate, the results in Fig. 2 seem directly relevant to the goal of describing the distributions of seabird assemblages.*
+
+\textcolor{blue}{Thanks for pointing this out---we moved species richness analysis into the main paper.} \newline
+
+*L 245-247 - authors note that in particular, 'proxies for persistent oceanographic features that may aggregate food…were selected only in the autumn and spring abundance models'. This is interesting, but I don't see in the Discussion where the authors propose why this may be. Somewhere in Discussion, it would also be helpful to indicate what prey are being affected, and where, by the oceanographic features and SST. Alternatively, the Methods section could include information on prey consumed by regional seabirds in the region.*
+
+\textcolor{blue}{Thanks for your comment. We did expand on this interesting finding of only abundance models selecting variables summarising persistent oceanographic features (see the new sentences below). However, we think it is out-of-scope for our study to delve into prey and prey distribution. This would require new sections, from Methods to Discussion, and very likely new analyses, which may deserve a separate publication.}
+
+\textcolor{blue}{The new sentences were added under section 4.2, splitting the (original) third paragraph into two. The sentences read as follows:}
+
+\textcolor{blue}{"[...]. Although we have not approached the data in a multi-scale analysis, our results partially support this. Presence-absence models retained static variables and oceanographic variables that define water masses (i.e. SST and salinity). In addition to those, the autumn and spring abundance models also retained variables associated with persistent oceanographic features (e.g. climatic variables related to eddies and fronts), as well as mixed layer depth and chlorophyll in the autumn model. Eddies, fronts, high chlorophyll and shallower mixed layer depths are all related to increased seabird foraging success (Weimerskirch, 2007; Scales et al., 2014; De Pascalis et al., 2021), and therefore likely to influence seabird numbers. [...]"} \newline
+
+*Fig. 5 - Might note in caption that the species along the Y-axis are arranged taxonomically.*
+
+\textcolor{blue}{The species are ordered alphabetically (from bottom up) as the default output from the \{ecomix\} package. Nevertheless, we noted this in the figure caption to avoid doubts (in both the main paper and supplementary material).} \newline
+
+*L 266-275 - Very nice opening paragraph. It summarizes key findings and implications to monitoring and conservation.*
+
+\textcolor{blue}{Many thanks!} \newline
+
+*L 277 - Suggest rewording to '..and water masses has been well established'. Could also include northern studies (e.g., Gall et al 2013 or 2022).*
+
+\textcolor{blue}{Thanks, we have accepted your suggestion and included Gall et al. (2022) in the reference list.} \newline
+
+*L 279 - as noted earlier, Supple Fig. 9 & 10 appear to show considerable spatial shifts in latitude, even if still two assemblages - thus the 'spatial consistency of these patterns throughout seasons' isn't obvious to me. They show similar patterns in winter and spring, but summer and autumn each have different patterns. A difference in pattern during autumn is mentioned in lines 254-255, but not addressed later. Please explain, or if you're basing this conclusion on another set of figures, cite those.*
+
+\textcolor{blue}{We have included "(but see Section 4.3)" [limitations] after the L 279 sentence, and expanded on that in the proper section by writing a new paragraph:}
+
+\textcolor{blue}{"These limitations are illustrated in the results for the summer and autumn seasons. Considering the strong support for a southern and a northern assemblage, we note that both summer and autumn lack samples in representative southern and northern (summer) and northern (autumn) areas. Albeit the sample coverage values were overall high, compared to winter and spring, summer and autumn had lower values (in particular, for the southern assemblage 'RCP1' in summer and for the northern assemblage 'RCP3' in autumn; Supplementary Fig. 12). Further, based on point predictions, higher probabilities of the southern assemblage in the northern area in summer (both presence-absence and abundance models) and of the northern assemblage in the southern area in autumn (abundance model), were assigned to a few grids (Fig. 4). The latter reinforces the possible weakness of these models to detect stronger relationships between the identified assemblages and the predictors. We also acknowledge the sharp spatial change in probabilities between assemblages in summer models (i.e. without a proper 'transition zone'), which may be related to the previous point. However, both summer and autumn models detected higher probabilities of expected taxa in their species profiles, suggesting that the make-up of the assemblage was well distinguished by the models. In addition, these models also seem to have captured the appropriate number of assemblages, agreeing with other models/seasons. Despite their limitations, we believe these models agree with the big picture of our results, therefore being a valid resource as a baseline."}
+
+\textcolor{blue}{Regarding the 'three assemblage pattern' for autumn (L 254--255) mentioned by the reviewer, we believe we have touched on it in the second paragraph of section 4.1 and when concluding it by saying "[...] In turn, including these taxa in the models could result in a more stable 'three assemblage pattern' (as revealed by the autumn presence-absence model) in all but the summer season, when the majority of Antarctic species are breeding (Marchant and Higgins, 1990)."} \newline
+
+*L 306-332 - I like this section describing the results in context of other descriptions of biogeographic units and LMEs. It's clearly written and is relevant to management issues.*
+
+\textcolor{blue}{Thank you!} \newline
+
+*L 340 - Suggest mentioning the positive aspects of studying seabirds in context of environmental parameters - i.e., seabirds are highly visible and therefore it's possible to obtain good sample sizes over large areas, and have high encounter rates in some locations (easy to identify hotspots). (there are multiple citations stating these points).*
+
+\textcolor{blue}{We understand that for a broader readership, your suggestion might be valid (e.g. people not used to seabird surveys). Therefore, we have included the sentences below:}
+
+\textcolor{blue}{"Among marine megafauna, seabirds are relatively easy to detect visually, enabling suitable sample sizes to be gathered over large areas (Ballance, 2007). Thus, seabirds can be used as models to study the distribution of highly mobile animals in relation to environmental characteristics in the marine environment."} \newline
+
+*L365-367 - Could add some recent studies*
+
+\textcolor{blue}{Done. We have added Commins et al. (2014) and Gall et al. (2022) in the first part of the sentence, and De Pascalis et al. (2021) on the second part of the sentece.} \newline
+
+*L 373 - remove 'which we suspect do not exist….'. Replace with something like 'which to our knowledge are not generally available at present, ". You might check whether this is in fact the case, at least for your region.*
+
+\textcolor{blue}{Thanks for the suggestion. To the best of our knowledge, no such data is available for our study area. So, we slightly modified the previous sentence to:}
+
+\textcolor{blue}{"Such a hierarchical approach would require substantial concurrent observational and environmental data sets, which, to our knowledge, do not exist for our study area."} \newline
+
+*L 381-384 - While I don't disagree with these statements on 'need for more seabird data', these are generally known concepts, and not directly relevant to scope of this journal. I would remove or reduce this paragraph to keep focus on the important findings.*
+
+\textcolor{blue}{Thanks for your comment. The (original) paragraph was about our study's limitations and how the analyses could benefit from more data. As you stressed before (mainly regarding summer/autumn), this also has implications for the described patterns, which we have expanded the text on 'limitations' in the current version of the manuscript. Therefore we would prefer not to remove this paragraph.} \newline
+
+*L 392 - Can authors provide information on why SST is a key variable discriminating the two seabird assemblages? The Discussion could provide brief examination of what SST is linked to: e.g,, the biological (prey type and distribution?) and physical (more on fronts and upwelling?) features birds are likely responding to. How do prey differ north and south of the 'transitional zone'?*
+
+\textcolor{blue}{Our analysis does not allow us to dive into the 'whys' as a correlative method. However, as shown elsewhere, SST likely influences prey distribution, affecting predator distribution. We briefly mentioned that while presenting biogeographic schema that agreed with our findings, such as the mesopelagic biogeographic provinces from Sutton et al. (2017). As mentioned previously, we think it is out-of-scope to go further down the 'prey distribution' topic. Nonetheless, we have highlighted this in a new sentence in the Conclusions:}
+
+\textcolor{blue}{"The mechanistic links between SST and seabird assemblages deserve more studies but may be due to the distribution of seabird prey, which at the biogeographic level seems to correlate with our findings (Sutton et al., 2017)."} \newline
+
+*L 402 - might the 'transition zone' also shift poleward? Or might it expand in size? That would have implications for future seabird studies attempting to replicate your study.*
+
+\textcolor{blue}{Good point. We believe the 'transition zone' might shift polewards following EAC's strengthening. We have modified the original sentence to reflect this; it now reads:} \newline
+
+\textcolor{blue}{"In particular, the transition zone between assemblages might be pushed southwards along with the expected trend of the EAC. The transition zone between assemblages (Morrone, 2023), associated with the eastern extension of the EAC, may be fundamental to effectively monitoring the strengthening of the EAC and the subsequent impact on marine biota."} \newline
